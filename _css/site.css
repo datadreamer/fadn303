@@ -83,6 +83,27 @@ p{
   color: #f00;
 }
 
+/* STUDENT PROFILE STYLES */
+
+.left{
+  float: left;
+  width: 30%;
+}
+.middle{
+  float: left;
+  width: 30%;
+  margin-left: 5%;
+}
+.right{
+  float: left;
+  width: 30%;
+  margin-left: 5%;
+}
+.studentimg{
+  width: 100%;
+  height: auto;
+}
+
 
 
 /* HEADER STYLES */
