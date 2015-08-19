@@ -1,0 +1,199 @@
+body{
+  margin: 0px;
+  font: normal 12px "Helvetica Neue", "Arial", sans-serif;
+}
+
+a{
+  color: #0099ff;
+}
+a:visited{
+  color: #0099ff;
+}
+a:active{
+  color: #0099ff;
+}
+
+ul{
+  padding-left: 20px;
+  line-height: 18px;
+}
+
+ol{
+  padding-left: 20px;
+  line-height: 18px;
+}
+
+h1{
+  font-size: 30px;
+  font-weight:200;
+}
+h3{
+  margin-top: -20px;
+}
+h4{
+  font-size: 22px;
+  font-weight:200;
+  margin: 0px;
+  border-bottom: 2px solid #0099ff;
+}
+
+p{
+  line-height: 18px;
+}
+
+.grades{
+  font-family: monospace;
+}
+
+#page{
+  width: 100%;
+  margin: 10px;
+}
+
+#main{
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.weektitle{
+  float: left;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.weeka{
+  float: left;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.weekb{
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-bottom: 40px;
+}
+
+.day{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.due{
+  color: #f00;
+}
+
+
+
+/* HEADER STYLES */
+
+#header { background: #000; border-bottom: 2px solid #fc0; margin-bottom: 20px; height: 116px; }
+#header h1 { margin: 0 auto; width: 100%; height: 116px; }
+#header h1 a { text-indent: -9999px; }
+#header h1 a.roskititle {
+  background: url(../_images/usc-roski-logo.png) 0 65px no-repeat;
+  background-size: 100%; width: 64.5%; height: 116px; display: block;
+  margin-left: 10px;
+}
+#header h1 a.uscshield {
+  background:url(../_images/usc-shield-wordmark.png) 0 12px no-repeat;
+  background-size: 100%; float: right; width: 18.3%; height:60px;
+  margin-right: 10px;
+}
+
+
+
+/* MENU STYLES */
+
+#navigation{
+  width: 100%;
+  float: left;
+  border-bottom: 2px solid #0099ff;
+  margin-bottom: 20px;
+}
+
+#menutitle{
+  display: none;
+}
+
+.sectionNav{
+  font-size: 14px;
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.sectionNav li{
+  float: none;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.1em;
+}
+.sectionNav li a{
+  color: #000;
+  text-decoration: none;
+}
+.sectionNav li a:hover{
+  color: #09f;
+}
+li.selected a{
+  color: #09f;
+}
+
+
+
+
+
+@media only screen and (min-width: 640px) {
+  .sectionNav li{
+    width: 10%;
+    font-size: 1em;
+    margin-bottom: 20px;
+    margin-left: 3.33%;
+    margin-right: 3.33%;
+    float: left;
+  }
+  .weeka{
+    width: 48%;
+  }
+
+  .weekb{
+    width: 48%;
+    margin-left: 4%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  #header h1 { margin: 0 auto; width: 960px; height: 116px; }
+  #header h1 a.roskititle {
+    margin-left: 0px;
+  }
+  #header h1 a.uscshield {
+    margin-right: 0px;
+  }
+  #page{
+    max-width: 960px;
+    margin: auto;
+  }
+  #main{
+    margin-left: 250px;
+    padding-left: 35px;
+  }
+  #navigation{
+    width: 250px;
+  }
+  #menutitle{
+    display: block;
+  }
+  .sectionNav{
+    margin-top: 14px;
+  }
+  .sectionNav li{
+    float: none;
+    width: 100%;
+    font-weight: inherit;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
