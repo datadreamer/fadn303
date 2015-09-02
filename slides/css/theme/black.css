@@ -15,7 +15,7 @@ body {
   background-color: #222; }
 
 .reveal {
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-family: 'Montserrat', Helvetica, sans-serif;
   font-size: 38px;
   font-weight: normal;
   color: #fff; }
@@ -35,7 +35,7 @@ body {
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
   color: #fff;
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
@@ -125,7 +125,7 @@ body {
 .reveal pre {
   display: block;
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: 20px auto;
   text-align: left;
   font-size: 0.55em;
@@ -206,10 +206,8 @@ body {
  * IMAGES
  *********************************************/
 .reveal section img {
-  margin: 15px 0px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  margin: 0px;
+}
 
 .reveal a img {
   -webkit-transition: all 0.15s linear;
@@ -265,3 +263,33 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #42affa; }
+
+
+
+/*********************************************
+ * CUSTOM SHIT BY AARON
+ *********************************************/
+.titletext{
+  text-align: left;
+  color: #09F;
+}
+
+.caption{
+  width: 90%;
+  margin: auto !important;
+  font-size: 0.5em !important;
+}
+
+.half{
+  float: left;
+  width: 50%;
+}
+
+.half img{
+  width: 50%;
+}
+
+.third{
+  float: left;
+  width: 33.3%;
+}

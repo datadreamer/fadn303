@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Web Literacy 101 - FADN 303: Web Design</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -14,8 +14,10 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/slide.css">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -42,7 +44,215 @@
 			<div class="slides">
 
 				<section>
-					<h1>fadn 303</h1>
+					<div class="titletext">
+						FADN 303: Web Design
+						<h1>Web Literacy 101</h1>
+						Aaron Siegel<br/>
+						<script type="text/javascript">
+	        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+	        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+	          </script>
+					</div>
+				</section>
+
+				<section>
+					Servers and Clients
+				</section>
+
+				<section>
+					<div class="half">
+						<img src="images/webserver.png" /><br/>
+						Server<br/>
+						<div class="caption">
+							<br/>A server is a network enabled computer running software that allows clients to connect to it.
+						</div>
+					</div>
+					<div class="half">
+						<img src="images/laptop.png" /><br/>
+						Client
+						<div class="caption">
+							<br/>A client is any network enabled computer that makes a connection to the server.
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<img src="images/network.png" /><br/>
+					Network
+					<div class="caption">
+						<br/>The network consists of many clients connecting to the server. Each client makes a request for a service and the server is able to handle them seperately and quickly.<br/>
+						<br/>
+						A web server hosts files for clients to download and display as web pages using browsers.
+					</div>
+				</section>
+
+				<section>
+					Back-end vs. Front-end
+				</section>
+
+				<section>
+					<div class="half">
+						<img src="images/webserver.png" /><br/>
+						Back-end<br/>
+						<div class="caption">
+							<br/>Back-end involves scripts, databases, and applications that run on a server.
+						</div>
+					</div>
+					<div class="half">
+						<img src="images/laptop.png" /><br/>
+						Front-end
+						<div class="caption">
+							<br/>Front-end involves files and scripts that are downloaded from the server and displayed and run on a client.
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="third">
+						HTML
+						<div class="caption">
+							<br/>Hyper Text Markup Language
+							<pre><code data-trim>
+<div class="half">
+	<img src="images/webserver.png" />
+	Back-end
+</div>
+<div class="half">
+	<img src="images/laptop.png" />
+	Front-end
+</div>
+							</code></pre>
+						</div>
+					</div>
+					<div class="third">
+						CSS
+						<div class="caption">
+							<br/>Cascading Style Sheets
+							<pre><code data-trim>
+.half{
+  float: left;
+  width: 50%;
+}
+
+.half img{
+  width: 50%;
+}
+
+.third{
+  float: left;
+  width: 33.3%;
+}
+							</code></pre>
+						</div>
+					</div>
+					<div class="third">
+						JS
+						<div class="caption">
+							<br/>JavaScript
+							<pre><code data-trim>
+function myFunction() {
+    var x = document.getElementById("me");
+    x.style.fontSize = "25px";
+    x.style.color = "red";
+}
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="third">
+						PHP
+						<div class="caption">
+							<br/>PHP: Hypertext Preprocessor
+							<pre><code data-trim>
+<?php
+$t = date("H");
+
+if ($t < "10") {
+    echo "Have a good morning!";
+} elseif ($t < "20") {
+    echo "Have a good day!";
+} else {
+    echo "Have a good night!";
+}
+?>
+							</code></pre>
+						</div>
+					</div>
+					<div class="third">
+						Python
+						<div class="caption">
+							<br/>Python
+							<pre><code data-trim>
+#!/home/asiegel/dev/bin/python
+
+import sys, cgi, urllib, pafy
+print "Content-Type: video/mp4\n"
+BUFFER_SIZE = 16 * 1024
+form = cgi.FieldStorage()
+id = form["id"].value
+url = "https://www.youtube.com/watch?v=" + id
+video = pafy.new(url)
+best = video.getbest()
+req = urllib.urlopen(best.url)
+while 1:
+	chunk = req.read(BUFFER_SIZE)
+	if not chunk:
+		break
+	sys.stdout.write(chunk)
+req.close()
+							</code></pre>
+						</div>
+					</div>
+					<div class="third">
+						SQL
+						<div class="caption">
+							<br/>Structured Query Language
+							<pre><code data-trim>
+SELECT isbn,
+       title,
+       price
+ FROM  Book
+ WHERE price < (SELECT AVG(price) FROM Book)
+ ORDER BY title;
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					HTML Syntax
+					<pre><code data-trim>
+<p>This is a paragraph.</p>
+
+<img src="cat.jpg" />
+					</code></pre>
+					<p class="fragment fade-in caption">HTML tags open and close. Some have content or other tags nested inside them, as seen with the &lt;p&gt; tag. The image tag &lt;img&gt; opens and closes in the same tag, with the closing slash at the end.</p>
+				</section>
+
+				<section>
+					CSS Syntax
+				</section>
+
+				<section>
+					Basic HTML Structure
+				</section>
+
+				<section>
+					Markup Formatting
+				</section>
+
+				<section>
+					Basic CSS Structure
+				</section>
+
+				<section>
+					Organizing A Website
+				</section>
+
+				<section>
+					Resources
 				</section>
 
 				<!--
