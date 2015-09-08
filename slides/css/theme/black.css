@@ -293,3 +293,7 @@ body {
   float: left;
   width: 33.3%;
 }
+
+.imglist{
+  font-size: 0.5em !important;
+}
