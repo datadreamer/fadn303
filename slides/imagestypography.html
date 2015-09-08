@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Images & Typography - FADN 303: Web Design</title>
+
+		<meta name="description" content="Lecture slides for USC FADN 303 Web Design course. Subject is images and typography.">
+		<meta name="author" content="Aaron Siegel">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/slide.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<div class="titletext">
+						FADN 303: Web Design
+						<h1>Images &amp; Typography</h1>
+						Aaron Siegel<br/>
+						<script type="text/javascript">
+	        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+	        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+	          </script>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					Images in HTML<br/>
+					<br/>
+					<img src="images/corgismile.jpg" /><br/>
+					<br/>
+					<img src="images/img1.png" />
+				</section>
+
+				<section data-transition="fade">
+					Images in HTML<br/>
+					<br/>
+					<img src="images/corgismile.jpg" /><br/>
+					<br/>
+					<img src="images/img2.png" />
+				</section>
+
+				<section>
+					Background Images in CSS<br/>
+					<br/>
+					<div class="third">
+						<p class="caption">
+							HTML
+						</p><br/>
+						<img src="images/imgbg1.png" />
+					</div>
+					<div class="third">
+						<p class="caption">
+							CSS
+						</p><br/>
+						<img src="images/imgbg2.png" />
+					</div>
+					<div class="third">
+						<p class="caption">
+							BROWSER
+						</p>
+						<br/>
+						<article style="width:320px; height:240px; border:2px solid green; background-image:url('images/corgismile.jpg'); background-size:cover;">
+							<p style="margin-top:120px;">
+								Corgis!
+							</p>
+						</article>
+					</div>
+				</section>
+
+				<section data-background="images/corgismile.jpg">
+					<h1>Corgis!</h1>
+				</section>
+
+				<section>
+					Image Types<br/><br/>
+					<div class="third">
+						<p class="caption">
+							JPEG<br/>
+							<span style="font-size:70%; color:#999;">(1986)</span><br/><br/>
+						</p>
+						<ul class="imglist">
+							<li><i>Joint Photographic Experts Group</i></li>
+							<li>Lossy Compression</li>
+							<li>24-bit color</li>
+							<li>Good for photos.</li>
+						</ul>
+					</div>
+					<div class="third">
+						<p class="caption">
+							PNG<br/>
+							<span style="font-size:70%; color:#999;">(1996)</span><br/><br/>
+						</p>
+						<ul class="imglist">
+							<li><i>Portable Network Graphics</i></li>
+							<li>Lossless Compression</li>
+							<li>32-bit color (includes 8-bit alpha channel)</li>
+							<li>Good for illustration, text, and transparency.</li>
+						</ul>
+					</div>
+					<div class="third">
+						<p class="caption">
+							GIF<br/>
+							<span style="font-size:70%; color:#999;">(1987)</span><br/><br/>
+						</p>
+						<ul class="imglist">
+							<li><i>Graphics Interchange Format</i></li>
+							<li>Lossy Compression</li>
+							<li>8-bit indexed color</li>
+							<li>Okay for animations, but dying out.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					JPEG<br/><br/>
+					<img src="images/JPEG_example_JPG_RIP_100.jpg">
+					<img src="images/JPEG_example_JPG_RIP_050.jpg">
+					<img src="images/JPEG_example_JPG_RIP_025.jpg">
+					<img src="images/JPEG_example_JPG_RIP_010.jpg">
+					<img src="images/JPEG_example_JPG_RIP_001.jpg">
+				</section>
+
+				<section data-transition="fade" />
+					PNG<br/>
+					<img src="images/feather.png" />
+				</section>
+
+				<section data-background="#0066cc" data-transition="fade">
+					PNG<br/>
+					<img src="images/feather.png" />
+				</section>
+
+				<section data-background="images/corgismile.jpg" data-transition="fade">
+					PNG<br/>
+					<img src="images/feather.png" />
+				</section>
+
+				<section data-transition="fade">
+					GIF<br/><br/>
+					<img src="images/corgipup.gif" />
+					<p class="caption">60.3 MB</p>
+				</section>
+
+				<section data-transition="fade">
+					HTML5 Video<br/><br/>
+					<video preload="auto" autoplay="autoplay" muted="muted" loop="loop">
+						<source src="images/corgipup.webm" type="video/webm">
+					</video>
+					<p class="caption">973 KB</p>
+				</section>
+
+				<section data-transition="fade">
+					HTML5 Video (4k @ 60fps)<br/><br/>
+					<video preload="auto" autoplay="autoplay" muted="muted" loop="loop">
+						<source src="images/dancinggirl.webm" type="video/webm" />
+					</video>
+					<p class="caption">35.6 MB</p>
+					<br/>
+					<img src="images/video.png" />
+				</section>
+
+				<section data-background-video="images/dancinggirl.webm" data-transition="fade">
+				</section>
+
+				<section>
+					Font-Family
+				</section>
+
+				<section>
+					Embedding Fonts
+				</section>
+
+				<section>
+					Resetting Default CSS Styles
+				</section>
+
+				<section>
+					Styling Links with Pseudoclasses
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
