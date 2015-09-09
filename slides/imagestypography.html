@@ -59,17 +59,13 @@
 				</section>
 
 				<section data-transition="fade">
-					Images in HTML<br/>
-					<br/>
-					<img src="images/corgismile.jpg" /><br/>
+					<img src="images/corgismile.jpg" width="30%" /><br/>
 					<br/>
 					<img src="images/img1.png" />
 				</section>
 
 				<section data-transition="fade">
-					Images in HTML<br/>
-					<br/>
-					<img src="images/corgismile.jpg" /><br/>
+					<img src="images/corgismile.jpg" width="30%" /><br/>
 					<br/>
 					<img src="images/img2.png" />
 				</section>
@@ -172,13 +168,13 @@
 
 				<section data-transition="fade">
 					GIF<br/><br/>
-					<img src="images/corgipup.gif" />
+					<img src="images/corgipup.gif" width="40%" />
 					<p class="caption">60.3 MB</p>
 				</section>
 
 				<section data-transition="fade">
 					HTML5 Video<br/><br/>
-					<video preload="auto" autoplay="autoplay" muted="muted" loop="loop">
+					<video preload="auto" autoplay="autoplay" muted="muted" loop="loop" width="40%">
 						<source src="images/corgipup.webm" type="video/webm">
 					</video>
 					<p class="caption">973 KB</p>
@@ -186,7 +182,7 @@
 
 				<section data-transition="fade">
 					HTML5 Video (4k @ 60fps)<br/><br/>
-					<video preload="auto" autoplay="autoplay" muted="muted" loop="loop">
+					<video preload="auto" autoplay="autoplay" muted="muted" loop="loop" width="60%">
 						<source src="images/dancinggirl.webm" type="video/webm" />
 					</video>
 					<p class="caption">35.6 MB</p>
@@ -228,7 +224,7 @@
 						Just sit right there<br/>
 						I'll tell you how I became the prince of a town called Bel Air<br/>
 					</p><br/>
-					<img src="images/freshprince.gif" />
+					<img src="images/freshprince.gif" width="25%" />
 				</section>
 
 				<section>
@@ -314,7 +310,7 @@
 				<section>
 					All HTML Color Names In Alphabetical Order<br/>
 					<br/>
-					<table border=0 width=100%>
+					<table border=0 width=30%>
 						<tr><td bgcolor="AliceBlue">&nbsp;</td></tr>
 						<tr><td bgcolor="AntiqueWhite">&nbsp;</td></td>
 						<tr><td bgcolor="Aqua">&nbsp;</td></td>
@@ -494,6 +490,11 @@
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				width: 1280,
+				height: 720,
+				margin: 0.1,
+				minScale: 0.2,
+				maxScale: 1.5,
 				controls: true,
 				progress: true,
 				history: true,
