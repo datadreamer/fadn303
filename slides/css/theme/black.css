@@ -305,6 +305,11 @@ body {
   width: 33.3%;
 }
 
+.quarter{
+  float: left;
+  width: 25%;
+}
+
 .imglist{
   font-size: 0.5em !important;
 }
@@ -330,4 +335,43 @@ td, tr {
 
 table{
   border-collapse:collapse !important;
+}
+
+.divtest{
+  width: 300px;
+}
+
+.divtest2{
+  position: relative;
+  width: 300px;
+}
+
+.divtest3{
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin: 20px !important;
+}
+
+.divtest4{
+  width: 200px;
+  height: 200px;
+  float: right;
+  margin: 20px !important;
+}
+
+#diva{
+  background-color: #ff0000;
+}
+#divb{
+  background-color: #ff3300;
+}
+#divc{
+  background-color: #ff6600;
+}
+#divd{
+  background-color: #ff9900;
+}
+#dive{
+  background-color: #ffcc00;
 }
