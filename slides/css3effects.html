@@ -381,7 +381,7 @@
 					</div>
 					<div class="half">
 						<div style="background-color: white; color: #0099ff; padding: 30px; box-shadow: 5px 5px 10px black;">
-							NEON!
+							Box Shadow
 						</div>
 					</div>
 				</section>
@@ -665,6 +665,37 @@
 				</section>
 
 				<section>
+					Transition Timing
+					<p class="caption">
+						<br/>Adjust the speed curve of your transition animation.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							div {<br/>
+								&nbsp;&nbsp;width: 100px;<br/>
+								&nbsp;&nbsp;height: 100px;<br/>
+								&nbsp;&nbsp;background: #0099ff;<br/>
+								&nbsp;&nbsp;-webkit-transition: width 2s, height 2s, background 2s, -webkit-transform 2s;<br/>
+								&nbsp;&nbsp;transition: width 2s, height 2s, background 2s, transform 2s;<br/>
+								&nbsp;&nbsp;transition-timing-function: ease-in-out;<br/>
+							}<br/>
+							<br/>
+							div:hover {<br/>
+								&nbsp;&nbsp;width: 300px;<br/>
+								&nbsp;&nbsp;height: 300px;<br/>
+								&nbsp;&nbsp;background: red;<br/>
+								&nbsp;&nbsp;-webkit-transform: rotate(180deg);<br/>
+							  &nbsp;&nbsp;transform: rotate(180deg);<br/>
+							}
+						</code>
+					</div>
+					<div class="half">
+						<div id="transition5"></div>
+					</div>
+				</section>
+
+				<section>
 					<h2>CSS3 Animations</h2>
 				</section>
 
@@ -850,6 +881,39 @@
 					</div>
 					<div class="half">
 						<div style="width:200px; height:200px; position: relative; background:red; animation-name:example3; animation-duration:4s; animation-iteration-count: infinite;animation-direction: alternate;"></div>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					Animation Timing
+					<p class="caption">
+						<br/>Adjust the speed curve of your animations.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							@keyframes example3 {<br/>
+							    &nbsp;&nbsp;0%   {background-color: red; left:0px; top:0px;}<br/>
+							    &nbsp;&nbsp;25%  {background-color: yellow; left:200px; top:0px;}<br/>
+							    &nbsp;&nbsp;50%  {background-color: blue; left:200px; top:200px;}<br/>
+							    &nbsp;&nbsp;75%  {background-color: green; left:0px; top:200px;}<br/>
+							    &nbsp;&nbsp;100% {background-color: red; left:0px; top:0px;}<br/>
+							}<br/>
+							<br/>
+							div {<br/>
+								&nbsp;&nbsp;width: 200px;<br/>
+								&nbsp;&nbsp;height: 200px;<br/>
+								&nbsp;&nbsp;position: relative;<br/>
+								&nbsp;&nbsp;background: red;<br/>
+								&nbsp;&nbsp;animation-name: example2;<br/>
+							  &nbsp;&nbsp;animation-duration: 4s;<br/>
+								&nbsp;&nbsp;animation-iteration-count: infinite;<br/>
+								&nbsp;&nbsp;animation-timing-function: linear;<br/>
+							}
+						</code>
+					</div>
+					<div class="half">
+						<div style="width:200px; height:200px; position: relative; background:red; animation-name:example3; animation-duration:4s; animation-iteration-count: infinite;animation-timing-function: linear;"></div>
 					</div>
 				</section>
 
