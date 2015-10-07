@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Javascript & jQuery - FADN 303: Web Design</title>
+
+		<meta name="description" content="Lecture slides for USC FADN 303 Web Design course. Subject is Javascript & jQuery.">
+		<meta name="author" content="Aaron Siegel">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/animation.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/examples.js"></script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<div class="titletext">
+						FADN 303: Web Design
+						<h1>Javascript & jQuery</h1>
+						Aaron Siegel<br/>
+						<script type="text/javascript">
+	        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+	        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+	          </script>
+					</div>
+				</section>
+
+				<section>
+					<h2>Javascript</h2>
+				</section>
+
+				<section>
+					What is Javascript?<br/><br/>
+					<ul class="caption">
+						<li>Industry standard scripting language of the web.</li>
+						<li>Used to program behavior of web pages.</li>
+						<li>High-level, dynamic, untyped, and interpreted.</li>
+						<li>Chunks of code are distributed as javascript libraries.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>jQuery</h2>
+				</section>
+
+				<section>
+					What is jQuery?<br/><br/>
+					<ul class="caption">
+						<li>Javascript library for programming page behavior.</li>
+						<li>Shortcuts for performing Javascript tasks.</li>
+						<li>HTML/DOM/CSS manipulation.</li>
+						<li>Events, listeners, and loops.</li>
+						<li>Effects and Animations.</li>
+						<li>Asynchronous Javascript and XML (AJAX).</li>
+						<li>Thousands of plugins.</li>
+					</ul>
+				</section>
+
+				<section data-transition="fade">
+					Including jQuery
+					<p class="caption">
+						<br/>To use a javascript library, it has to be included in your HTML document. This is similar to referencing external CSS files, where it has to be declared inside the <code>&lt;head&gt;</code> tags. This will allow you to make use of all of jQuery's methods.
+					</p>
+					<br/>
+					<div  style="text-align: left; font-size:0.4em;">
+						<code>
+								&lt;head&gt;<br/>
+								&nbsp;&nbsp;&lt;script src="jquery-1.11.3.min.js"&gt;&lt;/script&gt;<br/>
+								&lt;/head&gt;<br/>
+						</code><br/>
+						or<br/><br/>
+						<code>
+								&lt;head&gt;<br/>
+								&nbsp;&nbsp;&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;<br/>
+								&lt;/head&gt;<br/>
+						</code>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					jQuery Syntax
+					<p class="caption">
+						<br/>Basic syntax uses the <code>$(selector).action()</code> format.<br/>
+						<br/>
+						The $ symbol indicates that you're making use of jQuery. The selector is the CSS selector used to declare the element(s) that will be affected. The action is the method used to apply some change to the selected element(s).
+					</p>
+					<br/>
+					<div class="third" style="text-align: left; font-size:0.4em;">
+						<code>
+							$(function(){<br/>
+								&nbsp;&nbsp;<br/>
+							  &nbsp;&nbsp;$("#jstest1a").click(function(){<br/>
+							    &nbsp;&nbsp;&nbsp;&nbsp;$("#jstest1b").toggle();<br/>
+							  &nbsp;&nbsp;});<br/>
+							<br/>
+							});
+						</code>
+					</div>
+					<div class="third">
+						<div id="jstest1a" style="background-color:#0099ff; padding:50px;float:left;">
+								Click me!
+						</div>
+					</div>
+					<div class="third">
+						<div id="jstest1b" style="background-color:#0066cc; padding:50px;float:left;">
+							Watch me!
+						</div>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					jQuery Events
+					<p class="caption">
+						<br/>jQuery can be used to write code that occurs on particular events.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							$(function(){<br/>
+								<br/>
+								&nbsp;&nbsp;$("#jstest2a").on({<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;mouseenter: function(){<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("#jstest2b").css("background-color", "red");<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;mouseleave: function(){<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("#jstest2b").css("background-color", "#0066cc");<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;click: function(){<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("#jstest2b").css("background-color", "green");<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+							  &nbsp;&nbsp;});
+							<br/>
+							});
+						</code>
+					</div>
+					<div class="half">
+						<div id="jstest2a" style="width:300px;background-color:#0099ff; padding:50px;float:left; margin-bottom:20px;">
+								Click me!
+						</div>
+						<div id="jstest2b" style="width:300px;background-color:#0066cc; padding:50px;float:left;">
+							Watch me!
+						</div>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					jQuery Hide/Show
+					<p class="caption">
+						<br/>The display of elements can be toggled based on events.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							$(function(){<br/>
+								<br/>
+								&nbsp;&nbsp;$("#jstest3a").on({<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;mouseenter: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest3b").hide();<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;mouseleave: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest3b").show();<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;click: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest3c").toggle();<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+							  &nbsp;&nbsp;});<br/>
+							<br/>
+							});
+						</code>
+					</div>
+					<div class="half">
+						<div id="jstest3a" style="width:65%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px;">
+							a
+						</div>
+						<div id="jstest3b" style="width:30%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px; margin-right: 5%;">
+							b
+						</div>
+						<div id="jstest3c" style="width:30%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px;">
+							c
+						</div>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					jQuery Fade
+					<p class="caption">
+						<br/>Elements can be faded in and out at whim.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							$(function(){<br/>
+								<br/>
+								&nbsp;&nbsp;$("#jstest4a").on({<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;mouseenter: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest4b").fadeOut();<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;mouseleave: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest4b").fadeIn();<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;click: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest4c").fadeToggle();<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+							  &nbsp;&nbsp;});<br/>
+							<br/>
+							});
+						</code>
+					</div>
+					<div class="half">
+						<div id="jstest4a" style="width:65%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px;">
+							a
+						</div>
+						<div id="jstest4b" style="width:30%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px; margin-right: 5%;">
+							b
+						</div>
+						<div id="jstest4c" style="width:30%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px;">
+							c
+						</div>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					jQuery Slide
+					<p class="caption">
+						<br/>Elements can be revealed or hidden by sliding up and down.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							$(function(){<br/>
+								<br/>
+								&nbsp;&nbsp;$("#jstest5a").on({<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;mouseenter: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest5b").slideDown();<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;mouseleave: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest5b").slideUp();<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;click: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest5c").slideToggle();<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+							  &nbsp;&nbsp;});<br/>
+							<br/>
+							});
+						</code>
+					</div>
+					<div class="half">
+						<div id="jstest5a" style="width:65%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px; ">
+							a
+						</div>
+						<div id="jstest5b" style="width:30%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px; margin-right: 5%;display: none;">
+							b
+						</div>
+						<div id="jstest5c" style="width:30%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px;display: none;">
+							c
+						</div>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					jQuery Animate
+					<p class="caption">
+						<br/>Elements can be animated by specifying different css properties to affect.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							$(function(){<br/>
+								<br/>
+								&nbsp;&nbsp;$("#jstest5a").on({<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;mouseenter: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest6b").animate({<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    marginLeft: '35%'<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  });<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;mouseleave: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest6b").animate({<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    marginLeft: '0%'<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  });<br/>
+						  	&nbsp;&nbsp;&nbsp;&nbsp;  },<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;click: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest6b").animate({<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    marginTop: '+=20px'<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  });<br/>
+						  	&nbsp;&nbsp;&nbsp;&nbsp;  }<br/>
+							  &nbsp;&nbsp;});<br/>
+							<br/>
+							});
+						</code>
+					</div>
+					<div class="half">
+						<div id="jstest6a" style="width:65%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px; ">
+							a
+						</div>
+						<div id="jstest6b" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; float: left;">
+							b
+						</div>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					jQuery Animate
+					<p class="caption">
+						<br/>Multiple animations can be stacked together.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							$(function(){<br/>
+								<br/>
+								&nbsp;&nbsp;$("#jstest7a").on({<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;mouseenter: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("#jstest7b").animate({width:'65%'});<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("#jstest7b").animate({height:'200px'});<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;mouseleave: function(){<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("#jstest7b").animate({height:'auto'});<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("#jstest7b").animate({width:'30%'});<br/>
+						  	&nbsp;&nbsp;&nbsp;&nbsp;  }<br/>
+							  &nbsp;&nbsp;});<br/>
+							<br/>
+							});
+						</code>
+					</div>
+					<div class="half">
+						<div id="jstest7a" style="width:65%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px; ">
+							a
+						</div>
+						<div id="jstest7b" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; float: left;">
+							b
+						</div>
+					</div>
+				</section>
+
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
