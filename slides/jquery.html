@@ -111,7 +111,7 @@
 				</section>
 
 				<section data-transition="fade">
-					jQuery Syntax
+					Basic Syntax
 					<p class="caption">
 						<br/>Basic syntax uses the <code>$(selector).action()</code> format.<br/>
 						<br/>
@@ -142,7 +142,7 @@
 				</section>
 
 				<section data-transition="fade">
-					jQuery Events
+					Events
 					<p class="caption">
 						<br/>jQuery can be used to write code that occurs on particular events.
 					</p>
@@ -177,7 +177,7 @@
 				</section>
 
 				<section data-transition="fade">
-					jQuery Hide/Show
+					Hiding / Showing
 					<p class="caption">
 						<br/>The display of elements can be toggled based on events.
 					</p>
@@ -215,7 +215,7 @@
 				</section>
 
 				<section data-transition="fade">
-					jQuery Fade
+					Fading
 					<p class="caption">
 						<br/>Elements can be faded in and out at whim.
 					</p>
@@ -253,7 +253,7 @@
 				</section>
 
 				<section data-transition="fade">
-					jQuery Slide
+					Sliding
 					<p class="caption">
 						<br/>Elements can be revealed or hidden by sliding up and down.
 					</p>
@@ -291,7 +291,7 @@
 				</section>
 
 				<section data-transition="fade">
-					jQuery Animate
+					Animating
 					<p class="caption">
 						<br/>Elements can be animated by specifying different css properties to affect.
 					</p>
@@ -332,7 +332,7 @@
 				</section>
 
 				<section data-transition="fade">
-					jQuery Animate
+					Multiple Animations
 					<p class="caption">
 						<br/>Multiple animations can be stacked together.
 					</p>
@@ -361,6 +361,103 @@
 						</div>
 						<div id="jstest7b" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; float: left;">
 							b
+						</div>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					Geting / Setting Content
+					<p class="caption">
+						<br/>jQuery can be used to dynamically read or write the content of elements.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							$(function(){<br/>
+								<br/>
+								&nbsp;&nbsp;$("#jstest8a").click(function(){<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;  var stuff = $("#jstest8b").text();<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest8c").text(stuff);<br/>
+							  &nbsp;&nbsp;});<br/>
+							<br/>
+							});
+						</code>
+					</div>
+					<div class="half">
+						<div id="jstest8a" style="width:65%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px; ">
+							Click to copy.
+						</div>
+						<div id="jstest8b" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; float: left;">
+							Stuff
+						</div>
+						<div id="jstest8c" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; float: left;">
+							Here
+						</div>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					Append / Prepend
+					<p class="caption">
+						<br/>jQuery can be used to dynamically append or prepend content inside elements.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							$(function(){<br/>
+								<br/>
+								&nbsp;&nbsp;$("#jstest9a").click(function(){<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest9c").append("more stuff after!&lt;br/&gt;");<br/>
+							  &nbsp;&nbsp;});<br/><br/>
+							  &nbsp;&nbsp;$("#jstest9b").click(function(){<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest9c").prepend("more stuff before!&lt;br/&gt;");<br/>
+							  &nbsp;&nbsp;});<br/>
+							<br/>
+							});
+						</code>
+					</div>
+					<div class="half">
+						<div id="jstest9a" style="width:30%; background-color:#0099ff; padding: 20px 0px 20px 0px; margin-bottom: 20px; float: left; margin-right: 5%; font-size: 0.4em">
+							Append
+						</div>
+						<div id="jstest9b" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-bottom: 20px; float: left; font-size: 0.4em">
+							Prepend
+						</div>
+						<div id="jstest9c" style="width:65%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; clear:both; font-size: 0.4em">
+							---<br/>
+						</div>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					After / Before
+					<p class="caption">
+						<br/>jQuery can be used to dynamically add content before or after elements.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							$(function(){<br/>
+								<br/>
+								&nbsp;&nbsp;$("#jstest9a").click(function(){<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest9c").append("more stuff after!&lt;br/&gt;");<br/>
+							  &nbsp;&nbsp;});<br/><br/>
+							  &nbsp;&nbsp;$("#jstest9b").click(function(){<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest9c").prepend("more stuff before!&lt;br/&gt;");<br/>
+							  &nbsp;&nbsp;});<br/>
+							<br/>
+							});
+						</code>
+					</div>
+					<div class="half">
+						<div id="jstest10a" style="width:30%; background-color:#0099ff; padding: 20px 0px 20px 0px; margin-bottom: 20px; float: left; margin-right: 5%; font-size: 0.4em">
+							After
+						</div>
+						<div id="jstest10b" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-bottom: 20px; float: left; font-size: 0.4em">
+							Before
+						</div>
+						<div id="jstest10c" style="width:65%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; clear:both; font-size: 0.4em">
+							---<br/>
 						</div>
 					</div>
 				</section>

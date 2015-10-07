@@ -87,4 +87,26 @@ $(function(){
     }
   });
 
+
+  $("#jstest8a").click(function(){
+    var stuff = $("#jstest8b").text();
+    $("#jstest8c").text(stuff);
+  });
+
+
+  $("#jstest9a").click(function(){
+    $("#jstest9c").append("more stuff after!<br/>");
+  });
+  $("#jstest9b").click(function(){
+    $("#jstest9c").prepend("more stuff before!<br/>");
+  });
+
+
+  $("#jstest10a").click(function(){
+    $("#jstest10c").after("<div style='width:65%; background-color:#0099ff; padding: 20px 0px 20px 0px; margin-right: 5%; clear:both; font-size: 0.4em'>more after</div>");
+  });
+  $("#jstest10b").click(function(){
+    $("#jstest10c").before("<div style='width:65%; background-color:#33ccff; padding: 20px 0px 20px 0px; margin-right: 5%; clear:both; font-size: 0.4em'>more before</div>");
+  });
+
 });
