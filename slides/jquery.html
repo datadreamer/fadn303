@@ -439,11 +439,11 @@
 						<code>
 							$(function(){<br/>
 								<br/>
-								&nbsp;&nbsp;$("#jstest9a").click(function(){<br/>
-							  &nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest9c").append("more stuff after!&lt;br/&gt;");<br/>
+								&nbsp;&nbsp;$("#jstest10a").click(function(){<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest10c").append("more stuff after!&lt;br/&gt;");<br/>
 							  &nbsp;&nbsp;});<br/><br/>
-							  &nbsp;&nbsp;$("#jstest9b").click(function(){<br/>
-							  &nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest9c").prepend("more stuff before!&lt;br/&gt;");<br/>
+							  &nbsp;&nbsp;$("#jstest10b").click(function(){<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest10c").prepend("more stuff before!&lt;br/&gt;");<br/>
 							  &nbsp;&nbsp;});<br/>
 							<br/>
 							});
@@ -460,6 +460,48 @@
 							---<br/>
 						</div>
 					</div>
+				</section>
+
+				<section data-transition="fade">
+					jQuery Dimensions
+					<p class="caption">
+						<br/>jQuery can be used to grab the dimensions of any elements current size.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							$(function(){<br/>
+								<br/>
+								&nbsp;&nbsp;$("#jstest11a").click(function(){<br/>
+							  &nbsp;&nbsp;&nbsp;&nbsp;var w = $("#jstest11a").width();<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;var h = $("#jstest11a").height();<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;$("#jstest11a").after("&lt;br/&gt;" + w +" "+ h);<br/>
+							  &nbsp;&nbsp;});<br/>
+							<br/>
+							});
+						</code>
+					</div>
+					<div class="half">
+						<img id="jstest11a" src="images/jquery_dimensions.png">
+					</div>
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<p class="caption">
+						<a href="http://www.w3schools.com/jquery/jquery_intro.asp">jQuery Introduction</a><br/>
+						<a href="http://www.w3schools.com/jquery/jquery_syntax.asp">jQuery Syntax</a><br/>
+						<a href="http://www.w3schools.com/jquery/jquery_selectors.asp">jQuery Selectors</a><br/>
+						<a href="http://www.w3schools.com/jquery/jquery_events.asp">jQuery Events</a><br/>
+						<a href="http://www.w3schools.com/jquery/jquery_hide_show.asp">Hide/Show</a><br/>
+						<a href="http://www.w3schools.com/jquery/jquery_fade.asp">Fade</a><br/>
+						<a href="http://www.w3schools.com/jquery/jquery_slide.asp">Slide</a><br/>
+						<a href="http://www.w3schools.com/jquery/jquery_animate.asp">Animate</a><br/>
+						<a href="http://www.w3schools.com/jquery/jquery_dom_get.asp">Get</a> / <a href="http://www.w3schools.com/jquery/jquery_dom_set.asp">Set</a><br/>
+						<a href="http://www.w3schools.com/jquery/jquery_dom_add.asp">Add</a> / <a href="http://www.w3schools.com/jquery/jquery_dom_remove.asp">Remove</a><br/>
+						<a href="http://www.w3schools.com/jquery/jquery_dimensions.asp">Dimensions</a><br/>
+					</p>
+
 				</section>
 
 

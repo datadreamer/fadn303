@@ -109,4 +109,10 @@ $(function(){
     $("#jstest10c").before("<div style='width:65%; background-color:#33ccff; padding: 20px 0px 20px 0px; margin-right: 5%; clear:both; font-size: 0.4em'>more before</div>");
   });
 
+  $("#jstest11a").click(function(){
+    var w = $("#jstest11a").width();
+    var h = $("#jstest11a").height();
+    $("#jstest11a").after("<br/>" + w +" "+ h);
+  });
+
 });
