@@ -73,6 +73,111 @@
 				</section>
 
 				<section>
+					Javascript Variables
+					<p class="caption">
+						<br/>Javascript allows you to store information as variables which can be used in your program.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							var a = "hey!";<br/>
+							var x = 5;<br/>
+							var y = 6;<br/>
+							var z = x + y;<br/>
+							console.log(z);<br/>
+							document.getElementById("jssyntax").innerHTML = a;<br/>
+							document.getElementById("jssyntax").innerHTML = z;
+						</code>
+					</div>
+
+					<div class="half">
+						<div id="jssyntax" style="background-color:#0099ff; padding:50px;float:left; margin-right: 5%;">
+						</div>
+						<div id="jssyntax2" style="background-color:#0099ff; padding:50px;float:left;">
+						</div>
+						<script>
+							var a = "hey!";
+							var x = 5;
+							var y = 6;
+							var z = x + y;
+							console.log(z);
+							document.getElementById("jssyntax").innerHTML = a;
+							document.getElementById("jssyntax2").innerHTML = z;
+						</script>
+					</div>
+				</section>
+
+				<section>
+					Javascript Variables
+					<p class="caption">
+						<br/>Beyond simple numbers and strings, javascript can hold arrays and associative arrays.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							var dogBreeds = ["Corgi", "Chihuahua", "German Shepard"];<br/>
+							var dog = {name:"Oscar", breed:"Dachsund", age:6};<br/>
+							for(var i=0; i&lt;dogBreeds.length; i++){<br/>
+							&nbsp;&nbsp;document.getElementById("jssyntax3").innerHTML += dogBreeds[i] + "&lt;br/&gt;";<br/>
+						}<br/>
+						document.getElementById("jssyntax4").innerHTML = dog.name +" is a "+ dog.breed + " that is "+ dog.age +" years old.";
+						</code>
+					</div>
+
+					<div class="half">
+						<div id="jssyntax3" style="background-color:#0099ff; padding:50px;float:left; margin-left: 5%; font-size:0.4em; margin-bottom: 20px; width:300px;">
+						</div>
+						<div id="jssyntax4" style="background-color:#0099ff; padding:50px;float:left; margin-left: 5%; font-size:0.4em;clear:both; width:300px;">
+						</div>
+						<script>
+							var dogBreeds = ["Corgi", "Chihuahua", "German Shepard"];
+							var dog = {name:"Oscar", breed:"Dachsund", age:6};
+							for(var i=0; i<dogBreeds.length; i++){
+								document.getElementById("jssyntax3").innerHTML += dogBreeds[i] + "<br/>";
+							}
+							document.getElementById("jssyntax4").innerHTML = dog.name +" is a "+ dog.breed +" that is "+ dog.age +" years old.";
+						</script>
+					</div>
+				</section>
+
+				<section>
+					Javascript Functions
+					<p class="caption">
+						<br/>Functions are chunks of code that are used to perform an operation.
+					</p>
+					<br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							function kmToMiles(dist){<br/>
+								&nbsp;&nbsp;return dist * 0.621371;<br/>
+							}<br/>
+							function milesToKm(dist){<br/>
+								&nbsp;&nbsp;return dist * 1.60934;<br/>
+							}<br/>
+							document.getElementById("jssyntax5").innerHTML = "5km is "+ kmToMiles(5) + " miles";<br/>
+							document.getElementById("jssyntax6").innerHTML = "5 miles is "+ milesToKm(5) + " km";
+						</code>
+					</div>
+
+					<div class="half">
+						<div id="jssyntax5" style="background-color:#0099ff; padding:50px;float:left; margin-left: 5%; font-size:0.4em; margin-bottom: 20px; width:300px;">
+						</div>
+						<div id="jssyntax6" style="background-color:#0099ff; padding:50px;float:left; margin-left: 5%; font-size:0.4em; margin-bottom: 20px; width:300px;">
+						</div>
+						<script>
+							function kmToMiles(dist){
+								return dist * 0.621371;
+							}
+							function milesToKm(dist){
+								return dist * 1.60934;
+							}
+							document.getElementById("jssyntax5").innerHTML = "5km is "+ kmToMiles(5) + " miles";
+							document.getElementById("jssyntax6").innerHTML = "5 miles is "+ milesToKm(5) + " km";
+						</script>
+					</div>
+				</section>
+
+				<section>
 					<h2>jQuery</h2>
 				</section>
 
