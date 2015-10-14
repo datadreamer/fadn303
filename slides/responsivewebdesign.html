@@ -17,7 +17,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
-		<link rel="stylesheet" href="css/animation.css">
+		<link rel="stylesheet" href="css/mediaqueries.css">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -59,6 +59,14 @@
 				</section>
 
 				<section>
+					<ol>
+						<li>Fluid Grid</li>
+						<li>Mobile First</li>
+						<li>Progressive Enhancement</li>
+					</ol>
+				</section>
+
+				<section>
 					<h2>Fluid Grid</h2>
 				</section>
 
@@ -66,10 +74,11 @@
 				</section>
 
 				<section data-background="#fff">
+					Designing with Columns<br/><br/>
 					<img src="images/fluidgrid.png">
 				</section>
 
-				<section data-background="#121212">
+				<section data-background="#141414">
 					<img src="images/contentislikewater.jpg">
 				</section>
 
@@ -81,11 +90,76 @@
 				</section>
 
 				<section>
+					<i>Last year’s mobile data traffic was nearly 30 times the size of the entire global Internet in 2000.</i>
+				</section>
+
+				<section>
+					<i>By the end of 2014, the number of mobile-connected devices exceeded the number of people on earth, and by 2019 there will be nearly 1.5 mobile devices per capita.</i>
+				</section>
+
+				<section>
+					<i>In 2014, the number of mobile-connected tablets increased 1.6-fold to 74 million, and each tablet generated 2.5 times more traffic than the average smartphone.</i>
+				</section>
+
+				<section>
 					<h2>Progressive Enhancement</h2>
+				</section>
+
+				<section data-background="images/mobile_devices.jpg">
 				</section>
 
 				<section>
 					<h2>Media Queries</h2>
+				</section>
+
+				<section>
+					Responding to Device Resolution<br/><br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							@media screen and (min-width: 640px) {<br/>
+							&nbsp;&nbsp;#mediatest1 { background-color: lightgreen; }<br/>
+							}<br/>
+							@media screen and (min-width: 960px) {<br/>
+							&nbsp;&nbsp;#mediatest1 { background-color: yellow; }<br/>
+							}<br/>
+							@media screen and (min-width: 1280px) {<br/>
+							&nbsp;&nbsp;#mediatest1 { background-color: orange; }<br/>
+							}<br/>
+							@media screen and (min-width: 1440px) {<br/>
+							&nbsp;&nbsp;#mediatest1 { background-color: red; }<br/>
+							}
+						</code>
+					</div>
+					<div class="half">
+						<div id="mediatest1">
+							#mediatest1
+						</div>
+					</div>
+				</section>
+
+				<section>
+					Responding to Device Resolution<br/><br/>
+					<div class="half" style="text-align: left; font-size:0.4em;">
+						<code>
+							@media screen and (min-width: 640px) {<br/>
+							&nbsp;&nbsp;#mediatest2 { font-size: 1.2em; }<br/>
+							}<br/>
+							@media screen and (min-width: 960px) {<br/>
+							&nbsp;&nbsp;#mediatest2 { font-size: 1.5em; }<br/>
+							}<br/>
+							@media screen and (min-width: 1280px) {<br/>
+							&nbsp;&nbsp;#mediatest2 { font-size: 2em; }<br/>
+							}<br/>
+							@media screen and (min-width: 1440px) {<br/>
+							&nbsp;&nbsp;#mediatest2 { font-size: 2.5em; }<br/>
+							}
+						</code>
+					</div>
+					<div class="half">
+						<div id="mediatest2">
+							change this text size.
+						</div>
+					</div>
 				</section>
 
 				<section>
@@ -96,7 +170,8 @@
 					<h2>Resources</h2>
 					<ul class="caption">
 						<li><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp">W3Schools - @media Rule</a></li>
-						<li><a href="http://mediaqueri.es/">Media Queries</a></li>
+						<li><a href="http://mediaqueri.es/">Media Queries - Portfolio of Responsive Design</a></li>
+						<li><a href="http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/white_paper_c11-520862.html">Cisco Global Mobile Data Traffic Forecast 2014-2019</a></li>
 					</ul>
 				</section>
 
