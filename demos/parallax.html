@@ -5,12 +5,26 @@
 		<title>Basic Parallax Scrolling Demo</title>
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
 		<link rel="stylesheet" type="text/css" href="css/parallax.css">
+		<!--
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/smoothscroll.js"></script>
+		-->
 	</head>
 
 	<body>
+
+		<!--
+		<header>
+			<a href="#section1">First</a>
+			<a href="#section2">Second</a>
+			<a href="#section3">Third</a>
+			<a href="#section4">Fourth</a>
+		</header>
+		-->
+
 		<div class="parallax">
 
-			<section class="parallax_group">
+			<section class="parallax_group" id="section1">
 				<div class="parallax_layer parallax_layer_base">
 					<div class="title" style="background-color: rgba(0,150,255,0.5);">
 						Here comes the parallax.
@@ -18,7 +32,7 @@
 				</div>
 			</section>
 
-			<section class="parallax_group" style="background-color: rgba(200,200,200,0.5)">
+			<section class="parallax_group" id="section2" style="background-color: rgba(200,200,200,0.5)">
 				<div class="parallax_layer parallax_layer_base">
 					<div class="title" style="background-color: rgba(0,150,255,0.5);">
 						Base Layer
@@ -36,25 +50,25 @@
 				</div>
 			</section>
 
-			<section class="parallax_group">
+			<section class="parallax_group" id="section3">
 				<div class="parallax_layer parallax_layer_base">
 					<div class="title" style="background-color: rgba(255,255,0,0.5);">
-						Base Layer
+						I move at a normal rate.
 					</div>
 				</div>
 				<div class="parallax_layer parallax_layer_fg">
 					<div class="title" style="background-color: rgba(255,150,0,0.5);">
-						Foreground Layer
+						I move faster in the foreground.
 					</div>
 				</div>
 				<div class="parallax_layer parallax_layer_bg">
 					<div class="title" style="background-color: rgba(255,0,150,0.5);">
-						Background Layer
+						I move slower in the background.
 					</div>
 				</div>
 			</section>
 
-			<section class="parallax_group" style="background-color: rgba(200,200,0,0.5)">
+			<section class="parallax_group" id="section4" style="background-color: rgba(200,200,0,0.5)">
 				<div class="parallax_layer parallax_layer_base">
 					<div class="title" style="background-color: rgba(255,0,0,0.5)">
 						Base Layer
