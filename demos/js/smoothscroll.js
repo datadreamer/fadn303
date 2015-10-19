@@ -4,7 +4,7 @@ $(document).ready(function(){
 	    e.preventDefault();
 	    var target = this.hash;
 	    var $target = $(target);
-	    $('.parallax').stop().animate({ 'scrollTop': $target.position().top}, 2000, 'swing');
+	    $('body').stop().animate({ 'scrollTop': $target.offset().top}, 2000, 'swing');
 	});
 
 });
