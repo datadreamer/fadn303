@@ -117,114 +117,114 @@ section{
   height: auto;
 }
 
-#t1{
-  top: -10vw;
-  left: 10vh;
+.bg{
   transform: translateZ(-50px) scale(0.7);
+  filter: blur(20px);
+  -webkit-filter: blur(5px);
+}
+
+.fg{
+  transform: translateZ(50px) scale(1.5);
+  filter: blur(20px) !important;
+  -webkit-filter: blur(2px);
+}
+
+#t1{
+  top: -10vh;
+  left: -10vw;
 }
 
 #t2{
-  top: 20vw;
-  left: 30vh;
-  transform: translateZ(-50px) scale(0.7);
+  top: 20vh;
+  left: 30vw;
 }
 
 #t3{
-  top: 50vw;
-  left: 90vh;
-  transform: translateZ(-50px) scale(0.7);
+  top: 50vh;
+  left: 90vw;
 }
 
 #t4{
-  top: 80vw;
-  left: 10vh;
-  transform: translateZ(-50px) scale(0.7);
+  top: 80vh;
+  left: 10vw;
 }
 
 #t5{
-  top: 10vw;
-  left: 40vh;
-  transform: translateZ(-50px) scale(0.7);
+  top: 10vh;
+  left: 40vw;
 }
 
 #t6{
-  top: 40vw;
-  left: 10vh;
-  transform: translateZ(-50px) scale(0.7);
+  top: 40vh;
+  left: 10vw;
 }
 
 #t7{
-  top: 50vw;
-  left: 70vh;
-  transform: translateZ(-50px) scale(0.7);
+  top: 50vh;
+  left: 70vw;
 }
 
 #t8{
-  top: 30vw;
-  left: 10vh;
+  top: 30vh;
+  left: 10vw;
 }
 
 #t9{
-  top: 20vw;
-  left: 60vh;
+  top: 20vh;
+  left: 50vw;
 }
 
 #t10{
-  top: 10vw;
-  left: 80vh;
+  top: 10vh;
+  left: 80vw;
 }
 
 #t11{
-  top: 80vw;
-  left: 20vh;
+  top: 80vh;
+  left: 20vw;
 }
 
 #t12{
-  top: 30vw;
-  left: 10vh;
+  top: 30vh;
+  left: 0vw;
 }
 
 #t13{
-  top: 40vw;
-  left: 70vh;
+  top: 40vh;
+  left: 70vw;
 }
 
 #t14{
-  top: 0vw;
-  left: 80vh;
+  top: 10vh;
+  left: 90vw;
 }
 
 #t15{
-  top: 60vw;
-  left: 10vh;
+  top: 60vh;
+  left: 10vw;
 }
 
 #t16{
-  top: 80vw;
-  left: 40vh;
-  transform: translateZ(50px) scale(1.5);
+  top: 80vh;
+  left: 20vw;
 }
 
 #t17{
-  top: -10vw;
-  left: 80vh;
-  transform: translateZ(100px) scale(2);
+  top: -10vh;
+  left: 80vw;
 }
 
 #t18{
-  top: 10vw;
-  left: 10vh;
-  transform: translateZ(100px) scale(2);
+  top: -10vh;
+  left: 10vw;
 }
 
 #t19{
-  top: 0vw;
-  left: 50vh;
-  transform: translateZ(100px) scale(2);
+  top: 0vh;
+  left: 50vw;
 }
 
 #t20{
-  top: 50vw;
-  left: 30vh;
-  transform: translateZ(100px) scale(2);
+  top: 50vh;
+  left: 30vw;
 }
