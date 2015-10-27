@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+		<title>Paginated Scrolling Demo</title>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+		<link rel="stylesheet" type="text/css" href="css/scrolling.css">
+		<link rel="stylesheet" type="text/css" href="css/onepage-scroll.css" />
+		<script src="js/jquery-1.11.3.js"></script>
+	  <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+	</head>
+
+	<body>
+
+		<div class="main">
+		  <section class="fullpage" id="section1">
+				<div class="title">Hello Visitor.</div>
+	    </section>
+
+	    <section class="fullpage" id="section2" style="background-attachment:local;">
+				<div class="title">Welcome to the page.</div>
+	    </section>
+
+	    <section class="fullpage" id="section3">
+				<div class="title">I'm glad you're enjoying my different sections.</div>
+	    </section>
+
+			<section class="fullpage" id="section4">
+				<div class="title">That's all for now. :)</div>
+	    </section>
+		</div>
+
+		<script type="text/javascript">
+	    $(".main").onepage_scroll({
+	      sectionContainer: "section"
+	    });
+  	</script>
+
+	</body>
+</html>
