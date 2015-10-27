@@ -103,6 +103,7 @@ section{
 }
 
 #page8{
+  display: none;
   opacity: 0;
   background-color: #000;
 }
@@ -115,17 +116,24 @@ section{
   position: absolute;
   width: 160px;
   height: auto;
+  transition: 200ms filter linear;
+  -webkit-transition: 200ms -webkit-filter linear;
+}
+
+.thumb:hover{
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
 }
 
 .bg{
   transform: translateZ(-50px) scale(0.7);
-  filter: blur(20px);
+  filter: blur(5px);
   -webkit-filter: blur(5px);
 }
 
 .fg{
   transform: translateZ(50px) scale(1.5);
-  filter: blur(20px) !important;
+  filter: blur(2px);
   -webkit-filter: blur(2px);
 }
 
