@@ -98,10 +98,9 @@
 			$(function(){
 				$(window).scroll(function(e){
 					if(!s.isAnimatingTo()){
-						if(lastpos < s.getScrollTop()){
-							console.log("lastpos: "+ lastpos);
+						if(lastpos < s.getScrollTop()){					// scrolling down
 							scrollNext(s.getScrollTop());
-						} else {
+						} else if(lastpos > s.getScrollTop()){	// scrolling up
 							scrollPrev(s.getScrollTop());
 						}
 					}
@@ -113,9 +112,7 @@
 			function scrollNext(pos){
 				for(var i=0; i<keyframes.length; i++){
 					if(pos < keyframes[i]){
-						dur = keyframes[i] - lastpos;
-						s.animateTo(keyframes[i], {"duration":dur});
-						lastpos = keyframes[i];
+						scrollToPos(keyframes[i], keyframes[i] - lastpos);
 						break;
 					}
 				}
@@ -124,12 +121,18 @@
 			function scrollPrev(pos){
 				for(var i=0; i<keyframes.length; i++){
 					if(pos > keyframes[i] && pos < keyframes[i+1]){
-						dur = lastpos - keyframes[i];
-						s.animateTo(keyframes[i], {"duration":dur});
-						lastpos = keyframes[i];
+						scrollToPos(keyframes[i], lastpos - keyframes[i]);
+						break;
+					} else if(pos < keyframes[0]){
+						scrollToPos(0, pos);
 						break;
 					}
 				}
+			}
+
+			function scrollToPos(pos, dur){
+				s.animateTo(pos, {"duration":dur, "easing":"outCubic"});
+				lastpos = pos;
 			}
     </script>
 
