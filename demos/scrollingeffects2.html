@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+		<title>Scrolling Effects Demo</title>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" type="text/css" href="css/scrollingeffects.css">
+    <script src="js/jquery-1.11.3.js"></script>
+	</head>
+
+	<body>
+
+    <section id="page1">
+      <div class="center" data-0="opacity:1;" data-200="opacity:0;">
+        <span class="title">
+          Scroll Down
+        </span>
+      </div>
+    </section>
+
+    <section id="page2" data-500="opacity:0;" data-1000="opacity:1;">
+      <div class="center" data-1000="transform:rotateY(0deg);" data-2000="transform:rotateY(360deg);">
+        <span class="title">
+          Spinning Element
+        </span>
+      </div>
+    </section>
+
+    <section id="page3" data-2000="opacity:0;" data-2500="opacity:1;">
+      <div class="center" data-2500="filter:blur(50px); opacity:0;" data-3500="filter:blur(0px); opacity:1;" data-4500="filter:blur(0px); opacity:1;" data-5500="filter:blur(50px); opacity:0;" >
+        <span class="title">
+          Get your eyes checked.
+        </span>
+      </div>
+    </section>
+
+    <section id="page4" data-5500="opacity:0;" data-6500="opacity:1;">
+      <div class="center" data-6500="left:-20%;" data-7500="left[cubic]:50%;" data-8500="left[cubic]:50%;" data-9500="left:120%;" >
+        <span class="title">
+          Slide in then out.
+        </span>
+      </div>
+    </section>
+
+    <section id="page5" data-9500="opacity:1; height:0vh; bottom:0px; top:100vh;" data-10500="opacity:1; height:100vh; bottom:0px; top:0vh;">
+      <div class="center">
+        <span class="title">
+          Wipe upward!
+        </span>
+      </div>
+    </section>
+
+    <section id="page6" data-10500="opacity:1; width:0%;" data-11500="opacity:1; width:100%;">
+      <div class="center">
+        <span class="title">
+          Wipe sideways!
+        </span>
+      </div>
+    </section>
+
+    <section id="page7" data-11500="opacity:0;" data-12500="opacity:1;">
+      <!-- background -->
+      <a href="kolding/images/kolding01.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding01.jpg" class="thumb bg" id="t1" data-12500="top:120vh;" data-15500="top:-20vh;"/></a>
+      <a href="kolding/images/kolding02.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding02.jpg" class="thumb bg" id="t2" data-12500="top:130vh;" data-15500="top:-10vh;"/></a>
+  		<a href="kolding/images/kolding03.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding03.jpg" class="thumb bg" id="t3" data-12500="top:140vh;" data-15500="top:0vh;"/></a>
+  		<a href="kolding/images/kolding04.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding04.jpg" class="thumb bg" id="t4" data-12500="top:110vh;" data-15500="top:-30vh;"/></a>
+  		<a href="kolding/images/kolding05.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding05.jpg" class="thumb bg" id="t5" data-12500="top:160vh;" data-15500="top:20vh;"/></a>
+  		<a href="kolding/images/kolding06.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding06.jpg" class="thumb bg" id="t6" data-12500="top:170vh;" data-15500="top:30vh;"/></a>
+  		<a href="kolding/images/kolding07.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding07.jpg" class="thumb bg" id="t7" data-12500="top:120vh;" data-15500="top:-20vh;"/></a>
+      <!-- middleground -->
+  		<a href="kolding/images/kolding08.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding08.jpg" class="thumb" id="t8" data-12500="top:160vh;" data-15500="top:-40vh;"/></a>
+  		<a href="kolding/images/kolding09.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding09.jpg" class="thumb" id="t9" data-12500="top:130vh;" data-15500="top:-70vh;"/></a>
+  		<a href="kolding/images/kolding10.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding10.jpg" class="thumb" id="t10" data-12500="top:140vh;" data-15500="top:-60vh;"/></a>
+  		<a href="kolding/images/kolding11.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding11.jpg" class="thumb" id="t11" data-12500="top:110vh;" data-15500="top:-90vh;"/></a>
+  		<a href="kolding/images/kolding12.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding12.jpg" class="thumb" id="t12" data-12500="top:120vh;" data-15500="top:-80vh;"/></a>
+      <a href="kolding/images/kolding13.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding13.jpg" class="thumb" id="t13" data-12500="top:120vh;" data-15500="top:-80vh;"/></a>
+  		<a href="kolding/images/kolding14.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding14.jpg" class="thumb" id="t14" data-12500="top:120vh;" data-15500="top:-80vh;"/></a>
+  		<a href="kolding/images/kolding15.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding15.jpg" class="thumb" id="t15" data-12500="top:160vh;" data-15500="top:-40vh;"/></a>
+      <!-- foreground -->
+  		<a href="kolding/images/kolding16.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding16.jpg" class="thumb fg" id="t16" data-12500="top:160vh;" data-15500="top:-160vh;"/></a>
+  		<a href="kolding/images/kolding17.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding17.jpg" class="thumb fg" id="t17" data-12500="top:140vh;" data-15500="top:-180vh;"/></a>
+  		<a href="kolding/images/kolding18.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding18.jpg" class="thumb fg" id="t18" data-12500="top:120vh;" data-15500="top:-200vh;"/></a>
+  		<a href="kolding/images/kolding19.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding19.jpg" class="thumb fg" id="t19" data-12500="top:160vh;" data-15500="top:-160vh;"/></a>
+  		<a href="kolding/images/kolding20.jpg" data-lightbox="kolding"><img src="kolding/thumbs/kolding20.jpg" class="thumb fg" id="t20" data-12500="top:200vh;" data-15500="top:-120vh;"/></a>
+    </section>
+
+    <section id="page8" data-14500="display:none;" data-14501="display:block; opacity:0;" data-15500="display: block; opacity:1;">
+    </section>
+
+
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+    <script type="text/javascript">
+      var s = skrollr.init();
+			var keyframes = [2000, 3500, 7500, 10500, 11500, 15500];	// the different scroll positions we want to land on
+			var lastpos = 0;	// keep track of the last scroll position
+			var dur = 1000;		// variable to hold animation duration value
+
+			$(function(){
+				$(window).scroll(function(e){
+					if(!s.isAnimatingTo()){
+						if(lastpos < s.getScrollTop()){
+							console.log("lastpos: "+ lastpos);
+							scrollNext(s.getScrollTop());
+						} else {
+							scrollPrev(s.getScrollTop());
+						}
+					}
+					e.preventDefault();
+					e.stopPropagation();
+				});
+			});
+
+			function scrollNext(pos){
+				for(var i=0; i<keyframes.length; i++){
+					if(pos < keyframes[i]){
+						dur = keyframes[i] - lastpos;
+						s.animateTo(keyframes[i], {"duration":dur});
+						lastpos = keyframes[i];
+						break;
+					}
+				}
+			}
+
+			function scrollPrev(pos){
+				for(var i=0; i<keyframes.length; i++){
+					if(pos > keyframes[i] && pos < keyframes[i+1]){
+						dur = lastpos - keyframes[i];
+						s.animateTo(keyframes[i], {"duration":dur});
+						lastpos = keyframes[i];
+						break;
+					}
+				}
+			}
+    </script>
+
+  </body>
+
+</html>
