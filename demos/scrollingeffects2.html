@@ -91,7 +91,7 @@
     <script type="text/javascript" src="js/skrollr.min.js"></script>
     <script type="text/javascript">
       var s = skrollr.init();
-			var keyframes = [2000, 3500, 7500, 10500, 11500, 15500];	// the different scroll positions we want to land on
+			var keyframes = [0,2000, 3500, 7500, 10500, 11500, 15500];	// the different scroll positions we want to land on
 			var lastpos = 0;	// keep track of the last scroll position
 			var dur = 1000;		// variable to hold animation duration value
 
@@ -122,9 +122,6 @@
 				for(var i=0; i<keyframes.length; i++){
 					if(pos > keyframes[i] && pos < keyframes[i+1]){
 						scrollToPos(keyframes[i], lastpos - keyframes[i]);
-						break;
-					} else if(pos < keyframes[0]){
-						scrollToPos(0, pos);
 						break;
 					}
 				}
