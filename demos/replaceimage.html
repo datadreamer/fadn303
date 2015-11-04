@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Responsive Image Replacement Demo</title>
+    <style>
+      body{
+        margin: 0px;
+      }
+      #myimg{
+        width: 100%;
+        height: auto;
+      }
+      @media only screen and (min-width: 320px){
+        #myimg{content:url('http://placehold.it/640x360');}
+      }
+      @media only screen and (min-width: 640px){
+        #myimg{content:url('http://placehold.it/960x540');}
+      }
+      @media only screen and (min-width: 960px){
+        #myimg{content:url('http://placehold.it/1280x720');}
+      }
+      @media only screen and (min-width: 1280px){
+        #myimg{content:url('http://placehold.it/1920x1080');}
+      }
+      @media only screen and (min-width: 1920px){
+        #myimg{content:url('http://placehold.it/3840x2160');}
+      }
+    </style>
+	</head>
+
+  <body>
+    <img id="myimg" src="http://placehold.it/320x180" />
+  </body>
+</html>
