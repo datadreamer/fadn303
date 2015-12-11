@@ -30,6 +30,9 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<!-- canvas demo -->
+		<script src="js/p5.min.js"></script>
+		<script src="js/canvasdemo.js"></script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -112,8 +115,15 @@
 				</section>
 
 				<section>
-					HTML5 Canvas
+					HTML5 Canvas<br/>
 				</section>
+
+<!--
+				<section>
+					<div id="canvasdemo">
+					</div>
+				</section>
+			-->
 
 				<section>
 					HTML5 Canvas<br/>
