@@ -4,14 +4,14 @@
  * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
  */
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
-  color: #222; }
+  color: #000; }
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #222;
-  background-color: #222; }
+  background: #000;
+  background-color: #000; }
 
 .reveal {
   font-family: 'Montserrat', Helvetica, sans-serif;
@@ -56,6 +56,47 @@ body {
 
 .reveal h1 {
   text-shadow: none; }
+
+.reveal header{
+  position: absolute;
+  font-size: 0.6em;
+  font-weight: 700;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  text-shadow: 1px 1px black;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+.reveal header a{
+  color: #fff;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+.reveal header a:hover{
+  color: #09f;
+  text-decoration: none;
+}
+
+.reveal footer{
+  position: absolute;
+  font-size: 0.6em;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  text-shadow: 1px 1px black;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+.left{
+  float: left;
+}
+.right{
+  float: right;
+  font-weight: 200 !important;
+}
 
 /*********************************************
  * OTHER
@@ -375,4 +416,8 @@ table{
 }
 #dive{
   background-color: #ffcc00;
+}
+
+.week{
+  color: white;
 }
