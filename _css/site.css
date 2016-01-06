@@ -55,23 +55,34 @@ p{
   padding-left: 0px;
 }
 
+.week{
+  float: left;
+  width: 100%;
+}
+
 .weektitle{
   float: left;
   width: 100%;
   margin-bottom: 14px;
 }
 
+.weeknum{
+  float: left;
+  width: 100%;
+  color: #999;
+  background-color: #eee;
+  font-weight: 700;
+}
+
 .weeka{
   float: left;
   width: 100%;
-  margin-bottom: 40px;
 }
 
 .weekb{
   float: left;
   width: 100%;
   margin-left: 0%;
-  margin-bottom: 40px;
 }
 
 .day{
@@ -79,8 +90,25 @@ p{
   font-weight: 700;
 }
 
-.due{
-  color: #f00;
+.checkpoint{
+  background-color: #ff0;
+  font-weight: 700;
+}
+.exercise{
+  background-color: #f90;
+  font-weight: 700;
+}
+.project{
+  background-color: #f00;
+  font-weight: 700;
+}
+.noclass{
+  background-color: #9f9;
+  font-weight: 700;
+}
+.workday{
+  background-color:#9cf;
+  font-weight: 700;
 }
 
 /* STUDENT PROFILE STYLES */
@@ -225,13 +253,16 @@ li.selected a{
     margin-right: 3.33%;
     float: left;
   }
+  .weeknum{
+    width: 100%;
+    margin-bottom: 10px;
+  }
   .weeka{
     width: 48%;
   }
-
   .weekb{
     width: 48%;
-    margin-left: 4%;
+    margin-left: 2%;
   }
 }
 
