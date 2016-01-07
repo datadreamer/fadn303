@@ -19,9 +19,19 @@ header{
 }
 
 nav{
-  display: flex;
-  justify-content: space-between;
+  /*display: flex;
+  justify-content: space-between;*/
   line-height: 2em;
+}
+nav a{
+  float: left;
+  display: block;
+  width: 20%;
+  text-align: center;
+  background-color: #222;
+}
+nav a:hover{
+  background-color: #333;
 }
 
 footer{
@@ -33,7 +43,7 @@ footer{
 section{
   float: left;
   padding: 2%;
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 a{
@@ -92,7 +102,7 @@ h4{
   border-bottom: 1px solid #fff;
 }
 .classtitle{
-  margin: 0px;
+  margin: 0 0 20px 0;
 }
 
 
@@ -166,7 +176,7 @@ h4{
 
 #studentsection{
   padding: 1%;
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 #studentlist{
@@ -269,14 +279,20 @@ h4{
     width: 48%;
     margin-left: 4%;
   }
-  nav{
-    font-size: 1.5em;
-  }
   section{
     padding-top: 150px;
   }
   #studentsection{
     padding-top: 150px;
+  }
+  #roskilogo{
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  nav{
+    font-size: 1.5em;
   }
 }
 
