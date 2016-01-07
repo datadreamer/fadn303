@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="_css/site.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   </head>
 
   <body>
@@ -27,83 +28,94 @@
 
     <section id="studentsection">
       <div id="studentlist">
-        <a href="#" target="new">
+        <a href="#a" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student A</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#b" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student B</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#c" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student C</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#d" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student D</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#e" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student E</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#f" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student F</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#g" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student G</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#h" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student H</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#i" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student I</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#j" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student J</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#k" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student K</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#l" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student L</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#m" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student M</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#n" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student N</span>
           </div>
         </a>
-        <a href="#" target="new">
+        <a href="#o" target="new">
           <div class="student" style="background-image: url('_images/avatar.png')">
-            <span class="studentname">Student Name</span>
+            <span class="studentname">Student O</span>
           </div>
         </a>
       </div>
+      <a id="shuffleButton" href="#"><img src="_images/shuffle.png" id="shuffleButtonImg"></a>
     </section>
+
+    <script>
+      $('#shuffleButton').on('click', function(){
+        var parent = $("#studentlist");
+        var divs = parent.children();
+        while (divs.length) {
+            parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+        }
+      });
+    </script>
 
   </body>
 
