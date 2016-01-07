@@ -300,6 +300,10 @@ h4{
   body{
     background-color: #fff;
     color: #000;
+    font-size: 10px;
+  }
+  ul, ol, p{
+    line-height: 12px;
   }
   a{
     color: #000;
