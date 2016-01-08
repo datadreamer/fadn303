@@ -4,7 +4,7 @@ var points = []
 var deadpoints = [];
 var connectRadius = 0.25;
 var fadeSpeed = 2;
-var releaseRate = 500;
+var releaseRate = 1000;
 var lastRelease = 0;
 
 function setup(){
@@ -13,6 +13,8 @@ function setup(){
   frameRate(60);
   noFill();
   strokeWeight(3)
+  background(0);
+  blendMode(ADD);
 }
 
 function draw(){
@@ -20,7 +22,7 @@ function draw(){
     points.push(new Point(random(0, windowWidth), random(0, windowHeight)));
     lastRelease = millis();
   }
-  background(0);
+  //background(0);
   for(var i=0; i<points.length; i++){
     // move and draw current
     points[i].move();
@@ -59,14 +61,19 @@ function getColor(pos){
   // returns a value from the CMY spectrum
   var cyan = color(0, 174, 239);
   var magenta = color(236, 0, 140);
-  var yellow = color(255, 242, 0);
-  if(pos >= 0 && pos < 85){ // C to M
-    return lerpColor(cyan, magenta, (pos / 85));
-  } else if(pos >= 85 && pos < 170){  // M to Y
-    return lerpColor(magenta, yellow, ((pos-85) / 85));
-  } else {  // Y to C
-    return lerpColor(yellow, cyan, ((pos-170) / 85));
+  if(pos >= 0 && pos < 128){
+    return lerpColor(cyan, magenta, (pos / 128));
+  } else {
+    return lerpColor(magenta, cyan, (pos / 128));
   }
+  // var yellow = color(255, 242, 0);
+  // if(pos >= 0 && pos < 85){ // C to M
+  //   return lerpColor(cyan, magenta, (pos / 85));
+  // } else if(pos >= 85 && pos < 170){  // M to Y
+  //   return lerpColor(magenta, yellow, ((pos-85) / 85));
+  // } else {  // Y to C
+  //   return lerpColor(yellow, cyan, ((pos-170) / 85));
+  // }
 }
 
 function gradientLine(x1, y1, x2, y2, color1, color2) {
