@@ -8,12 +8,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="_css/site.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="_js/menu.js"></script>
   </head>
 
   <body>
 
     <header>
       <h1 class="classtitle">FADN 303 Web Design</h1>
+      <button type="button" class="btn-navbar" onclick="toggleMenu()">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
       <nav>
         <a href="index.html">Home</a>
         <a href="syllabus.html">Syllabus</a>
@@ -90,7 +97,7 @@
         </li>
         <li>
           <i>Style an Article</i> (10 points):<br/>
-          Copy an article that has body text, title, subtitle, publishing information (author, date/time, tags, etc), and at least one photo, and restyle the article using your own CSS.<br/>
+          Copy an article that has body text, title, subtitle, publishing information (author, date/time, tags, etc), and at least one photo, and restyle the article using your own CSS.<br/><br/>
         </li>
       </ol>
       <h4 class="project">Projects (110 points)</h4>
@@ -113,7 +120,7 @@
         </li>
         <li>
           <i>Portfolio</i> (30 points):<br/>
-          Create a portfolio website for yourself or an artist/designer you admire. The portfolio must contain 20 different entries from at least 3 different categories. The site must have introduction, portfolio, about, and contact sections. Content for the site should be stored in SQL tables.<br/>
+          Create a portfolio website for yourself or an artist/designer you admire. The portfolio must contain at least 10 different entries, each of which having an image, title, date, and description as well as any other data qualities you feel it should include (tags, links, etc). The site must have a portfolio index, portfolio item template page, and a separate about page. Content for the site should be stored in SQL tables.<br/>
         </li>
       </ol>
     </section>
