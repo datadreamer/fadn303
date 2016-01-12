@@ -247,7 +247,7 @@ h4{
   font-size: 0.8em;
   bottom: 0;
   left: 0;
-  opacity: 0;
+  opacity: 0.5;
   transition: opacity 500ms;
   -webkit-transition: opacity 500ms;
 
@@ -288,7 +288,7 @@ h4{
 #shuffleButtonImg{
   width: 32px;
   height: 32px;
-  margin-left: 1%;
+  margin: 1%;
   opacity: 0.2;
 }
 #shuffleButtonImg:hover{
@@ -323,8 +323,8 @@ h4{
 
 @media only screen and (min-width: 640px) {
   .student{
-    width: 18%;
-    padding-bottom: 18%;
+    width: 23%;
+    padding-bottom: 23%;
     margin: 1%;
   }
   .weeka{

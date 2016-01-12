@@ -4,44 +4,24 @@ var points = []
 var deadpoints = [];
 var connectRadius = 0.25;
 var fadeSpeed = 2;
-var releaseRate = 1000;
+var releaseRate = 50;
 var lastRelease = 0;
 
 function setup(){
   var canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("splash");
   frameRate(60);
-  noFill();
-  strokeWeight(3)
+  noStroke();
   background(0);
-  blendMode(ADD);
+  ellipseMode(CENTER);
+  blendMode(SCREEN);
 }
 
 function draw(){
-  if(millis() - lastRelease > releaseRate){
-    points.push(new Point(random(0, windowWidth), random(0, windowHeight)));
-    lastRelease = millis();
-  }
-  //background(0);
   for(var i=0; i<points.length; i++){
     // move and draw current
     points[i].move();
     points[i].draw();
-    // check other points to draw connections with
-    noFill();
-    for(var j=i+1; j<points.length; j++){
-      var xdiff = points[i].getNormX() - points[j].getNormX();
-      var ydiff = points[i].getNormY() - points[j].getNormY();
-      dist = Math.sqrt(xdiff*xdiff + ydiff*ydiff);
-      if(dist < connectRadius){
-        var midx = points[i].getNormX() - xdiff/2;
-        var midy = points[i].getNormY() - ydiff/2;
-        var a = (1 - (dist / connectRadius)) * 255;
-        var colorA = color(red(points[i].c), green(points[i].c), blue(points[i].c), a);
-        var colorB = color(red(points[j].c), green(points[j].c), blue(points[j].c), a);
-        gradientLine(points[i].x, points[i].y, points[j].x, points[j].y, colorA, colorB);
-      }
-    }
     // check for dead points
     if(points[i].dead){
       deadpoints.push(points[i]);
@@ -55,34 +35,21 @@ function draw(){
     }
   }
   deadpoints = [];
+  console.log(points.length);
 }
 
 function getColor(pos){
-  // returns a value from the CMY spectrum
-  var cyan = color(0, 174, 239);
-  var magenta = color(236, 0, 140);
-  if(pos >= 0 && pos < 128){
-    return lerpColor(cyan, magenta, (pos / 128));
-  } else {
-    return lerpColor(magenta, cyan, (pos / 128));
+  // returns a color falue
+  var r = color(255,0,0);
+  var g = color(0,255,0);
+  var b = color(0,0,255);
+  if(pos >= 0 && pos < 85){ // R to G
+    return lerpColor(r, g, (pos / 85));
+  } else if(pos >= 85 && pos < 170){  // G to B
+    return lerpColor(g, b, ((pos-85) / 85));
+  } else {  // B to R
+    return lerpColor(b, r, ((pos-170) / 85));
   }
-  // var yellow = color(255, 242, 0);
-  // if(pos >= 0 && pos < 85){ // C to M
-  //   return lerpColor(cyan, magenta, (pos / 85));
-  // } else if(pos >= 85 && pos < 170){  // M to Y
-  //   return lerpColor(magenta, yellow, ((pos-85) / 85));
-  // } else {  // Y to C
-  //   return lerpColor(yellow, cyan, ((pos-170) / 85));
-  // }
-}
-
-function gradientLine(x1, y1, x2, y2, color1, color2) {
-  // linear gradient from start to end of line
-  var grad = this.drawingContext.createLinearGradient(x1, y1, x2, y2);
-  grad.addColorStop(0, color1);
-  grad.addColorStop(1, color2);
-  this.drawingContext.strokeStyle = grad;
-  line(x1, y1, x2, y2);
 }
 
 function getMouseX(){
@@ -93,8 +60,11 @@ function getMouseY(){
   return mouseY / windowHeight;
 }
 
-function mousePressed(){
-  points.push(new Point(mouseX, mouseY));
+function mouseMoved(){
+  if(millis() - lastRelease > releaseRate){
+    points.push(new Point(mouseX, mouseY));
+    lastRelease = millis();
+  }
 }
 
 function windowResized(){
@@ -107,16 +77,16 @@ function windowResized(){
 function Point(x, y){
   this.birth = millis();
   this.death = 0;
-  this.lifespan = random(2000, 5000);
+  this.lifespan = random(1000, 2000);
   this.deathspan = 1000;
   this.dead = false;
   this.dying = false;
   this.x = x;
   this.y = y;
-  this.d = random(windowWidth/10, windowWidth/3);
+  this.d = random(2, 10);
   this.c = getColor((millis() * 0.01) % 255);
-  this.xvec = random(-2,2);
-  this.yvec = random(-2,2);
+  this.xvec = random(-1,1);
+  this.yvec = random(-1,1);
   this.damping = 0.997;
   this.maxalpha = 50;
   this.alpha = this.maxalpha;
@@ -127,7 +97,8 @@ Point.prototype = {
   constructor: Point,
 
   draw:function(){
-    // nothing here
+    fill(red(this.c), green(this.c), blue(this.c), this.alpha);
+    ellipse(this.x, this.y, this.d, this.d);
   },
 
   getNormX(){
@@ -147,7 +118,7 @@ Point.prototype = {
     this.x += this.xvec;
     this.y += this.yvec;
     // kill this fucker if it goes outside the window
-    if((this.x > windowWidth || this.x < 0) || (this.y < 0 || this.x > windowHeight)){
+    if(millis() - this.birth > this.lifespan){
       if(!this.dying){
         this.dying = true;
         this.death = millis();
