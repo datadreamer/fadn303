@@ -4,8 +4,9 @@ var points = []
 var deadpoints = [];
 var connectRadius = 0.25;
 var fadeSpeed = 2;
-var releaseRate = 50;
+var releaseRate = 10;
 var lastRelease = 0;
+var r, y, g, b;
 
 function setup(){
   var canvas = createCanvas(windowWidth, windowHeight);
@@ -14,10 +15,15 @@ function setup(){
   noStroke();
   background(0);
   ellipseMode(CENTER);
-  blendMode(SCREEN);
+  strokeWeight(2);
+  r = color(255,0,0);
+  y = color(255,255,0);
+  g = color(0,255,0);
+  b = color(0,0,255);
 }
 
 function draw(){
+  background(0);
   for(var i=0; i<points.length; i++){
     // move and draw current
     points[i].move();
@@ -35,20 +41,15 @@ function draw(){
     }
   }
   deadpoints = [];
-  console.log(points.length);
+  //console.log(points.length);
 }
 
 function getColor(pos){
-  // returns a color falue
-  var r = color(255,0,0);
-  var g = color(0,255,0);
-  var b = color(0,0,255);
-  if(pos >= 0 && pos < 85){ // R to G
-    return lerpColor(r, g, (pos / 85));
-  } else if(pos >= 85 && pos < 170){  // G to B
-    return lerpColor(g, b, ((pos-85) / 85));
-  } else {  // B to R
-    return lerpColor(b, r, ((pos-170) / 85));
+  // returns a color value
+  if(pos >= 0 && pos < 128){ // B to G
+    return lerpColor(r, y, (pos / 128));
+  } else{  // G to B
+    return lerpColor(y, r, ((pos-128) / 128));
   }
 }
 
@@ -64,6 +65,20 @@ function mouseMoved(){
   if(millis() - lastRelease > releaseRate){
     points.push(new Point(mouseX, mouseY));
     lastRelease = millis();
+  }
+}
+
+function mousePressed(){
+  for(var i=0; i<points.length; i++){
+    points[i].force(mouseX, mouseY);
+    points[i].c = color(255);
+  }
+}
+
+function mouseDragged(){
+  for(var i=0; i<points.length; i++){
+    points[i].force(mouseX, mouseY);
+    points[i].c = color(255);
   }
 }
 
@@ -87,8 +102,8 @@ function Point(x, y){
   this.c = getColor((millis() * 0.01) % 255);
   this.xvec = random(-1,1);
   this.yvec = random(-1,1);
-  this.damping = 0.997;
-  this.maxalpha = 50;
+  this.damping = 0.97;
+  this.maxalpha = 255;
   this.alpha = this.maxalpha;
   this.angle = 0 - Math.atan2(this.xvec, this.yvec);
 }
@@ -97,8 +112,26 @@ Point.prototype = {
   constructor: Point,
 
   draw:function(){
-    fill(red(this.c), green(this.c), blue(this.c), this.alpha);
-    ellipse(this.x, this.y, this.d, this.d);
+    //fill(red(this.c), green(this.c), blue(this.c), this.alpha);
+    //ellipse(this.x, this.y, this.d, this.d);
+    push();
+    translate(this.x, this.y);
+    rotate(this.angle);
+    stroke(red(this.c), green(this.c), blue(this.c), this.alpha);
+    line(0-this.d, 0, this.d, 0);
+    pop();
+  },
+
+  force:function(forceX, forceY){
+    var radius = windowWidth/5;
+    var xdiff = this.x - forceX;
+    var ydiff = this.y - forceY;
+    var hypo = Math.sqrt(xdiff*xdiff + ydiff*ydiff);
+    if(hypo < radius){
+      var force = ((radius - hypo) / radius) * 5;
+      this.xvec = (xdiff/hypo) * force;
+      this.yvec = (ydiff/hypo) * force;
+    }
   },
 
   getNormX(){
