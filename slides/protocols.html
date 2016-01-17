@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Protocols, Servers and Clients - FADN 303: Web Design</title>
+
+		<meta name="description" content="Lecture slides for USC FADN 303 Web Design course. Subject is protocols, servers and clients.">
+		<meta name="author" content="Aaron Siegel">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+			/* Move all this shit into the proper CSS file */
+			.noheader header { opacity: 0;}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- header and footer stays on page and changes when tweaked by <style> inside each <section> -->
+				<header>
+					<a href="http://www.fadn303.net" class="left">FADN 303: Web Design</a>
+					<a href="http://roski.usc.edu" class="right">USC Roski School of Art and Design</a>
+				</header>
+
+				<footer>
+					<span id="leftside" class="left"></span>
+					<span id="rightside" class="right"></span>
+				</footer>
+
+				<section>
+					<div class="titletext">
+						<div class="week">WEEK 2:</div>
+						<h1>Servers, Clients and Protocols</h1>
+						Aaron Siegel |
+						<script type="text/javascript">
+				        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+				        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				        </script>
+				        | Spring 2016
+					</div>
+				</section>
+
+				<section>
+					<h2>The Network</h2>
+					<ul>
+						<li>The network is comprised of computers, routers, and cables connecting them.</li>
+						<li>Some of the computers are servers and some of them are clients.</li>
+						<li>Servers and clients are deliniated by their purpose.</li>
+					</ul>
+				</section>
+
+				<section>
+					[insert network diagram here]
+				</section>
+
+				<section>
+					<h2>Servers and Services</h2>
+					<ul>
+						<li>Servers are computers that run services for clients.</li>
+						<li>Services are software applications to perform tasks.</li>
+						<li>Clients connect to servers on different ports to access different services.</li>
+						<li>Multiple clients can make use of services simultaneously.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Clients</h2>
+					<ul>
+						<li>Clients are computers that run software to connect to services on servers.</li>
+						<li>Clients issue requests/commands to servers.</li>
+					</ul>
+				</section>
+
+				<section>
+					[insert server-client diagram here]
+				</section>
+
+				<section>
+					<h2>Protocols</h2>
+					<ul>
+						<li>Services use unique protocols to allow servers and clients to communicate.</li>
+						<li>These communications occur between ports on the server and client computers.</li>
+						<li>HTTP operates on port 80 of the server.</li>
+						<li>FTP operates on port 21 of the server.</li>
+					</ul>
+				</section>
+
+				<section>
+					[insert port chart here]
+				</section>
+
+				<section>
+					<h2>HTTP</h2>
+					<ul>
+						<li>Hypertext Transfer Protocol (c. 1991).</li>
+						<li>Specifies how information and files are transferred on the web.</li>
+						<li>Used by web servers and web browsers.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>HTTP Client: Web Browser</h2>
+					<ul>
+						<li>Firefox, Chrome, Safari, Internet Explorer, etc.</li>
+						<li>How is accessing a site using Safari different from doing so with Firefox?</li>
+						<li>How is accessing a site using Safari on your iPhone different from doing so on your MacBook?</li>
+					</ul>
+				</section>
+
+				<section>
+					[insert web client browser diagram here]
+				</section>
+
+				<section>
+					<h2>FTP</h2>
+					<ul>
+						<li>File Transfer Protocol (c. 1971).</li>
+						<li>Specifically for moving files from one system to another.</li>
+						<li>Used by FTP servers and FTP clients.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>FTP Client: FileZilla</h2>
+					<ul>
+						<li>Free, open-source FTP client.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>URL Structure</h2>
+				</section>
+
+				<section>
+					[insert url structure diagram here]
+				</section>
+
+				<section>
+					<h2>Server Directory Structure</h2>
+				</section>
+
+				<section>
+					[insert server directory structure diagram here]
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Wikipedia: Hypertext Transfer Protocol</a></li>
+						<li><a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol">Wikipedia: File Transfer Protocol</a></li>
+						<li><a href="http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml">Service Name and Transport Protocol Port Number Registry</a></li>
+						<li><a href="https://filezilla-project.org/">FileZilla FTP Client</a></li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1920,
+			    height: 1440,
+			    margin: 0.1,
+			    minScale: 0.2,
+			    maxScale: 2.0,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
