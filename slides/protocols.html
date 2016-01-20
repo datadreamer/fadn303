@@ -30,6 +30,10 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
+		<!-- P5js Canvas stuff -->
+		<script src="js/p5.min.js"></script>
+		<script src="js/tracert.js"></script>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -85,7 +89,17 @@
 					</style>
 				</section>
 
+				<!--
 				<section data-state="networkfooter2" data-background="images/tracert.png" data-transition="fade">
+					<style>
+						.networkfooter2 footer #leftside:after{content: "Traceroute from my computer to fadn303.net";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+			-->
+
+				<section data-state="networkfooter2" data-transition="fade" >
+					<div id="tracert"style="width:100%;height:auto;">
+					</div>
 					<style>
 						.networkfooter2 footer #leftside:after{content: "Traceroute from my computer to fadn303.net";color:#fff;text-shadow:none;}
 					</style>
