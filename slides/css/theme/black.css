@@ -339,7 +339,7 @@ body {
 }
 
 .half img{
-  width: 50%;
+  width: 100%;
 }
 
 .third{
@@ -350,6 +350,11 @@ body {
 .quarter{
   float: left;
   width: 25%;
+}
+
+.fifth{
+  float: left;
+  width: 20%;
 }
 
 .imglist{
