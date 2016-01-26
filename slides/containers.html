@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Images & Typography - FADN 303: Web Design</title>
+		<title>Containers & Positioning - FADN 303: Web Design</title>
 
-		<meta name="description" content="Lecture slides for USC FADN 303 Web Design course. Subject is images and typography.">
+		<meta name="description" content="Lecture slides for USC FADN 303 Web Design course. Subject is containers and positioning.">
 		<meta name="author" content="Aaron Siegel">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,13 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+		<style>
+			section img{
+				width: 90% !important;
+				height: auto;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -42,15 +49,27 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
+				<!-- header and footer stays on page and changes when tweaked by <style> inside each <section> -->
+				<header>
+					<a href="http://www.fadn303.net" class="left">FADN 303: Web Design</a>
+					<a href="http://roski.usc.edu" class="right">USC Roski School of Art and Design</a>
+				</header>
+
+				<footer>
+					<span id="leftside" class="left"></span>
+					<span id="rightside" class="right"></span>
+				</footer>
+
 				<section>
 					<div class="titletext">
-						FADN 303: Web Design
-						<h1>Containers</h1>
-						Aaron Siegel<br/>
+						<div class="week">WEEK 3:</div>
+						<h1>Containers &amp; Positioning</h1>
+						Aaron Siegel |
 						<script type="text/javascript">
-	        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
-	        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
-	          </script>
+				        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+				        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				        </script>
+				        | Spring 2016
 					</div>
 				</section>
 
@@ -58,92 +77,98 @@
 					<h2>Block Elements</h2>
 				</section>
 
-				<section>
-					Div Elements<br/>
-					<p class="caption">
-						<br/>Divs are used as containers to create divisions in your page content. They are <b>block</b> level elements.<br/><br/>
-					</p>
+				<section data-state="blockdivfooter">
 					<div class="half">
 						<img src="images/div1.png">
 					</div>
 					<div class="half" style="font-family:'Times New Roman',Times,serif;">
 						I'm inside a container!
 					</div>
+					<div style="clear:both;">
+						Divs are used as containers to create divisions in your page content. They are <b>block</b> level elements.<br/><br/>
+					</div>
+					<style>
+						.blockdivfooter footer #leftside:after{content: "Block Elements: Div";color:#fff;text-shadow:none;}
+					</style>
 				</section>
 
-				<section>
-					Div Elements<br/>
-					<p class="caption">
-						<br/>Divs inherit standard margins, padding, borders, and vertical and horizontal alignments used to contain content. All of these attributes can be changed with CSS.<br/><br/>
-					</p>
+				<section data-state="blockdivfooter">
 					<div class="half" style="width: 40%;">
 						<img src="images/div2.png">
 					</div>
 					<div class="half" style="font-family:'Times New Roman',Times,serif;background-color:#036;color:#6f6;border:2px solid #fff;padding: 50px;">
 						I'm inside a container!
 					</div>
+					<div style="clear:both;">
+						Divs inherit standard margins, padding, borders, and vertical and horizontal alignments used to contain content. All of these attributes can be changed with CSS.<br/>
+					</div>
 				</section>
 
 				<section>
-					Margins / Border / Padding<br/>
-					<br/>
+					<h2>Margins / Border / Padding</h2>
 					<img src="images/margins.png" />
 				</section>
 
-				<section>
-					Positioning<br/>
-					<p class="caption">
+				<section data-state="positionfooter">
+					<p>
 						<br/>Elements can be positioned in different ways to respond to the page as well as other elements.<br/><br/>
 					</p>
 					<div class="quarter">
-						<p class="caption">
+						<p>
 							<code>position: static;</code><br/><br/>
 						</p>
-						<ul class="imglist">
+						<ul>
 							<li>Default position renders elements in order as they appear in the document flow.</li>
 						</ul>
 					</div>
 					<div class="quarter">
-						<p class="caption">
+						<p>
 							<code>position: relative;</code><br/><br/>
 						</p>
-						<ul class="imglist">
+						<ul>
 							<li>The element is positioned relative to its normal position.</li>
 							<li>Adjusts based on <code>left</code>, <code>right</code>, <code>top</code>, and <code>bottom</code> CSS declarations.</li>
 						</ul>
 					</div>
 					<div class="quarter">
-						<p class="caption">
+						<p>
 							<code>position: absolute;</code><br/><br/>
 						</p>
-						<ul class="imglist">
+						<ul>
 							<li>The element is positioned relative to its first positioned (not static) ancestor element.</li>
 							<li>Adjusts based on <code>left</code>, <code>right</code>, <code>top</code>, and <code>bottom</code> CSS declarations.</li>
 							<li>Like tacking an element to a specific position on the page.</li>
 						</ul>
 					</div>
 					<div class="quarter">
-						<p class="caption">
+						<p>
 							<code>position: fixed;</code><br/><br/>
 						</p>
-						<ul class="imglist">
+						<ul>
 							<li>The element is positioned relative to the browser window.</li>
 							<li>Adjusts based on <code>left</code>, <code>right</code>, <code>top</code>, and <code>bottom</code> CSS declarations.</li>
 							<li>Like tacking an element to a specific position on the browser window.</li>
 						</ul>
 					</div>
+
+					<style>
+						.positionfooter footer #leftside:after{content: "CSS Position Property";color:#fff;text-shadow:none;}
+					</style>
 				</section>
 
-				<section data-transition="fade">
+				<section data-transition="fade" data-state="positionstaticfooter">
 					<code>position: static;</code><br/><br/>
 					<div class="divtest" id="diva">Container A</div>
 					<div class="divtest" id="divb">Container B</div>
 					<div class="divtest" id="divc">Container C</div>
 					<div class="divtest" id="divd">Container D</div>
 					<div class="divtest" id="dive">Container E</div>
+					<style>
+						.positionstaticfooter footer #leftside:after{content: "Static positioned elements appear in the order that they have been entered in the HTML.";color:#fff;text-shadow:none;}
+					</style>
 				</section>
 
-				<section data-transition="fade">
+				<section data-transition="fade" data-state="positionrelativefooter">
 					<code>position: relative;</code><br/><br/>
 					<div style="position: relative;">
 						<div class="divtest2" id="diva" style="left: 100px;">Container A</div>
@@ -152,29 +177,36 @@
 						<div class="divtest2" id="divd" style="left: 400px;">Container D</div>
 						<div class="divtest2" id="dive" style="left: 500px;">Container E</div>
 					</div>
+					<style>
+						.positionrelativefooter footer #leftside:after{content: "Relative positioned elements are adjusted relative to their static position, in this case each element shifted to the right by 100px.";color:#fff;text-shadow:none;}
+					</style>
 				</section>
 
-				<section data-transition="fade">
+				<section data-transition="fade" data-state="positionabsolutefooter">
 					<code>position: absolute;</code><br/><br/>
 					<div class="divtest" id="diva" style="position:absolute;top:300px;left:500px;">Container A</div>
 					<div class="divtest" id="divb" style="position:absolute;top:280px;left:400px;">Container B</div>
 					<div class="divtest" id="divc" style="position:absolute;top:260px;left:300px;">Container C</div>
 					<div class="divtest" id="divd" style="position:absolute;top:240px;left:200px;">Container D</div>
 					<div class="divtest" id="dive" style="position:absolute;top:220px;left:100px;">Container E</div>
+					<style>
+						.positionabsolutefooter footer #leftside:after{content: "Absolute positioned elements are pinned to a specific X/Y position on the page and ignore elements around it.";color:#fff;text-shadow:none;}
+					</style>
 				</section>
 
-				<section data-transition="fade">
+				<section data-transition="fade" data-state="positionfixedfooter">
 					<code>position: fixed;</code><br/><br/>
-					<p class="caption">
-						Can't easily  be shown in this presentation, because the fixed position tacks items to the browser window as if they are stuck on a sheet of glass you are looking through, allowing the page to scroll underneath them. This is most often scene with headers and navigation menus, especially on mobile devices.<br/>
-					</p>
+					<div class="divtest" id="diva" style="position:fixed;top:300px;left:500px;">Container A</div>
+					<div class="divtest" id="divb" style="position:fixed;top:280px;left:400px;">Container B</div>
+					<div class="divtest" id="divc" style="position:fixed;top:260px;left:300px;">Container C</div>
+					<div class="divtest" id="divd" style="position:fixed;top:240px;left:200px;">Container D</div>
+					<div class="divtest" id="dive" style="position:fixed;top:220px;left:100px;">Container E</div>
+					<style>
+						.positionfixedfooter footer #leftside:after{content: "Fixed positioned elements are pinned to a specific X/Y position on the browser window, allowing other page elements to scroll underneath.";color:#fff;text-shadow:none;}
+					</style>
 				</section>
 
-				<section data-transition="fade">
-					Floating Position<br/>
-					<p class="caption">
-						<br/>The float declaration in CSS allows elements to adjust their positioning based on the size and positioning of content around them.<br/><br/>
-					</p>
+				<section data-transition="fade" data-state="floatleftfooter">
 					<code>float: left;</code><br/><br/>
 					<div>
 						<div class="divtest3" id="diva">Container A</div>
@@ -183,13 +215,12 @@
 						<div class="divtest3" id="divd">Container D</div>
 						<div class="divtest3" id="dive">Container E</div>
 					</div>
+					<style>
+						.floatleftfooter footer #leftside:after{content: "The float declaration in CSS allows elements to adjust their positioning based on the size and positioning of content around them.";color:#fff;text-shadow:none;}
+					</style>
 				</section>
 
-				<section data-transition="fade">
-					Floating Position<br/>
-					<p class="caption">
-						<br/>Switching the direction of the float can flip the order in which elements appear without changing their order in the HTML document.<br/><br/>
-					</p>
+				<section data-transition="fade" data-state="floatrightfooter">
 					<code>float: right;</code><br/><br/>
 					<div>
 						<div class="divtest4" id="diva">Container A</div>
@@ -198,13 +229,12 @@
 						<div class="divtest4" id="divd">Container D</div>
 						<div class="divtest4" id="dive">Container E</div>
 					</div>
+					<style>
+						.floatrightfooter footer #leftside:after{content: "Switching the direction of the float can flip the order in which elements appear without changing their order in the HTML document.";color:#fff;text-shadow:none;}
+					</style>
 				</section>
 
-				<section data-transition="fade">
-					Clearing Floating Elements<br/>
-					<p class="caption">
-						<br/>Using the CSS clear property specifies on which sides of an element where floating elements are not allowed (basically used for forcing vertical breaks between floating elements).<br/><br/>
-					</p>
+				<section data-transition="fade" data-state="clearfooter">
 					<code>clear: both;</code><br/><br/>
 					<div>
 						<div class="divtest3" id="diva">Container A</div>
@@ -213,33 +243,40 @@
 						<div class="divtest3" id="divd" style="clear:both;">Container D</div>
 						<div class="divtest3" id="dive">Container E</div>
 					</div>
+					<style>
+						.clearfooter footer #leftside:after{content: "Using the CSS clear property specifies on which sides of an element where floating elements are not allowed (basically used for forcing line breaks between floating elements).";color:#fff;text-shadow:none;}
+					</style>
 				</section>
 
 				<section>
-					Semantic Elements<br/>
-					<p class="caption">
+					<h2>Semantic Elements</h2>
+					<p>
 						<br/>Semantic elements help organize content for machine readability, making it easier to index in search engines.<br/><br/>
 					</p>
-					<ul class="imglist">
+					<ul>
 						<li><code>&lt;header&gt;</code>: Defines a header for a document or section.</li>
 						<li><code>&lt;footer&gt;</code>: Defines a footer for a document or section.</li>
 						<li><code>&lt;article&gt;</code>: Defines an article.</li>
 						<li><code>&lt;section&gt;</code>: Defines a section in a document.</li>
 						<li><code>&lt;nav&gt;</code>: Defines navigation links.</li>
 					</ul>
-					<p class="caption">
+					<p>
 						<br/>Check the <a href="http://www.w3schools.com/tags/default.asp">complete HTML reference</a> for more.<br/><br/>
 					</p>
 				</section>
 
-				<section data-transition="fade">
-					Div Element Example<br/><br/>
+				<section data-transition="fade" data-state="divexamplefooter">
 					<img src="images/semantic1.png">
+					<style>
+						.divexamplefooter footer #leftside:after{content: "Div Element Example.";color:#fff;text-shadow:none;}
+					</style>
 				</section>
 
-				<section data-transition="fade">
-					Semantic Element Example<br/><br/>
+				<section data-transition="fade" data-state="semanticexamplefooter">
 					<img src="images/semantic2.png">
+					<style>
+						.semanticexamplefooter footer #leftside:after{content: "Semantic Element Example";color:#fff;text-shadow:none;}
+					</style>
 				</section>
 
 				<section>
@@ -247,8 +284,8 @@
 				</section>
 
 				<section>
-					Span Elements<br/>
-					<p class="caption">
+					<h2>Span Elements</h2>
+					<p>
 						<br/>Spans are used to position elements inline with other content such as text. Span elements can <span style="color:#66ff66;font-family:serif;font-style:italic;">style individual text</span> in a paragraph using a combination of CSS that <i>italic</i> and <b>bold</b> tags can not do alone. Unlike <code>&lt;div&gt;</code> elements, spans initialize as inline elements changing the way content wraps around them.
 					</p><br/>
 					<img src="images/span.png" />
@@ -256,7 +293,7 @@
 
 				<section>
 					<h2>Resources</h2>
-					<ul class="imglist">
+					<ul>
 						<li><a href="http://www.w3schools.com/html/html_blocks.asp">W3Schools - HTML Blocks</a></li>
 						<li><a href="http://www.w3schools.com/w3css/w3css_containers.asp">W3Schools - Containers</a></li>
 						<li><a href="http://www.w3schools.com/cssref/pr_class_position.asp">W3Schools - CSS Positioning</a></li>
@@ -276,15 +313,15 @@
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				width: 1280,
-				height: 720,
-				margin: 0.1,
-				minScale: 0.2,
-				maxScale: 1.5,
 				controls: true,
 				progress: true,
 				history: true,
 				center: true,
+				width: 1920,
+		    height: 1440,
+		    margin: 0.1,
+		    minScale: 0.2,
+		    maxScale: 2.0,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
