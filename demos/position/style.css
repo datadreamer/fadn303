@@ -1,0 +1,57 @@
+/* These selectors are used to modify HTML tags. */
+
+body{
+	margin: 0px;
+	font-family: Helvetica, Arial, sans;
+	font-size: 32px;
+}
+
+div{
+	background-color:#f00;
+	color: #fff;
+	font-size: 14px;
+	width: 23%;
+	padding-bottom: 23%;
+	margin: 1%;
+}
+
+section{
+	float: left;
+	width: 100%;
+}
+
+/* These selectors are used to define CSS ID's. */
+
+#divrel{
+	position: relative;
+	left: 25%;
+	background-color:#f60;
+}
+
+#divabs{
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	background-color:#fa0;
+}
+
+#divfix{
+	position: fixed;
+	left: 75%;
+	top: 25%;
+	background-color:#fd0;
+	opacity: 0.8;
+}
+
+/* These selectors are used to define CSS classes. */
+
+.floater{
+	float: left;
+	background-color:#0af;
+}
+
+.rigid{
+	width: 300px;
+	padding-bottom: 300px;
+	background-color: #0f9;
+}
