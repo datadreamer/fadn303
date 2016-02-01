@@ -1,0 +1,44 @@
+div{
+	padding: 0px;
+	background: #09f;
+}
+
+.topclass{
+	width: 33.33%;
+	float: left;
+	padding: 0px;
+}
+
+.typea{
+	background: #f00;
+	width: 33.33%;
+	float: left;
+	padding: 0px;
+}
+
+.typeb{
+	background: #ff0;
+}
+
+.stack{
+	float: left;
+	width: 100%;
+}
+
+#topcontainer{
+}
+
+#verytop{
+	font-family: Arial;
+	font-size: 32px;
+}
+
+#verymiddle{
+	color: #fff;
+	font-size: 32px;
+}
+
+#shrunken{
+	width: 50%;
+	padding: 0px;
+}
