@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Using Code - FADN 303: Web Design</title>
+
+		<meta name="description" content="Lecture slides for USC FADN 303 Web Design course. Subject is browser tools for web development.">
+		<meta name="author" content="Aaron Siegel">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+			section img{
+				width: 90% !important;
+				height: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- header and footer stays on page and changes when tweaked by <style> inside each <section> -->
+				<header>
+					<a href="http://www.fadn303.net" class="left">FADN 303: Web Design</a>
+					<a href="http://roski.usc.edu" class="right">USC Roski School of Art and Design</a>
+				</header>
+
+				<footer>
+					<span id="leftside" class="left"></span>
+					<span id="rightside" class="right"></span>
+				</footer>
+
+				<section>
+					<div class="titletext">
+						<div class="week">WEEK 4:</div>
+						<h1>Browser Tools</h1>
+						Aaron Siegel |
+						<script type="text/javascript">
+				        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+				        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				        </script>
+				        | Spring 2016
+					</div>
+				</section>
+
+				<section>
+					<h2>View Source</h2>
+				</section>
+
+				<section data-state="browsertoolsclasspage" data-background="images/browsertools_classpage.png" data-transition="fade">
+					<style>
+						.browsertoolsclasspage footer #leftside:after{content: "The index.html page of the class web site.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section data-state="browsertoolviewsource" data-background="images/browsertools_viewsource.png" data-transition="fade">
+					<style>
+						.browsertoolviewsource footer #leftside:after{content: "You can view the HTML, CSS and Javascript of every web site you access with your browser.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section>
+					<h2>Inspector</h2>
+				</section>
+
+				<section data-state="browsertoolsfooter1" data-background="images/browsertools_inspector1.png" data-transition="fade">
+					<style>
+						.browsertoolsfooter1 footer #leftside:after{content: "The inspector is used to evaluate the styles of specific HTML elements.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section data-state="browsertoolsfooter2" data-background="images/browsertools_inspector2.png" data-transition="fade">
+					<style>
+						.browsertoolsfooter2 footer #leftside:after{content: "The panel on the right side shows the styles and dimensions of the element.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section data-state="browsertoolsconsole" data-background="images/browsertools_console.png" data-transition="fade">
+					<style>
+						.browsertoolsconsole footer #leftside:after{content: "The console is used to evaluate javascript warnings and errors.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section data-state="browsertoolsnetwork" data-background="images/browsertools_network.png" data-transition="fade">
+					<style>
+						.browsertoolsnetwork footer #leftside:after{content: "The network panel is used to view page assets, load time and bandwidth consumption.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section data-state="browsertoolsfirefox" data-background="images/browsertools_firefoxinspector.png" data-transition="fade">
+					<style>
+						.browsertoolsfirefox footer #leftside:after{content: "Firefox has a really nicely designed inspector tool.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section data-state="browsertoolsfirefox3d" data-background="images/browsertools_firefox3dinspector.png" data-transition="fade">
+					<style>
+						.browsertoolsfirefox3d footer #leftside:after{content: "Firefox also allows for a 3D view of elements to see how they are nested.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section data-state="browsertoolsfirefox3d2" data-background="images/browsertools_firefox3dinspector2.png" data-transition="fade">
+					<style>
+						.browsertoolsfirefox3d2 footer #leftside:after{content: "Sagmeister & Walsh's site uses many layers of nested elements to organize their content appropriately.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section>
+					<h2>W3C Validator</h2>
+					This tool is provided to evaluate web site code for proper syntax and any errors.
+				</section>
+
+				<section data-state="browsertoolsvalidator" data-background="images/browsertools_validator1.png" data-transition="fade">
+					<style>
+						.browsertoolsvalidator footer #leftside:after{content: "Enter the URL of a web site into the validator.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section data-state="browsertoolsvalidator2" data-background="images/browsertools_validator2.png" data-transition="fade">
+					<style>
+						.browsertoolsvalidator2 footer #leftside:after{content: "The validator will return warnings and errors related to the web site.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section data-state="browsertoolsvalidator3" data-background="images/browsertools_validator3.png" data-transition="fade">
+					<style>
+						.browsertoolsvalidator3 footer #leftside:after{content: "If all of the code is good, the validator will return a page stating the document check is complete and no errors or warnings were found.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section>
+					Resources<br/><br/>
+					<ul>
+						<li><a href="https://developer.chrome.com/devtools">Chrome DevTools Overview</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector">Firefox Page Inspector</a></li>
+							<li><a href="http://validator.w3.org">W3C Validator</a></li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1920,
+		    height: 1440,
+		    margin: 0.1,
+		    minScale: 0.2,
+		    maxScale: 2.0,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
