@@ -1,0 +1,50 @@
+body {
+	margin: 0px;
+	color: #09f;
+}
+
+div {
+	background: #f00;
+	color: #000;
+}
+
+#rel1{
+	position: relative;
+	left: 10%;
+	top: 100px;
+}
+
+#rel2{
+	position: relative;
+	left: 15%;
+}
+
+#header{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 60px;
+	background: #ff0;
+	opacity: 0.5;
+}
+
+#logo{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	background: #09f;
+	opacity: 0.7;
+	transform: translateX(-50%);
+}
+
+#abs1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	background: purple;
+}
