@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Page Composition and Wireframing - FADN 303: Web Design</title>
+
+		<meta name="description" content="Lecture slides for USC FADN 303 Web Design course. Subject is page composition and wireframing.">
+		<meta name="author" content="Aaron Siegel">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+			section img{
+				width: 90% !important;
+				height: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- header and footer stays on page and changes when tweaked by <style> inside each <section> -->
+				<header>
+					<a href="http://www.fadn303.net" class="left">FADN 303: Web Design</a>
+					<a href="http://roski.usc.edu" class="right">USC Roski School of Art and Design</a>
+				</header>
+
+				<footer>
+					<span id="leftside" class="left"></span>
+					<span id="rightside" class="right"></span>
+				</footer>
+
+				<section>
+					<div class="titletext">
+						<div class="week">WEEK 5:</div>
+						<h1>Page Composition and Wireframing</h1>
+						Aaron Siegel |
+						<script type="text/javascript">
+				        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+				        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				        </script>
+				        | Spring 2016
+					</div>
+				</section>
+
+				<section>
+					<h2>Organizing your Site</h2><br/>
+					<ul>
+						<li class="fragment">Consider the order of information.</li>
+						<li class="fragment">Visually organize content by importance.</li>
+						<li class="fragment">Guide your visitor's attention with visual elements.</li>
+					</ul>
+				</section>
+
+				<section data-state="compositionfooter" data-background="images/composition1.png" data-transition="fade">
+					<style>
+						.compositionfooter footer #leftside:after{content: "Visually organize your page using hierarchical elements.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section>
+					<h2>Structure through Composition</h2><br/>
+					<ul>
+						<li class="fragment">Web sites are made up of containers.</li>
+						<li class="fragment">Containers contain containers containing containers...</li>
+						<li class="fragment">Containers are used to logically structure your site content.</li>
+					</ul>
+				</section>
+
+				<section data-state="compositionfooter" data-background="images/composition1.png" data-transition="fade">
+				</section>
+
+				<section data-state="compositionfooter2" data-background="images/composition2.png" data-transition="fade">
+					<style>
+						.compositionfooter2 footer #leftside:after{content: "Elements must be structurally organized in a nested fashion to control their arrangement.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section data-state="compositionfooter3" data-background="images/composition3.png" data-transition="fade">
+					<style>
+						.compositionfooter3 footer #leftside:after{content: "Code is organized in a nested fashion.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section>
+					<h2>Wireframing a Page</h2>
+				</section>
+
+				<section data-state="compositionfooter2" data-background="images/composition2.png" data-transition="fade">
+				</section>
+
+				<section data-state="compositionfooter4" data-background="images/composition4.png" data-transition="fade">
+					<style>
+						.compositionfooter4 footer #leftside:after{content: "The wireframe shows the nested organization and approximate position/sizing of elements.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section data-state="compositionfooter5" data-background="images/composition5.png" data-transition="fade">
+					<style>
+						.compositionfooter5 footer #leftside:after{content: "Try organizing your site content on graph paper before writing any code.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section>
+					Resources<br/><br/>
+					<ul>
+						<li><a href="https://en.wikipedia.org/wiki/Website_wireframe">Wikipedia: Website Wireframe</a></li>
+						<li><a href="http://www.adobe.com/ProjectComet">Adobe: Project Comet</a></li>
+						<li><a href="https://wireframe.cc/">Wireframe.cc Tool</a></li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1920,
+		    height: 1440,
+		    margin: 0.1,
+		    minScale: 0.2,
+		    maxScale: 2.0,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
