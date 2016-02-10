@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Images - FADN 303: Web Design</title>
+
+		<meta name="description" content="Lecture slides for USC FADN 303 Web Design course. Subject is ethics of using code.">
+		<meta name="author" content="Aaron Siegel">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+			section img{
+				width: 90% !important;
+				height: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- header and footer stays on page and changes when tweaked by <style> inside each <section> -->
+				<header>
+					<a href="http://www.fadn303.net" class="left">FADN 303: Web Design</a>
+					<a href="http://roski.usc.edu" class="right">USC Roski School of Art and Design</a>
+				</header>
+
+				<footer>
+					<span id="leftside" class="left"></span>
+					<span id="rightside" class="right"></span>
+				</footer>
+
+				<section>
+					<div class="titletext">
+						<div class="week">WEEK 5:</div>
+						<h1>Images</h1>
+						Aaron Siegel |
+						<script type="text/javascript">
+				        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+				        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				        </script>
+				        | Spring 2016
+					</div>
+				</section>
+
+				<section>
+					<h2>IMG Tag</h2>
+					<br/>
+					The <code>&lt;img&gt;</code> tag is the original way to display an image as an html element.
+				</section>
+
+				<section>
+					<code>&lt;img src="images/corgismile.jpg" alt="corgismile"&gt;</code>
+				</section>
+
+				<section>
+					<img src="images/corgismile.jpg" alt="corgismile"/>
+				</section>
+
+				<section>
+					<div style="text-align: left;">
+						<code>&lt;img src="images/corgismile.jpg" alt="corgismile" id="corgione"&gt;</code><br/><br/>
+						<code>&lt;img src="images/corgismile.jpg" alt="corgismile" id="corgitwo"&gt;</code><br/><br/>
+					</div>
+					<br/><br/>
+
+					<div style="text-align: left;">
+						<code>
+							#corgione{<br/>
+								&nbsp;&nbsp;width: 200px;<br/>
+							}<br/>
+
+							#corgitwo{<br/>
+								&nbsp;&nbsp;width: 400px;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section data-state="imgdemoslide">
+					<img src="images/corgismile.jpg" alt="corgismile" id="corgione"/>
+					<img src="images/corgismile.jpg" alt="corgismile" id="corgitwo"/>
+					<style>
+						.imgdemoslide #corgione {width:500px !important;}
+						.imgdemoslide #corgitwo {width:1000px !important;}
+						.imgdemoslide footer #leftside:after{content: "Different styles can be applied to img tags with different IDs.";color:#fff;text-shadow:none;}
+					</style>
+				</section>
+
+				<section>
+					<h2>Background-image</h2>
+					<br/>
+					The <code>background-image</code> CSS property is a way to fill the background of an html element with an image.
+				</section>
+
+				<section data-transition="fade">
+					<div style="background-image:url('images/corgismile.jpg');width:100%;padding-top:50%;">
+					</div>
+					<br/><br/>
+					<div class="half" style="width: 40%;text-align: left;">
+						<code>&lt;div id="corgidiv"&gt;&lt;/div&gt;</code>
+					</div>
+					<div class="half" style="width: 60%;text-align: left;">
+						<code>
+							#corgidiv {<br/>
+								&nbsp;&nbsp;background-image: url('images/corgismile.jpg');<br/>
+								&nbsp;&nbsp;width: 100%;<br/>
+								&nbsp;&nbsp;padding-top: 50%;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					<div style="background-image:url('images/corgismile.jpg');width:100%;padding-top:50%;background-size:cover;">
+					</div>
+					<br/><br/>
+					<div class="half" style="width: 40%;text-align: left;">
+						<code>&lt;div id="corgidiv"&gt;&lt;/div&gt;</code>
+					</div>
+					<div class="half" style="width: 60%;text-align: left;">
+						<code>
+							#corgidiv {<br/>
+								&nbsp;&nbsp;background-image: url('images/corgismile.jpg');<br/>
+								&nbsp;&nbsp;background-size: cover;<br/>
+								&nbsp;&nbsp;width: 100%;<br/>
+								&nbsp;&nbsp;padding-top: 50%;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					<div style="background-image:url('images/corgismile.jpg');width:100%;padding-top:50%;background-size:contain;">
+					</div>
+					<br/><br/>
+					<div class="half" style="width: 40%;text-align: left;">
+						<code>&lt;div id="corgidiv"&gt;&lt;/div&gt;</code>
+					</div>
+					<div class="half" style="width: 60%;text-align: left;">
+						<code>
+							#corgidiv {<br/>
+								&nbsp;&nbsp;background-image: url('images/corgismile.jpg');<br/>
+								&nbsp;&nbsp;background-size: contain;<br/>
+								&nbsp;&nbsp;width: 100%;<br/>
+								&nbsp;&nbsp;padding-top: 50%;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					<div style="background-image:url('images/corgismile.jpg');width:100%;padding-top:50%;background-size:contain;background-repeat: no-repeat;">
+					</div>
+					<br/><br/>
+					<div class="half" style="width: 40%;text-align: left;">
+						<code>&lt;div id="corgidiv"&gt;&lt;/div&gt;</code>
+					</div>
+					<div class="half" style="width: 60%;text-align: left;">
+						<code>
+							#corgidiv {<br/>
+								&nbsp;&nbsp;background-image: url('images/corgismile.jpg');<br/>
+								&nbsp;&nbsp;background-size: contain;<br/>
+								&nbsp;&nbsp;background-repeat: no-repeat;<br/>
+								&nbsp;&nbsp;width: 100%;<br/>
+								&nbsp;&nbsp;padding-top: 50%;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					<div style="background-image:url('images/corgismile.jpg');width:100%;padding-top:50%;background-size:contain;background-repeat: no-repeat;background-position: center;">
+					</div>
+					<br/><br/>
+					<div class="half" style="width: 40%;text-align: left;">
+						<code>&lt;div id="corgidiv"&gt;&lt;/div&gt;</code>
+					</div>
+					<div class="half" style="width: 60%;text-align: left;">
+						<code>
+							#corgidiv {<br/>
+								&nbsp;&nbsp;background-image: url('images/corgismile.jpg');<br/>
+								&nbsp;&nbsp;background-size: contain;<br/>
+								&nbsp;&nbsp;background-repeat: no-repeat;<br/>
+								&nbsp;&nbsp;background-position: center;<br/>
+								&nbsp;&nbsp;width: 100%;<br/>
+								&nbsp;&nbsp;padding-top: 50%;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					<div style="background-image:url('images/corgismile.jpg');width:100%;padding: 20% 0 20% 0;background-size:cover;border-radius:100px;">
+						<h1 style="text-shadow: 10px 10px #000">corgis 4 life</h1>
+					</div>
+					<br/><br/>
+					<div class="half" style="width: 40%;text-align: left;">
+						<code>
+							&lt;div id="corgidiv"&gt;<br/>
+							&nbsp;&nbsp;&lt;h1&gt;corgis 4 life&lt;/h1&gt;<br/>
+							&lt;/div&gt;
+						</code>
+					</div>
+					<div class="half" style="width: 60%;text-align: left;">
+						<code>
+							#corgidiv {<br/>
+								&nbsp;&nbsp;background-image: url('images/corgismile.jpg');<br/>
+								&nbsp;&nbsp;background-size: cover;<br/>
+								&nbsp;&nbsp;width: 100%;<br/>
+								&nbsp;&nbsp;padding: 20% 0 20% 0;<br/>
+								&nbsp;&nbsp;text-shadow: 10px 10px #000;<br/>
+								&nbsp;&nbsp;border-radius: 100px<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li><a href="http://www.w3schools.com/html/html_images.asp">W3Schools: HTML Images</li>
+						<li><a href="http://www.w3schools.com/css/css3_images.asp">W3Schools: CSS3 Images</li>
+						<li><a href="http://www.w3schools.com/cssref/pr_background-image.asp">W3Schools: CSS background-image Property</li>
+						<li><a href="http://www.w3schools.com/cssref/pr_background-position.asp">W3Schools: CSS background-position Property</li>
+						<li><a href="http://www.w3schools.com/cssref/css3_pr_background-size.asp">W3Schools: CSS background-size Property</li>
+						<li><a href="http://www.w3schools.com/cssref/pr_background-attachment.asp">W3Schools: CSS background-attachment Property</li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1920,
+		    height: 1440,
+		    margin: 0.1,
+		    minScale: 0.2,
+		    maxScale: 2.0,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
