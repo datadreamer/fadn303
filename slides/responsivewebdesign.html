@@ -37,6 +37,13 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+		<style>
+			section img{
+				width: 90% !important;
+				height: auto;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -46,15 +53,27 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
+				<!-- header and footer stays on page and changes when tweaked by <style> inside each <section> -->
+				<header>
+					<a href="http://www.fadn303.net" class="left">FADN 303: Web Design</a>
+					<a href="http://roski.usc.edu" class="right">USC Roski School of Art and Design</a>
+				</header>
+
+				<footer>
+					<span id="leftside" class="left"></span>
+					<span id="rightside" class="right"></span>
+				</footer>
+
 				<section>
 					<div class="titletext">
-						FADN 303: Web Design
-						<h1>Responsive<br> Web Design</h1>
-						Aaron Siegel<br/>
+						<div class="week">WEEK 6:</div>
+						<h1>Responsive Web Design</h1>
+						Aaron Siegel |
 						<script type="text/javascript">
-	        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
-	        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
-	          </script>
+				        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+				        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				        </script>
+				        | Spring 2016
 					</div>
 				</section>
 
@@ -113,11 +132,19 @@
 
 				<section>
 					<h2>Media Queries</h2>
+					<br/>
+					Media Queries allow you to use breakpoints to specify different CSS styles for different window dimensions.
 				</section>
 
 				<section>
 					Responding to Device Resolution<br/><br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div>
+						<div id="mediatest1">
+							#mediatest1
+						</div>
+					</div>
+					<br/>
+					<div style="text-align: left;">
 						<code>
 							@media screen and (min-width: 640px) {<br/>
 							&nbsp;&nbsp;#mediatest1 { background-color: lightgreen; }<br/>
@@ -133,16 +160,17 @@
 							}
 						</code>
 					</div>
-					<div class="half">
-						<div id="mediatest1">
-							#mediatest1
-						</div>
-					</div>
 				</section>
 
 				<section>
 					Responding to Device Resolution<br/><br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div>
+						<div id="mediatest2">
+							change this text size.
+						</div>
+					</div>
+					<br/>
+					<div style="text-align: left;">
 						<code>
 							@media screen and (min-width: 640px) {<br/>
 							&nbsp;&nbsp;#mediatest2 { font-size: 1.2em; }<br/>
@@ -158,11 +186,6 @@
 							}
 						</code>
 					</div>
-					<div class="half">
-						<div id="mediatest2">
-							change this text size.
-						</div>
-					</div>
 				</section>
 
 				<section>
@@ -170,11 +193,100 @@
 				</section>
 
 				<section>
+					<h2>CSS3 Box Sizing</h2>
+					<br/>
+					The CSS3 <code>box-sizing</code> property allows you to include the padding and border in an element's total width and height.
+				</section>
+
+				<section>
+					<h2>Before Box Sizing</h2>
+					<br/>
+					<div>
+						<div class="half">
+							<div id="boxsizing1">
+								This div is smaller because it has no padding.
+							</div>
+						</div>
+						<div class="half">
+							<div id="boxsizing2">
+								This div is larger because its padding is added to its width and height.
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="half" style="text-align:left;">
+							<br/>
+							<code>
+								#div1 {<br/>
+									&nbsp;&nbsp;width: 300px;<br/>
+									&nbsp;&nbsp;height: 100px;<br/>
+									&nbsp;&nbsp;border: 1px solid blue; <br/>
+								}
+							</code>
+						</div>
+						<div class="half" style="text-align:left;">
+							<br/>
+							<code>
+								.div2 {<br/>
+								    &nbsp;&nbsp;width: 300px;<br/>
+								    &nbsp;&nbsp;height: 100px;<br/>
+								    &nbsp;&nbsp;padding: 50px;<br/>
+								    &nbsp;&nbsp;border: 1px solid red;<br/>
+								}
+							</code>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>After Box Sizing</h2>
+					<br/>
+					<div class="half">
+						<div id="boxsizing1" class="bb">
+							This div is unchanged.
+						</div>
+					</div>
+					<div class="half">
+						<div id="boxsizing2" class="bb">
+							This div is now the same dimensions, as the padding is included in the width and height.
+						</div>
+					</div>
+
+					<div>
+						<div class="half" style="text-align:left;">
+							<br/>
+							<code>
+								#div1 {<br/>
+									&nbsp;&nbsp;width: 300px;<br/>
+									&nbsp;&nbsp;height: 100px;<br/>
+									&nbsp;&nbsp;border: 1px solid blue; <br/>
+									&nbsp;&nbsp;box-sizing: border-box;<br/>
+								}
+							</code>
+						</div>
+						<div class="half" style="text-align:left;">
+							<br/>
+							<code>
+								.div2 {<br/>
+								    &nbsp;&nbsp;width: 300px;<br/>
+								    &nbsp;&nbsp;height: 100px;<br/>
+								    &nbsp;&nbsp;padding: 50px;<br/>
+								    &nbsp;&nbsp;border: 1px solid red;<br/>
+										&nbsp;&nbsp;box-sizing: border-box;<br/>
+								}
+							</code>
+						</div>
+					</div>
+				</section>
+
+				<section>
 					<h2>Resources</h2>
-					<ul class="caption">
-						<li><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp">W3Schools - @media Rule</a></li>
-						<li><a href="http://mediaqueri.es/">Media Queries - Portfolio of Responsive Design</a></li>
+					<ul>
+						<li><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp">W3Schools: @media Rule</a></li>
+						<li><a href="http://mediaqueri.es/">Media Queries: Portfolio of Responsive Design</a></li>
 						<li><a href="http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/white_paper_c11-520862.html">Cisco Global Mobile Data Traffic Forecast 2014-2019</a></li>
+						<li><a href="http://www.w3schools.com/css/css3_box-sizing.asp">W3Schools: CSS3 Box Sizing</a></li>
 					</ul>
 				</section>
 
@@ -194,8 +306,13 @@
 				progress: true,
 				history: true,
 				center: true,
+				width: 1920,
+		    height: 1440,
+		    margin: 0.1,
+		    minScale: 0.2,
+		    maxScale: 2.0,
 
-				transition: 'convex', // none/fade/slide/convex/concave/zoom
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
 
 				// Optional reveal.js plugins
 				dependencies: [

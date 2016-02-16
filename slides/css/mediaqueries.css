@@ -8,6 +8,26 @@
   background: gray;
 }
 
+#boxsizing1{
+  width: 500px;
+  height: 300px;
+  border: 1px solid blue;
+  margin: 0 auto;
+}
+
+#boxsizing2{
+  width: 500px;
+  height: 300px;
+  padding: 50px;
+  border: 1px solid red;
+  margin: 0 auto;
+}
+
+.bb{
+  box-sizing: border-box;
+}
+
+
 @media screen and (min-width: 640px) {
     #mediatest1 { background-color: lightgreen; }
     #mediatest2 { font-size: 1.2em; }
