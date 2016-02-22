@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Typography - FADN 303: Web Design</title>
+
+		<meta name="description" content="Lecture slides for USC FADN 303 Web Design course. Subject is Typography.">
+		<meta name="author" content="Aaron Siegel">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/mediaqueries.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/examples.js"></script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+			section img{
+				width: 90% !important;
+				height: auto;
+			}
+
+			@font-face {
+				font-family: "dinm";
+				src: url('fonts/dinm.eot');
+				src: url('fonts/dinm.eot#iefix') format('embedded-opentype'),
+				url('fonts/dinm.woff') format('woff'),
+				url('fonts/dinm.ttf') format('truetype'),
+				url('fonts/dinm.svg#dinm') format('svg');
+			}
+
+			#webfonttest {
+				font-family: dinm, Helvetica, Arial, serif;
+				font-size: 4em;
+				color: #ff00ff;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- header and footer stays on page and changes when tweaked by <style> inside each <section> -->
+				<header>
+					<a href="http://www.fadn303.net" class="left">FADN 303: Web Design</a>
+					<a href="http://roski.usc.edu" class="right">USC Roski School of Art and Design</a>
+				</header>
+
+				<footer>
+					<span id="leftside" class="left"></span>
+					<span id="rightside" class="right"></span>
+				</footer>
+
+				<section>
+					<div class="titletext">
+						<div class="week">WEEK 7:</div>
+						<h1>Typography</h1>
+						Aaron Siegel |
+						<script type="text/javascript">
+				        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+				        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				        </script>
+				        | Spring 2016
+					</div>
+				</section>
+
+				<section>
+					<h2>Font-Family</h2><br/>
+					The <code>font-family</code> css declaration is used to specify the font face to use for a particular element. You can specify multiple fonts in order to provide fallbacks in case fonts are not found or are not able to load.<br/>
+				</section>
+
+				<section>
+					<div class="half" style="text-align: left">
+						<p style="font-family: 'Times New Roman', serif;">
+							This is my serif paragraph.
+						</p><br/><br/><br/>
+						<code>
+							p {<br/>
+								&nbsp;&nbsp;font-family: "Times New Roman", serif;<br/>
+							}
+						</code>
+					</div>
+					<div class="half" style="text-align: left">
+						<p style="font-family: Helvetica, Arial, sans;">
+							This is my sans-serif paragraph.
+						</p><br/><br/><br/>
+						<code>
+							p {<br/>
+								&nbsp;&nbsp;font-family: Helvetica, Arial, sans;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Font-Size</h2><br/>
+					The <code>font-size</code> css declaration is used to specify the font size to use for a particular element.<br/>
+				</section>
+
+				<section>
+					<div class="half" style="text-align: left">
+						<p style="font-size: 1.5em;">
+							This is my small text.
+						</p><br/><br/><br/>
+						<code>
+							p {<br/>
+								&nbsp;&nbsp;font-size: 1.5em;<br/>
+							}
+						</code>
+					</div>
+					<div class="half" style="text-align: left">
+						<p style="font-size: 4em;">
+							This is my large text.
+						</p><br/><br/><br/>
+						<code>
+							p {<br/>
+								&nbsp;&nbsp;font-size: 4em;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Font-Weight</h2><br/>
+					The <code>font-weight</code> css declaration is used to specify the weight of the font to be used. This works best when you have a font that comes in a pack with multiple weights.<br/>
+				</section>
+
+				<section>
+					<div class="half" style="text-align: left">
+						<p style="font-weight: 200;">
+							This is my light text.
+						</p><br/><br/><br/>
+						<code>
+							p {<br/>
+								&nbsp;&nbsp;font-weight: 200;<br/>
+							}
+						</code>
+					</div>
+					<div class="half" style="text-align: left">
+						<p style="font-weight: 700;">
+							This is my heavy text.
+						</p><br/><br/><br/>
+						<code>
+							p {<br/>
+								&nbsp;&nbsp;font-weight: 700;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Font-Style</h2><br/>
+					The <code>font-style</code> css declaration is used to specify whether a font should be italic or bold.<br/>
+				</section>
+
+				<section>
+					<div class="half" style="text-align: left">
+						<p style="font-style: bold;">
+							This is my bold text.
+						</p><br/><br/><br/>
+						<code>
+							p {<br/>
+								&nbsp;&nbsp;font-style: bold;<br/>
+							}
+						</code>
+					</div>
+					<div class="half" style="text-align: left">
+						<p style="font-style: italic;">
+							This is my italic text.
+						</p><br/><br/><br/>
+						<code>
+							p {<br/>
+								&nbsp;&nbsp;font-style: italic;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Letter-Spacing</h2><br/>
+					The <code>letter-spacing</code> css declaration is used to adjust tracking for paragraphs.<br/>
+				</section>
+
+				<section>
+					<div class="half" style="text-align: left">
+						<p style="letter-spacing: 1em;">
+							Spaced Out.
+						</p><br/><br/><br/>
+						<code>
+							p {<br/>
+								&nbsp;&nbsp;letter-spacing: 1em;<br/>
+							}
+						</code>
+					</div>
+					<div class="half" style="text-align: left">
+						<p style="letter-spacing: -0.1em;">
+							Pushed Together.
+						</p><br/><br/><br/>
+						<code>
+							p {<br/>
+								&nbsp;&nbsp;letter-spacing: -0.1em;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Line-Height</h2><br/>
+					The <code>line-height</code> css declaration is used to adjust the vertical spacing between lines of a paragraph.<br/>
+				</section>
+
+				<section>
+					<div class="half" style="text-align: left">
+						<p style="line-height: 80%;">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna diam, maximus nec arcu eu, aliquam malesuada orci. Maecenas magna justo, viverra in elit ac, iaculis tempor mi. Etiam aliquet arcu sapien, in congue enim maximus vitae. Integer vehicula dignissim risus nec tempor. Aenean arcu turpis, tincidunt sit amet augue sed, rhoncus luctus lectus. Vivamus eget nunc lorem. Donec auctor, nunc sit amet ullamcorper pharetra, lacus odio dignissim ex, ac tempor nunc urna ac justo. Ut vel mi rutrum, fringilla sem ac, blandit ipsum. Proin elementum eu nisi in blandit. In hac habitasse platea dictumst. Donec at mi risus.
+						</p><br/><br/><br/>
+						<code>
+							p {<br/>
+								&nbsp;&nbsp;line-height: 80%;<br/>
+							}
+						</code>
+					</div>
+					<div class="half" style="text-align: left">
+						<p style="line-height: 150%;">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna diam, maximus nec arcu eu, aliquam malesuada orci. Maecenas magna justo, viverra in elit ac, iaculis tempor mi. Etiam aliquet arcu sapien, in congue enim maximus vitae. Integer vehicula dignissim risus nec tempor. Aenean arcu turpis, tincidunt sit amet augue sed, rhoncus luctus lectus. Vivamus eget nunc lorem. Donec auctor, nunc sit amet ullamcorper pharetra, lacus odio dignissim ex, ac tempor nunc urna ac justo. Ut vel mi rutrum, fringilla sem ac, blandit ipsum. Proin elementum eu nisi in blandit. In hac habitasse platea dictumst. Donec at mi risus.
+						</p><br/><br/><br/>
+						<code>
+							p {<br/>
+								&nbsp;&nbsp;line-height: 150%;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Text-Align</h2><br/>
+					The <code>text-align</code> css declaration is used to adjust the alignment of text paragraphs.<br/>
+				</section>
+
+				<section>
+					<div class="third">
+						<code>text-align: justify;</code><br/>
+						<p class="caption" style="text-align:justify;">
+							<br/>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet libero vel leo auctor dictum. In eu nisi ut lectus malesuada vestibulum in eu nunc. In varius varius elit ut porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque finibus, lacus sit amet porta condimentum, diam ex imperdiet nibh, at accumsan tellus libero ut lectus. Aenean rutrum libero in libero vestibulum, eget sodales velit efficitur. Mauris ut magna vitae velit tristique accumsan et eget est. Phasellus eu ante ut nibh dictum aliquet.
+						</p>
+					</div>
+					<div class="third">
+						<code>text-align: left;</code><br/>
+						<p class="caption" style="text-align:left;">
+							<br/>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet libero vel leo auctor dictum. In eu nisi ut lectus malesuada vestibulum in eu nunc. In varius varius elit ut porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque finibus, lacus sit amet porta condimentum, diam ex imperdiet nibh, at accumsan tellus libero ut lectus. Aenean rutrum libero in libero vestibulum, eget sodales velit efficitur. Mauris ut magna vitae velit tristique accumsan et eget est. Phasellus eu ante ut nibh dictum aliquet.
+						</p>
+					</div>
+					<div class="third" style="max-height: 100px;">
+						<code>text-align: right;</code><br/>
+						<p class="caption" style="text-align:right;">
+							<br/>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet libero vel leo auctor dictum. In eu nisi ut lectus malesuada vestibulum in eu nunc. In varius varius elit ut porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque finibus, lacus sit amet porta condimentum, diam ex imperdiet nibh, at accumsan tellus libero ut lectus. Aenean rutrum libero in libero vestibulum, eget sodales velit efficitur. Mauris ut magna vitae velit tristique accumsan et eget est. Phasellus eu ante ut nibh dictum aliquet.
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>Embedding Fonts</h2><br/>
+					By default, web pages will try to use fonts that are installed on your local system. In order to use custom fonts so that everyone can see them, they must be embedded in your CSS as web fonts.
+				</section>
+
+				<section>
+					<p id="webfonttest">
+						My Custom Web Font.
+					</p>
+					<br/>
+					<br/>
+					<div style="text-align: left;">
+						<code>
+							@font-face {<br/>
+								&nbsp;&nbsp;font-family: 'dinm';<br/>
+								&nbsp;&nbsp;src: url('fonts/dinm.eot');<br/>
+								&nbsp;&nbsp;src: url('fonts/dinm.eot#iefix') format('embedded-opentype'),<br/>
+								&nbsp;&nbsp;url('fonts/dinm.woff') format('woff'),<br/>
+								&nbsp;&nbsp;url('fonts/dinm.ttf') format('truetype'),<br/>
+								&nbsp;&nbsp;url('fonts/dinm.svg#dinm') format('svg');<br/>
+							}<br/>
+	<br/>
+							p {<br/>
+								&nbsp;&nbsp;font-family: dinm, Helvetica, Arial, serif;<br/>
+								&nbsp;&nbsp;font-size: 4em;<br/>
+								&nbsp;&nbsp;color: #ff00ff;<br/>
+							}
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Font Squirrel</h2><br/>
+					Font Squirrel is a service providing hundreds of freely available web fonts, as well as a web font generator so you can create the proper web files from your own type face.<br/>
+					<br/>
+					<a href="http://www.fontsquirrel.com/tools/webfont-generator">Visit</a>
+				</section>
+
+				<section data-background="images/fontsquirrel.png" data-transition="fade">
+				</section>
+
+				<section>
+					<h2>Google Fonts</h2><br/>
+					Google provides hundreds of free fonts for use on web sites and in apps. They also provide hosting for the fonts, so you only need to add a link tag to your HTML to include them in your site.<br/>
+					<br/>
+					<a href="http://www.google/fonts">Visit</a>
+				</section>
+
+				<section data-background="images/googlefonts.png" data-transition="fade">
+				</section>
+
+				<section>
+					<h2>Color</h2><br/>
+					Color can be applied using color names, hexadecimal codes, or RGBA/HSLA values, and can be applied to the foreground as well as background.
+				</section>
+
+				<section>
+					<h2>Color Types</h2><br/>
+					<div class="third">
+						<p>
+							Color Name<br/><br/>
+						</p>
+						<ul>
+							<li>Plain text names</li>
+							<li>140 available</li>
+							<li style="color:DeepPink;">DeepPink</li>
+							<li style="color:DodgerBlue;">DodgerBlue</li>
+							<li style="color:GreenYellow;">GreenYellow</li>
+						</ul>
+					</div>
+					<div class="third">
+						<p>
+							Hexadecimal<br/><br/>
+						</p>
+						<ul>
+							<li>Uses alphanumeric code to specify RGB values.</li>
+							<li>24-bit color</li>
+							<li style="color:#FF1493;">#FF1493</li>
+							<li style="color:#1E90FF;">#1E90FF</li>
+							<li style="color:#ADFF2F;">#ADFF2F</li>
+						</ul>
+					</div>
+					<div class="third">
+						<p>
+							RGBA/HSLA<br/><br/>
+						</p>
+						<ul>
+							<li>Uses 8-bit numbers for color channels.</li>
+							<li>32-bit color (can contain alpha channel).</li>
+							<li style="color:rgb(255,20,147);">rgb(255, 20, 147)</li>
+							<li style="color:rgb(30,144,255);">rgb(30, 144, 255)</li>
+							<li style="color:rgb(173,255,47);">rgb(173, 255, 47)</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li><a href="http://www.w3schools.com/css/css3_text_effects.asp">W3Schools - CSS Text Reference</a></li>
+						<li><a href="http://www.w3schools.com/css/css3_fonts.asp">W3Schools - CSS Font Reference</a></li>
+						<li><a href="http://www.fontsquirrel.com">Font Squirrel - Free Web Fonts</a></li>
+						<li><a href="https://www.google.com/fonts">Google Fonts - Free Web Fonts</a></li>
+						<li><a href="http://www.dafont.com/">Da Font - Free Fonts</a></li>
+						<li><a href="http://www.w3schools.com/tags/ref_colornames.asp">W3Schools - Color Names Reference</a></li>
+						<li><a href="http://www.w3schools.com/tags/ref_colorpicker.asp">W3Schools - Color Picker Tool</a></li>
+						<li><a href="http://www.w3schools.com/tags/ref_colormixer.asp">W3Schools - Color Mixer Tool</a></li>
+						<li><a href="http://vormplus.be/blog/article/using-colors-in-css">Using Colors in CSS</a></li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1920,
+		    height: 1440,
+		    margin: 0.1,
+		    minScale: 0.2,
+		    maxScale: 2.0,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
