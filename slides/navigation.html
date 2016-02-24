@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Navigation &amp; Pagination - FADN 303: Web Design</title>
+
+		<meta name="description" content="Lecture slides for USC FADN 303 Web Design course. Subject is navigation &amp; pagination.">
+		<meta name="author" content="Aaron Siegel">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/mediaqueries.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/examples.js"></script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+			section img{
+				width: 90% !important;
+				height: auto;
+			}
+
+			@font-face {
+				font-family: "dinm";
+				src: url('fonts/dinm.eot');
+				src: url('fonts/dinm.eot#iefix') format('embedded-opentype'),
+				url('fonts/dinm.woff') format('woff'),
+				url('fonts/dinm.ttf') format('truetype'),
+				url('fonts/dinm.svg#dinm') format('svg');
+			}
+
+			#webfonttest {
+				font-family: dinm, Helvetica, Arial, serif;
+				font-size: 4em;
+				color: #ff00ff;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- header and footer stays on page and changes when tweaked by <style> inside each <section> -->
+				<header>
+					<a href="http://www.fadn303.net" class="left">FADN 303: Web Design</a>
+					<a href="http://roski.usc.edu" class="right">USC Roski School of Art and Design</a>
+				</header>
+
+				<footer>
+					<span id="leftside" class="left"></span>
+					<span id="rightside" class="right"></span>
+				</footer>
+
+				<section>
+					<div class="titletext">
+						<div class="week">WEEK 7:</div>
+						<h1>Navigation &amp; Pagination</h1>
+						Aaron Siegel |
+						<script type="text/javascript">
+				        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+				        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				        </script>
+				        | Spring 2016
+					</div>
+				</section>
+
+				<section>
+					<h2>Navigation Styles</h2><br/>
+					Part of wireframing your site is making a UI/UX flowchart to organize the way the different sections of your web site connect. These might be different html documents linked together to create a site, or a single html document with multiple distinct sections.
+				</section>
+
+				<section data-background="images/navigation1.png">
+				</section>
+
+				<section data-background="images/navigation2.png">
+				</section>
+
+				<section>
+					<h2>Pagination</h2><br/>
+					Pagination is a design technique where you attempt to fit everything onto the screen at once, as if reading a printed page. Pagination requires the use of responsive design to accommodate displays with different dimensions and resolutions.<br/>
+					<br/>
+					<h2><a href="../demos/pagination/index.html">Demo</a></h2>
+				</section>
+
+				<section>
+					<h2>vw/vh</h2><br/>
+					In order to appropriately size paginated sections, we need to be able to reliably measure the viewport width and height. vw and vh are css measurement types used to position and size elements based on the complete viewport dimensions.<br/>
+				</section>
+
+				<section>
+					100vw = 100% viewport width<br/>
+					100vh = 100% viewport height<br/>
+					<br/>
+					vw/vh is different from using the % measurement because they are always based on the viewport dimensions, regardless of how nested the html element is that you are applying it to.<br/>
+				</section>
+
+				<section>
+					<h2>Paginated Linking</h2><br/>
+					Linking to different sections within the page is just as easy as linking to other pages. This gives the user the option to scroll through all the content or use a navigation menu to select a specific section to view.<br/>
+					<br/>
+					<h2><a href="../demos/paginatedlinking/index.html">Demo</a></h2>
+				</section>
+
+				<section>
+					<h2>Paginated Scrolling</h2><br/>
+					A little scrolling animation can be added to single html documents using a paginated menu in order to retain object permanence on screen.<br/>
+					<br/>
+					<h2><a href="../demos/paginatedscrolling/index.html">Demo</a></h2>
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li><a href="http://www.w3schools.com/cssref/css_units.asp">W3Schools - CSS Units</li>
+						<li><a href="http://www.w3schools.com/css/css_rwd_viewport.asp">W3Schools - Responsive Web Design Viewport</li>
+						<li><a href="http://www.w3schools.com/css/css_rwd_grid.asp">W3Schools - Responsive Web Design Grid View</li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1920,
+		    height: 1440,
+		    margin: 0.1,
+		    minScale: 0.2,
+		    maxScale: 2.0,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
