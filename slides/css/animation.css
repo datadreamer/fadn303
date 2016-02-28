@@ -1,31 +1,31 @@
 #transition1{
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 400px;
   background: #0099ff;
   -webkit-transition: width 2s;
   transition: width 2s;
 }
 
 #transition1:hover{
-  width: 300px;
+  width: 800px;
 }
 
 #transition2{
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 400px;
   background: #0099ff;
   -webkit-transition: width 2s, background 4s;
   transition: width 2s, background 4s;
 }
 
 #transition2:hover{
-  width: 300px;
+  width: 800px;
   background: red;
 }
 
 #transition3{
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 400px;
   background: #0099ff;
   -webkit-transition: width 1s, background 1s;
   transition: width 1s, background 1s;
@@ -34,7 +34,7 @@
 }
 
 #transition3:hover{
-  width: 300px;
+  width: 800px;
   background: red;
 }
 

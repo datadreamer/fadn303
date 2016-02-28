@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>CSS3 Effects - FADN 303: Web Design</title>
+		<title>CSS3 Effects, Transitions, Transforms, &amp; Animations - FADN 303: Web Design</title>
 
 		<meta name="description" content="Lecture slides for USC FADN 303 Web Design course. Subject is basic web literacy.">
 		<meta name="author" content="Aaron Siegel">
@@ -17,7 +17,6 @@
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
-		<link rel="stylesheet" href="css/slide.css">
 		<link rel="stylesheet" href="css/animation.css">
 
 		<!-- Code syntax highlighting -->
@@ -35,6 +34,14 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+		<style>
+			section img{
+				width: 90% !important;
+				height: auto;
+			}
+		</style>
+
 	</head>
 
 	<body>
@@ -44,15 +51,27 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
+				<!-- header and footer stays on page and changes when tweaked by <style> inside each <section> -->
+				<header>
+					<a href="http://www.fadn303.net" class="left">FADN 303: Web Design</a>
+					<a href="http://roski.usc.edu" class="right">USC Roski School of Art and Design</a>
+				</header>
+
+				<footer>
+					<span id="leftside" class="left"></span>
+					<span id="rightside" class="right"></span>
+				</footer>
+
 				<section>
 					<div class="titletext">
-						FADN 303: Web Design
-						<h1>CSS3 Effects</h1>
-						Aaron Siegel<br/>
+						<div class="week">WEEK 7:</div>
+						<h1>CSS3 Effects, Transitions, Transforms, &amp; Animations</h1>
+						Aaron Siegel |
 						<script type="text/javascript">
-	        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
-	        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
-	          </script>
+				        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+				        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				        </script>
+				        | Spring 2016
 					</div>
 				</section>
 
@@ -61,70 +80,61 @@
 				</section>
 
 				<section data-transition="fade">
-					Rounded Corners
-					<p class="caption">
-						<br/>Simply round out the edges of your element using the <code>border-radius</code> property.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Rounded Corners</h2>
+					Simply round out the edges of your element using the <code>border-radius</code> property.<br/><br/>
+					<div class="half" style="text-align: left;">
 						<code>
 							div {<br/>
 								&nbsp;&nbsp;border-radius: 25px;<br/>
 								&nbsp;&nbsp;background: #0099ff;<br/>
 								&nbsp;&nbsp;padding: 20px;<br/>
-								&nbsp;&nbsp;width: 200px;<br/>
+								&nbsp;&nbsp;width: 400px;<br/>
 								&nbsp;&nbsp;height: 150px;<br/>
 							}
 						</code>
 					</div>
 					<div class="half">
-						<div style="border-radius: 25px;background: #0099ff;padding: 20px; width: 200px;height: 150px;">
+						<div style="border-radius: 25px;background: #0099ff;padding: 20px; width: 400px;height: 150px;">
 							Rounded!
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Rounded Corners
-					<p class="caption">
-						<br/>Switch up the radius value for each corner to get some crazy shapes.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Rounded Corners</h2>
+					Switch up the radius value for each corner to get some crazy shapes.<br/><br/>
+					<div class="half" style="text-align: left;">
 						<code>
 							.rctest {<br/>
-								&nbsp;&nbsp;width:150px;<br/>
-								&nbsp;&nbsp;height:150px;<br/>
+								&nbsp;&nbsp;width:400px;<br/>
+								&nbsp;&nbsp;height:400px;<br/>
 								&nbsp;&nbsp;background:#0099ff;<br/>
 								&nbsp;&nbsp;float:left;<br/>
 							}<br/>
 							<br/>
 							#rc1 {<br/>
-								&nbsp;&nbsp;border-radius:75px;<br/>
+								&nbsp;&nbsp;border-radius:200px;<br/>
 							}<br/>
 							<br/>
 							#rc2 {<br/>
-								&nbsp;&nbsp;border-radius:0px 25px 75px 25px;<br/>
+								&nbsp;&nbsp;border-radius:0px 25px 200px 25px;<br/>
 							}
 						</code>
 					</div>
 					<div class="half">
-						<div id="rc1" style="width:150px; height:150px; background:#0099ff; float:left; border-radius:75px; ">
+						<div id="rc1" style="width:400px; height:400px; background:#0099ff; float:left; border-radius:200px; ">
 							#rc1
 						</div>
-						<div id="rc2" style="width:150px; height:150px; background:#0099ff; float:left; border-radius:0px 25px 75px 25px; margin-left:20px;">
+						<div id="rc2" style="width:400px; height:400px; background:#0099ff; float:left; border-radius:0px 25px 200px 25px; margin-left:20px;">
 							#rc2
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Border Images
-					<p class="caption">
-						<br/>Create an image that holds tiles for use in borders.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Border Images</h2>
+					Create an image that holds tiles for use in borders.<br/><br/>
+					<div style="text-align: left;float: left;width:60%;">
 						<code>
 							#borderimg {<br/>
 								&nbsp;&nbsp;border: 10px solid transparent;<br/>
@@ -134,23 +144,20 @@
 								&nbsp;&nbsp;padding: 30px;<br/>
 							}
 						</code>
-						<br/><br/>
-						<img src="images/border.png" style="width: 90px; height:90px">
 					</div>
-					<div class="half">
+					<div style="float:left;margin-left:5%;width:35%;">
 						<div style="padding: 30px;border: 10px solid transparent;-webkit-border-image: url('images/border.png') 30 round;-o-border-image: url('images/border.png') 30 round;border-image: url('images/border.png') 30 round;">
 							Festive!
 						</div>
+						<br/><br/>
+						<img src="images/border.png" style="width: 300px !important; height:300px !important;">
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Border Images
-					<p class="caption">
-						<br/>Stretch the sides for a different look.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Border Images</h2>
+					Stretch the sides for a different look.<br/><br/>
+					<div style="text-align: left; float: left; width:60%;">
 						<code>
 							#borderimg {<br/>
 								&nbsp;&nbsp;border: 10px solid transparent;<br/>
@@ -160,23 +167,20 @@
 								&nbsp;&nbsp;padding: 30px;<br/>
 							}
 						</code>
-						<br/><br/>
-						<img src="images/border.png" style="width: 90px; height:90px">
 					</div>
-					<div class="half">
+					<div style="float:left; margin-left:5%; width:35%;">
 						<div style="padding: 30px;border: 10px solid transparent;-webkit-border-image: url('images/border.png') 30 stretch;-o-border-image: url('images/border.png') 30 stretch;border-image: url('images/border.png') 30 stretch;">
 							Festive!
 						</div>
+						<br/><br/>
+						<img src="images/border.png" style="width: 300px !important; height:300px !important;">
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Gradients
-					<p class="caption">
-						<br/>Apply smooth gradients to the background of your elements.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Gradients</h2>
+					Apply smooth gradients to the background of your elements.<br/><br/>
+					<div style="text-align: left;">
 						<code>
 							#grad1 {<br/>
 								&nbsp;&nbsp;background: -webkit-linear-gradient(#000066, #0099ff);<br/>
@@ -187,7 +191,8 @@
 							}
 						</code>
 					</div>
-					<div class="half">
+					<br/><br/>
+					<div>
 						<div style="background: -webkit-linear-gradient(#000066, #0099ff);background: -o-linear-gradient(#000066, #0099ff);background: -moz-linear-gradient(#000066, #0099ff);background: linear-gradient(#000066, #0099ff); padding:100px">
 							Vertical
 						</div>
@@ -195,12 +200,9 @@
 				</section>
 
 				<section data-transition="fade">
-					Gradients
-					<p class="caption">
-						<br/>Gradiants can be horizontal as well.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Gradients</h2>
+					Gradiants can be horizontal as well.<br/><br/>
+					<div style="text-align: left;">
 						<code>
 							#grad1 {<br/>
 								&nbsp;&nbsp;background: -webkit-linear-gradient(left, #000066, #0099ff);<br/>
@@ -211,7 +213,8 @@
 							}
 						</code>
 					</div>
-					<div class="half">
+					<br/><br/>
+					<div>
 						<div style="background: -webkit-linear-gradient(left, #000066, #0099ff);background: -o-linear-gradient(right, #000066, #0099ff);background: -moz-linear-gradient(right, #000066, #0099ff);background: linear-gradient(to right, #000066, #0099ff); padding:100px">
 							Horizontal
 						</div>
@@ -219,12 +222,9 @@
 				</section>
 
 				<section data-transition="fade">
-					Gradients
-					<p class="caption">
-						<br/>In fact, gradients can be set to whatever angle your specify.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Gradients</h2>
+					In fact, gradients can be set to whatever angle your specify.<br/><br/>
+					<div style="text-align: left;">
 						<code>
 							#grad1 {<br/>
 								&nbsp;&nbsp;background: -webkit-linear-gradient(45deg, #000066, #0099ff);<br/>
@@ -235,7 +235,8 @@
 							}
 						</code>
 					</div>
-					<div class="half">
+					<br/><br/>
+					<div>
 						<div style="background: -webkit-linear-gradient(45deg, #000066, #0099ff);background: -o-linear-gradient(45deg, #000066, #0099ff);background: -moz-linear-gradient(45deg, #000066, #0099ff);background: linear-gradient(45deg, #000066, #0099ff); padding:100px">
 							Angled
 						</div>
@@ -243,12 +244,9 @@
 				</section>
 
 				<section data-transition="fade">
-					Gradients
-					<p class="caption">
-						<br/>Go nuts with colors.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Gradients</h2>
+					Go nuts with colors.<br/><br/>
+					<div style="text-align: left; font-size:0.8em;">
 						<code>
 							#grad1 {<br/>
 								&nbsp;&nbsp;background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);<br/>
@@ -259,7 +257,8 @@
 							}
 						</code>
 					</div>
-					<div class="half">
+					<br/><br/>
+					<div>
 						<div style="background: -webkit-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);background: -o-linear-gradient(right,red,orange,yellow,green,blue,indigo,violet);background: -moz-linear-gradient(right,red,orange,yellow,green,blue,indigo,violet);background: linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet); padding:100px">
 							Rainbow!
 						</div>
@@ -267,12 +266,9 @@
 				</section>
 
 				<section data-transition="fade">
-					Gradients
-					<p class="caption">
-						<br/>Gradiants can be applied radially as well.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Gradients</h2>
+					Gradiants can be applied radially as well.<br/><br/>
+					<div style="text-align: left;">
 						<code>
 							#grad1 {<br/>
 								&nbsp;&nbsp;background: -webkit-radial-gradient(#000066, #0099ff);<br/>
@@ -283,7 +279,8 @@
 							}
 						</code>
 					</div>
-					<div class="half">
+					<br/><br/>
+					<div>
 						<div style="background: -webkit-radial-gradient(#000066, #0099ff);background: -o-radial-gradient(#000066, #0099ff);background: -moz-radial-gradient(#000066, #0099ff);background: radial-gradient(#000066, #0099ff); padding:100px">
 							Radial
 						</div>
@@ -291,96 +288,88 @@
 				</section>
 
 				<section>
-					Shadows
+					<h2>Shadows</h2>
 				</section>
 
 				<section data-transition="fade">
-					Text-Shadow
-					<p class="caption">
-						<br/>Add a basic drop shadow to your text.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Text-Shadow</h2>
+					Add a basic drop shadow to your text.<br/><br/>
+					<div style="text-align: left;">
 						<code>
 							#shadowbox {<br/>
 								&nbsp;&nbsp;background-color: white;<br/>
 								&nbsp;&nbsp;color: #0099ff;<br/>
 								&nbsp;&nbsp;text-shadow: 2px 2px 4px black;<br/>
 								&nbsp;&nbsp;padding: 30px;<br/>
+								&nbsp;&nbsp;font-size: 3em;<br/>
 							}
 						</code>
 					</div>
-					<div class="half">
-						<div style="background-color: white; color: #0099ff; padding: 30px;text-shadow: 2px 2px 4px black;">
+					<br/><br/>
+					<div>
+						<div style="background-color: white; color: #0099ff; padding: 30px;text-shadow: 2px 2px 4px black; font-size:3em;">
 							Shadow
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Text-Shadow
-					<p class="caption">
-						<br/>Turn that shadow into a glow.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Text-Shadow</h2>
+					Turn that shadow into a glow.<br/><br/>
+					<div style="text-align: left;">
 						<code>
 							#shadowbox {<br/>
 								&nbsp;&nbsp;background-color: transparent;<br/>
 								&nbsp;&nbsp;color: #0099ff;<br/>
-								&nbsp;&nbsp;text-shadow: 0px 0px 10px white;<br/>
+								&nbsp;&nbsp;text-shadow: 0px 0px 30px white;<br/>
 								&nbsp;&nbsp;padding: 30px;<br/>
+								&nbsp;&nbsp;font-size: 3em;<br/>
 							}
 						</code>
 					</div>
-					<div class="half">
-						<div style="background-color: transparent; color: #0099ff; padding: 30px; text-shadow: 0px 0px 10px white;">
+					<div>
+						<div style="background-color: transparent; color: #0099ff; padding: 30px; text-shadow: 0px 0px 30px white; font-size:3em;">
 							Shadow
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Text-Shadow
-					<p class="caption">
-						<br/>Combine multiple shadows in one line to stack effects.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Text-Shadow</h2>
+					Combine multiple shadows in one line to stack effects.<br/><br/>
+					<div style="text-align: left;">
 						<code>
 							#shadowbox {<br/>
 								&nbsp;&nbsp;background-color: transparent;<br/>
 								&nbsp;&nbsp;color: #0099ff;<br/>
-								&nbsp;&nbsp;text-shadow: 0 0 10px white, 0 0 25px #00ff99, 0 0 50px #006699;<br/>
+								&nbsp;&nbsp;text-shadow: 0 0 20px white, 0 0 50px #00ff99, 0 0 100px #006699;<br/>
 								&nbsp;&nbsp;padding: 30px;<br/>
 							}
 						</code>
 					</div>
-					<div class="half">
-						<div style="background-color: transparent; color: #0099ff; padding: 30px; text-shadow: 0 0 10px white, 0 0 25px #00ff99, 0 0 50px #006699;">
+					<div>
+						<div style="background-color: transparent; color: #0099ff; padding: 30px; text-shadow: 0 0 20px white, 0 0 50px #00ff99, 0 0 100px #006699; font-size: 5em;">
 							NEON!
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Box-Shadow
-					<p class="caption">
-						<br/>You can add shadows to the boxes around your elements as well.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Box-Shadow</h2>
+					You can add shadows to the boxes around your elements as well.<br/><br/>
+					<div style="text-align: left;">
 						<code>
 							#shadowbox {<br/>
-								&nbsp;&nbsp;background-color: white;<br/>
+								&nbsp;&nbsp;background-color: #ccc;<br/>
 								&nbsp;&nbsp;color: #0099ff;<br/>
-								&nbsp;&nbsp;box-shadow: 5px 5px 10px black;<br/>
+								&nbsp;&nbsp;box-shadow: 10px 10px 20px black;<br/>
 								&nbsp;&nbsp;padding: 30px;<br/>
 							}
 						</code>
 					</div>
-					<div class="half">
-						<div style="background-color: white; color: #0099ff; padding: 30px; box-shadow: 5px 5px 10px black;">
+					<br/><br/>
+					<div style="background-color: white; width: 90%; height: 150px; padding: 5%">
+						<div style="background-color: #ccc; color: #0099ff; box-shadow: 10px 10px 20px black; height: 100px; padding: 30px;">
 							Box Shadow
 						</div>
 					</div>
@@ -388,15 +377,13 @@
 
 				<section>
 					<h2>CSS3 Transforms</h2>
+					CSS Transforms are used to adjust the position and sizing of elements after they have been positioned/sized in the DOM.
 				</section>
 
 				<section>
-					translate()
-					<p class="caption">
-						<br/>This method moves an element from its current position.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>translate()</h2>
+					This method moves an element from its current position.<br/><br/>
+					<div class="half" style="text-align: left;">
 						<code>
 							div {<br/>
 								&nbsp;&nbsp;background: rgba(0,180,255,0.5);<br/>
@@ -408,18 +395,15 @@
 					</div>
 					<div class="half">
 						<div style="background:rgba(0,180,255,0.5); -ms-transform: translate(50px,100px);-webkit-transform: translate(50px,100px);transform: translate(50px,100px);">
-							I've been moved. :D
+							I've been moved (but you can't tell). :D
 						</div>
 					</div>
 				</section>
 
 				<section>
-					rotate()
-					<p class="caption">
-						<br/>This method rotates an element according to a given degree.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>rotate()</h2>
+					This method rotates an element according to a given degree.<br/><br/>
+					<div class="half" style="text-align: left;">
 						<code>
 							div {<br/>
 								&nbsp;&nbsp;background: rgba(0,180,255,0.5);<br/>
@@ -437,12 +421,9 @@
 				</section>
 
 				<section>
-					scale()
-					<p class="caption">
-						<br/>This method increases or decreases the size of an element by a factor.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>scale()</h2>
+					This method increases or decreases the size of an element by a factor.<br/><br/>
+					<div class="half" style="text-align: left;">
 						<code>
 							div {<br/>
 								&nbsp;&nbsp;background: rgba(0,180,255,0.5);<br/>
@@ -460,12 +441,9 @@
 				</section>
 
 				<section>
-					skew(), skewX(), skewY(), matrix()
-					<p class="caption">
-						<br/>Different methods for distorting the element.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>skew(), skewX(), skewY(), matrix()</h2>
+					Different methods for distorting the element.<br/><br/>
+					<div class="half" style="text-align: left;">
 						<code>
 							div {<br/>
 								&nbsp;&nbsp;background: rgba(0,180,255,0.5);<br/>
@@ -483,12 +461,9 @@
 				</section>
 
 				<section>
-					translateX(), translateY(), translateZ(), translate3d()
-					<p class="caption">
-						<br/>Methods for positioning elements in 3D space.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>translateX(), translateY(), translateZ(), translate3d()</h2>
+					Methods for positioning elements in 3D space.<br/><br/>
+					<div style="text-align: left; width:70%;float:left;">
 						<code>
 							div {<br/>
 								&nbsp;&nbsp;background: rgba(0,180,255,0.5);<br/>
@@ -497,7 +472,7 @@
 							}
 						</code>
 					</div>
-					<div class="half">
+					<div style="width:30%; float: left;">
 						<div style="background: rgba(0,180,255,0.5); -webkit-transform: translate3d(-100px, -100px, 200px); transform: translate3d(-100px, -100px, 200px);">
 						3D positioning
 						</div>
@@ -505,12 +480,9 @@
 				</section>
 
 				<section>
-					rotateX(), rotateY(), rotateZ(), rotate3d()
-					<p class="caption">
-						<br/>Methods for orienting elements in 3D space.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>rotateX(), rotateY(), rotateZ(), rotate3d()</h2>
+					Methods for orienting elements in 3D space.<br/><br/>
+					<div class="half" style="text-align: left; width:60%;float:left;">
 						<code>
 							div {<br/>
 								&nbsp;&nbsp;background: rgba(0,180,255,0.5);<br/>
@@ -519,7 +491,7 @@
 							}
 						</code>
 					</div>
-					<div class="half">
+					<div style="width:40%; float: left;">
 						<div style="background: rgba(0,180,255,0.5); -webkit-transform: rotate3d(1, 1, 1, 30deg); transform: rotate3d(1, 1, 1, 30deg);">
 						3D rotation
 						</div>
@@ -527,12 +499,9 @@
 				</section>
 
 				<section>
-					scaleX(), scaleY(), scaleZ(), scale3d()
-					<p class="caption">
-						<br/>Methods for scaling elements in 3D space.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>scaleX(), scaleY(), scaleZ(), scale3d()</h2>
+					Methods for scaling elements in 3D space.<br/><br/>
+					<div class="half" style="text-align: left;">
 						<code>
 							div {<br/>
 								&nbsp;&nbsp;background: rgba(0,180,255,0.5);<br/>
@@ -549,27 +518,25 @@
 				</section>
 
 				<section>
-					<h2>CSS3 Transitions</h2>
+					<h2>CSS3 Transitions</h2><br/>
+					Transitions are used to change CSS properties and animate between the original state and the new state over a specified amount of time.
 				</section>
 
 				<section data-transition="fade">
-					Transition
-					<p class="caption">
-						<br/>A basic transition just responds when a property is changed.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Transition</h2>
+					A basic transition just responds when a property is changed.<br/><br/>
+					<div class="half" style="text-align: left; font-size:0.8em;">
 						<code>
 							div {<br/>
-								&nbsp;&nbsp;width: 100px;<br/>
-								&nbsp;&nbsp;height: 100px;<br/>
+								&nbsp;&nbsp;width: 400px;<br/>
+								&nbsp;&nbsp;height: 400px;<br/>
 								&nbsp;&nbsp;background: #0099ff;<br/>
 								&nbsp;&nbsp;-webkit-transition: width 2s;<br/>
 								&nbsp;&nbsp;transition: width 2s;<br/>
 							}<br/>
 							<br/>
 							div:hover {<br/>
-								&nbsp;&nbsp;width: 300px;<br/>
+								&nbsp;&nbsp;width: 800px;<br/>
 							}
 						</code>
 					</div>
@@ -579,12 +546,9 @@
 				</section>
 
 				<section data-transition="fade">
-					Multiple Transitions
-					<p class="caption">
-						<br/>Declare multiple properties to use transitions between states.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Multiple Transitions</h2>
+					Declare multiple properties to use transitions between states.<br/><br/>
+					<div class="half" style="text-align: left; font-size:0.8em;">
 						<code>
 							div {<br/>
 								&nbsp;&nbsp;width: 100px;<br/>
@@ -606,12 +570,9 @@
 				</section>
 
 				<section>
-					Transition Delay
-					<p class="caption">
-						<br/>Add a delay before the transition kicks in.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Transition Delay</h2>
+					Add a delay before the transition kicks in.<br/><br/>
+					<div class="half" style="text-align: left; font-size:0.8em;">
 						<code>
 							div {<br/>
 								&nbsp;&nbsp;width: 100px;<br/>
@@ -635,12 +596,9 @@
 				</section>
 
 				<section>
-					Transition + Transformation
-					<p class="caption">
-						<br/>Transition between property states and CSS3 transforms.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Transition + Transformation</h2>
+					Transition between property states and CSS3 transforms.<br/><br/>
+					<div style="text-align: left;">
 						<code>
 							div {<br/>
 								&nbsp;&nbsp;width: 100px;<br/>
@@ -659,18 +617,16 @@
 							}
 						</code>
 					</div>
-					<div class="half">
+					<br/><br/>
+					<div>
 						<div id="transition4"></div>
 					</div>
 				</section>
 
 				<section>
-					Transition Timing
-					<p class="caption">
-						<br/>Adjust the speed curve of your transition animation.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Transition Timing</h2>
+					Adjust the speed curve of your transition animation.<br/><br/>
+					<div style="text-align: left;">
 						<code>
 							div {<br/>
 								&nbsp;&nbsp;width: 100px;<br/>
@@ -690,22 +646,21 @@
 							}
 						</code>
 					</div>
-					<div class="half">
+					<br/><br/>
+					<div>
 						<div id="transition5"></div>
 					</div>
 				</section>
 
 				<section>
 					<h2>CSS3 Animations</h2>
+					Animations are used to define keyframes for how styles should change over the course of an predetermined transition.
 				</section>
 
 				<section data-transition="fade">
-					Basic @keyframes
-					<p class="caption">
-						<br/>Add a delay before the transition kicks in.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Basic @keyframes</h2>
+					Add a delay before the transition kicks in.<br/><br/>
+					<div class="half" style="text-align: left;">
 						<code>
 							@keyframes example {<br/>
 								&nbsp;&nbsp;from {background-color: red;}<br/>
@@ -713,8 +668,8 @@
 							}<br/>
 							<br/>
 							div {<br/>
-								&nbsp;&nbsp;width: 200px;<br/>
-								&nbsp;&nbsp;height: 200px;<br/>
+								&nbsp;&nbsp;width: 400px;<br/>
+								&nbsp;&nbsp;height: 400px;<br/>
 								&nbsp;&nbsp;background: red;<br/>
 								&nbsp;&nbsp;animation-name: example;<br/>
 							  &nbsp;&nbsp;animation-duration: 4s;<br/>
@@ -722,17 +677,14 @@
 						</code>
 					</div>
 					<div class="half">
-						<div style="width:200px; height:200px; background:red; animation-name:example; animation-duration:4s;"></div>
+						<div style="width:400px; height:400px; background:red; animation-name:example; animation-duration:4s;"></div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Multiple @keyframes
-					<p class="caption">
-						<br/>Customize the timing of your animation.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Multiple @keyframes</h2>
+					Customize the timing of your animation.<br/><br/>
+					<div class="half" style="text-align: left;">
 						<code>
 							@keyframes example2 {<br/>
 								&nbsp;&nbsp;0%   {background-color: red;}<br/>
@@ -742,8 +694,8 @@
 							}<br/>
 							<br/>
 							div {<br/>
-								&nbsp;&nbsp;width: 200px;<br/>
-								&nbsp;&nbsp;height: 200px;<br/>
+								&nbsp;&nbsp;width: 400px;<br/>
+								&nbsp;&nbsp;height: 400px;<br/>
 								&nbsp;&nbsp;background: red;<br/>
 								&nbsp;&nbsp;animation-name: example2;<br/>
 							  &nbsp;&nbsp;animation-duration: 4s;<br/>
@@ -751,17 +703,14 @@
 						</code>
 					</div>
 					<div class="half">
-						<div style="width:200px; height:200px; background:red; animation-name:example2; animation-duration:4s;"></div>
+						<div style="width:400px; height:400px; background:red; animation-name:example2; animation-duration:4s;"></div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Multiple Properties
-					<p class="caption">
-						<br/>Customize the timing of your animation.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Multiple Properties</h2>
+					Customize the timing of your animation.<br/><br/>
+					<div class="half" style="text-align: left; font-size:0.8em;">
 						<code>
 							@keyframes example3 {<br/>
 							    &nbsp;&nbsp;0%   {background-color: red; left:0px; top:0px;}<br/>
@@ -772,8 +721,8 @@
 							}<br/>
 							<br/>
 							div {<br/>
-								&nbsp;&nbsp;width: 200px;<br/>
-								&nbsp;&nbsp;height: 200px;<br/>
+								&nbsp;&nbsp;width: 400px;<br/>
+								&nbsp;&nbsp;height: 400px;<br/>
 								&nbsp;&nbsp;position: relative;<br/>
 								&nbsp;&nbsp;background: red;<br/>
 								&nbsp;&nbsp;animation-name: example2;<br/>
@@ -782,17 +731,14 @@
 						</code>
 					</div>
 					<div class="half">
-						<div style="width:200px; height:200px; position: relative; background:red; animation-name:example3; animation-duration:4s;"></div>
+						<div style="width:400px; height:400px; position: relative; background:red; animation-name:example3; animation-duration:4s;"></div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Repeat
-					<p class="caption">
-						<br/>Set the animation to repeat
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Repeat</h2>
+					Set the animation to repeat.<br/><br/>
+					<div class="half" style="text-align: left; font-size:0.8em;">
 						<code>
 							@keyframes example3 {<br/>
 							    &nbsp;&nbsp;0%   {background-color: red; left:0px; top:0px;}<br/>
@@ -803,8 +749,8 @@
 							}<br/>
 							<br/>
 							div {<br/>
-								&nbsp;&nbsp;width: 200px;<br/>
-								&nbsp;&nbsp;height: 200px;<br/>
+								&nbsp;&nbsp;width: 400px;<br/>
+								&nbsp;&nbsp;height: 400px;<br/>
 								&nbsp;&nbsp;position: relative;<br/>
 								&nbsp;&nbsp;background: red;<br/>
 								&nbsp;&nbsp;animation-name: example2;<br/>
@@ -814,17 +760,14 @@
 						</code>
 					</div>
 					<div class="half">
-						<div style="width:200px; height:200px; position: relative; background:red; animation-name:example3; animation-duration:4s; animation-iteration-count: infinite;"></div>
+						<div style="width:400px; height:400px; position: relative; background:red; animation-name:example3; animation-duration:4s; animation-iteration-count: infinite;"></div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Reverse
-					<p class="caption">
-						<br/>Reverse the direction with one line.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Reverse</h2>
+					Reverse the direction with one line.<br/><br/>
+					<div class="half" style="text-align: left; font-size:0.8em;">
 						<code>
 							@keyframes example3 {<br/>
 							    &nbsp;&nbsp;0%   {background-color: red; left:0px; top:0px;}<br/>
@@ -835,8 +778,8 @@
 							}<br/>
 							<br/>
 							div {<br/>
-								&nbsp;&nbsp;width: 200px;<br/>
-								&nbsp;&nbsp;height: 200px;<br/>
+								&nbsp;&nbsp;width: 400px;<br/>
+								&nbsp;&nbsp;height: 400px;<br/>
 								&nbsp;&nbsp;position: relative;<br/>
 								&nbsp;&nbsp;background: red;<br/>
 								&nbsp;&nbsp;animation-name: example2;<br/>
@@ -847,17 +790,14 @@
 						</code>
 					</div>
 					<div class="half">
-						<div style="width:200px; height:200px; position: relative; background:red; animation-name:example3; animation-duration:4s; animation-iteration-count: infinite;animation-direction: reverse;"></div>
+						<div style="width:400px; height:400px; position: relative; background:red; animation-name:example3; animation-duration:4s; animation-iteration-count: infinite;animation-direction: reverse;"></div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Alternate
-					<p class="caption">
-						<br/>Alternate makes the animation bounce back and forth.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Alternate</h2>
+					Alternate makes the animation bounce back and forth.<br/><br/>
+					<div class="half" style="text-align: left; font-size:0.8em;">
 						<code>
 							@keyframes example3 {<br/>
 							    &nbsp;&nbsp;0%   {background-color: red; left:0px; top:0px;}<br/>
@@ -868,8 +808,8 @@
 							}<br/>
 							<br/>
 							div {<br/>
-								&nbsp;&nbsp;width: 200px;<br/>
-								&nbsp;&nbsp;height: 200px;<br/>
+								&nbsp;&nbsp;width: 400px;<br/>
+								&nbsp;&nbsp;height: 400px;<br/>
 								&nbsp;&nbsp;position: relative;<br/>
 								&nbsp;&nbsp;background: red;<br/>
 								&nbsp;&nbsp;animation-name: example2;<br/>
@@ -880,17 +820,14 @@
 						</code>
 					</div>
 					<div class="half">
-						<div style="width:200px; height:200px; position: relative; background:red; animation-name:example3; animation-duration:4s; animation-iteration-count: infinite;animation-direction: alternate;"></div>
+						<div style="width:400px; height:400px; position: relative; background:red; animation-name:example3; animation-duration:4s; animation-iteration-count: infinite;animation-direction: alternate;"></div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Animation Timing
-					<p class="caption">
-						<br/>Adjust the speed curve of your animations.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Animation Timing</h2>
+					Adjust the speed curve of your animations.<br/><br/>
+					<div class="half" style="text-align: left; font-size:0.8em;">
 						<code>
 							@keyframes example3 {<br/>
 							    &nbsp;&nbsp;0%   {background-color: red; left:0px; top:0px;}<br/>
@@ -901,8 +838,8 @@
 							}<br/>
 							<br/>
 							div {<br/>
-								&nbsp;&nbsp;width: 200px;<br/>
-								&nbsp;&nbsp;height: 200px;<br/>
+								&nbsp;&nbsp;width: 400px;<br/>
+								&nbsp;&nbsp;height: 400px;<br/>
 								&nbsp;&nbsp;position: relative;<br/>
 								&nbsp;&nbsp;background: red;<br/>
 								&nbsp;&nbsp;animation-name: example2;<br/>
@@ -913,101 +850,13 @@
 						</code>
 					</div>
 					<div class="half">
-						<div style="width:200px; height:200px; position: relative; background:red; animation-name:example3; animation-duration:4s; animation-iteration-count: infinite;animation-timing-function: linear;"></div>
-					</div>
-				</section>
-
-				<section>
-					<h2>CSS3 Text Columns</h2>
-				</section>
-
-				<section data-transition="fade">
-					Basic Columns
-					<p class="caption">
-						<br/>Alternate makes the animation bounce back and forth.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
-						<code>
-							div {<br/>
-							    &nbsp;&nbsp;-webkit-column-count: 3;<br/>
-							    &nbsp;&nbsp;-moz-column-count: 3;<br/>
-							    &nbsp;&nbsp;column-count: 3;<br/>
-							}
-						</code>
-					</div>
-					<div class="half">
-						<div style="font-size:0.2em;text-align:left;-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum dui vestibulum dui ultrices, ut dignissim ante tristique. Phasellus sapien sem, tincidunt sed vestibulum et, tempus vitae lorem. Etiam ut viverra metus. Vestibulum lectus tellus, scelerisque ut ultricies id, laoreet a mi. Curabitur iaculis nisl mi, id auctor tortor dapibus vitae. Etiam pharetra tempor nisi quis faucibus. Integer lacus enim, ultricies ac felis in, mollis imperdiet purus. Etiam erat orci, consequat id accumsan a, tristique nec tellus.<br/><br/>
-							In dictum at tortor ac elementum. Proin elit justo, cursus in velit nec, interdum viverra velit. Cras laoreet massa magna, ut tristique orci fringilla aliquet. Mauris nulla nisi, aliquet ac ex nec, tincidunt iaculis massa. Integer sit amet mauris nulla. Pellentesque mattis, lacus eu sollicitudin pellentesque, est libero finibus orci, nec imperdiet lectus tellus id purus. Phasellus vitae ultrices est. Morbi feugiat libero ac ante auctor, nec pharetra tortor aliquet. Suspendisse mollis suscipit ornare. Aenean fringilla vel orci id pretium. Ut vestibulum ultrices augue, ac imperdiet nibh vulputate et. Donec malesuada euismod enim.<br/><br/>
-							Morbi lobortis blandit lectus in euismod. Mauris pretium odio at risus maximus, ut varius purus tristique. Sed in lacinia sapien. Aliquam vehicula porttitor mi, a vestibulum arcu mattis non. Mauris aliquam feugiat odio, ac rhoncus erat tincidunt sit amet. Phasellus malesuada ligula at massa lacinia eleifend. Donec gravida, lectus laoreet mollis finibus, sapien orci iaculis risus, sed euismod libero mi in felis. Quisque quis diam in nisi convallis volutpat. In suscipit ornare velit id placerat.<br/><br/>
-							In hac habitasse platea dictumst. Cras malesuada urna nec tincidunt eleifend. Sed nec pellentesque tortor. Ut vulputate lobortis fermentum. Maecenas at ultricies orci. Phasellus sit amet urna vitae erat dapibus blandit. Donec sed nunc tempus, congue metus eget, finibus eros. Curabitur quis lacinia neque. Donec leo turpis, viverra quis vehicula et, euismod vitae augue. Sed ornare metus vitae leo imperdiet posuere. Nunc sed bibendum justo. Praesent ac mollis libero. Sed tincidunt, dui at ullamcorper posuere, ligula nisi luctus nisi, ac lacinia sem felis nec orci. Nullam placerat viverra massa, at pulvinar lacus sagittis sit amet. Quisque id efficitur tellus.
-						</div>
-					</div>
-				</section>
-
-				<section data-transition="fade">
-					Column Gap
-					<p class="caption">
-						<br/>Adjust the gutter between columns.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
-						<code>
-							div {<br/>
-							    &nbsp;&nbsp;-webkit-column-count: 3;<br/>
-							    &nbsp;&nbsp;-moz-column-count: 3;<br/>
-							    &nbsp;&nbsp;column-count: 3;<br/>
-									&nbsp;&nbsp;-webkit-column-gap: 40px;<br/>
-									&nbsp;&nbsp;-moz-column-gap: 40px;<br/>
-									&nbsp;&nbsp;column-gap: 40px;<br/>
-							}
-						</code>
-					</div>
-					<div class="half">
-						<div style="font-size:0.2em;text-align:left;-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;-webkit-column-gap: 40px;-moz-column-gap: 40px;column-gap: 40px;">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum dui vestibulum dui ultrices, ut dignissim ante tristique. Phasellus sapien sem, tincidunt sed vestibulum et, tempus vitae lorem. Etiam ut viverra metus. Vestibulum lectus tellus, scelerisque ut ultricies id, laoreet a mi. Curabitur iaculis nisl mi, id auctor tortor dapibus vitae. Etiam pharetra tempor nisi quis faucibus. Integer lacus enim, ultricies ac felis in, mollis imperdiet purus. Etiam erat orci, consequat id accumsan a, tristique nec tellus.<br/><br/>
-							In dictum at tortor ac elementum. Proin elit justo, cursus in velit nec, interdum viverra velit. Cras laoreet massa magna, ut tristique orci fringilla aliquet. Mauris nulla nisi, aliquet ac ex nec, tincidunt iaculis massa. Integer sit amet mauris nulla. Pellentesque mattis, lacus eu sollicitudin pellentesque, est libero finibus orci, nec imperdiet lectus tellus id purus. Phasellus vitae ultrices est. Morbi feugiat libero ac ante auctor, nec pharetra tortor aliquet. Suspendisse mollis suscipit ornare. Aenean fringilla vel orci id pretium. Ut vestibulum ultrices augue, ac imperdiet nibh vulputate et. Donec malesuada euismod enim.<br/><br/>
-							Morbi lobortis blandit lectus in euismod. Mauris pretium odio at risus maximus, ut varius purus tristique. Sed in lacinia sapien. Aliquam vehicula porttitor mi, a vestibulum arcu mattis non. Mauris aliquam feugiat odio, ac rhoncus erat tincidunt sit amet. Phasellus malesuada ligula at massa lacinia eleifend. Donec gravida, lectus laoreet mollis finibus, sapien orci iaculis risus, sed euismod libero mi in felis. Quisque quis diam in nisi convallis volutpat. In suscipit ornare velit id placerat.<br/><br/>
-							In hac habitasse platea dictumst. Cras malesuada urna nec tincidunt eleifend. Sed nec pellentesque tortor. Ut vulputate lobortis fermentum. Maecenas at ultricies orci. Phasellus sit amet urna vitae erat dapibus blandit. Donec sed nunc tempus, congue metus eget, finibus eros. Curabitur quis lacinia neque. Donec leo turpis, viverra quis vehicula et, euismod vitae augue. Sed ornare metus vitae leo imperdiet posuere. Nunc sed bibendum justo. Praesent ac mollis libero. Sed tincidunt, dui at ullamcorper posuere, ligula nisi luctus nisi, ac lacinia sem felis nec orci. Nullam placerat viverra massa, at pulvinar lacus sagittis sit amet. Quisque id efficitur tellus.
-						</div>
-					</div>
-				</section>
-
-				<section data-transition="fade">
-					Column Rules
-					<p class="caption">
-						<br/>Add rules between columns.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
-						<code>
-							div {<br/>
-							    &nbsp;&nbsp;-webkit-column-count: 3;<br/>
-							    &nbsp;&nbsp;-moz-column-count: 3;<br/>
-							    &nbsp;&nbsp;column-count: 3;<br/>
-									&nbsp;&nbsp;-webkit-column-gap: 40px;<br/>
-									&nbsp;&nbsp;-moz-column-gap: 40px;<br/>
-									&nbsp;&nbsp;column-gap: 40px;<br/>
-									&nbsp;&nbsp;-webkit-column-rule: 1px dotted #0099ff;<br/>
-    							&nbsp;&nbsp;-moz-column-rule: 1px dotted #0099ff;<br/>
-    							&nbsp;&nbsp;column-rule: 1px dotted #0099ff;<br/>
-							}
-						</code>
-					</div>
-					<div class="half">
-						<div style="font-size:0.2em;text-align:left;-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;-webkit-column-gap: 40px;-moz-column-gap: 40px;column-gap: 40px;-webkit-column-rule: 1px dotted #0099ff;-moz-column-rule: 1px dotted #0099ff;column-rule: 1px dotted #0099ff;">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum dui vestibulum dui ultrices, ut dignissim ante tristique. Phasellus sapien sem, tincidunt sed vestibulum et, tempus vitae lorem. Etiam ut viverra metus. Vestibulum lectus tellus, scelerisque ut ultricies id, laoreet a mi. Curabitur iaculis nisl mi, id auctor tortor dapibus vitae. Etiam pharetra tempor nisi quis faucibus. Integer lacus enim, ultricies ac felis in, mollis imperdiet purus. Etiam erat orci, consequat id accumsan a, tristique nec tellus.<br/><br/>
-							In dictum at tortor ac elementum. Proin elit justo, cursus in velit nec, interdum viverra velit. Cras laoreet massa magna, ut tristique orci fringilla aliquet. Mauris nulla nisi, aliquet ac ex nec, tincidunt iaculis massa. Integer sit amet mauris nulla. Pellentesque mattis, lacus eu sollicitudin pellentesque, est libero finibus orci, nec imperdiet lectus tellus id purus. Phasellus vitae ultrices est. Morbi feugiat libero ac ante auctor, nec pharetra tortor aliquet. Suspendisse mollis suscipit ornare. Aenean fringilla vel orci id pretium. Ut vestibulum ultrices augue, ac imperdiet nibh vulputate et. Donec malesuada euismod enim.<br/><br/>
-							Morbi lobortis blandit lectus in euismod. Mauris pretium odio at risus maximus, ut varius purus tristique. Sed in lacinia sapien. Aliquam vehicula porttitor mi, a vestibulum arcu mattis non. Mauris aliquam feugiat odio, ac rhoncus erat tincidunt sit amet. Phasellus malesuada ligula at massa lacinia eleifend. Donec gravida, lectus laoreet mollis finibus, sapien orci iaculis risus, sed euismod libero mi in felis. Quisque quis diam in nisi convallis volutpat. In suscipit ornare velit id placerat.<br/><br/>
-							In hac habitasse platea dictumst. Cras malesuada urna nec tincidunt eleifend. Sed nec pellentesque tortor. Ut vulputate lobortis fermentum. Maecenas at ultricies orci. Phasellus sit amet urna vitae erat dapibus blandit. Donec sed nunc tempus, congue metus eget, finibus eros. Curabitur quis lacinia neque. Donec leo turpis, viverra quis vehicula et, euismod vitae augue. Sed ornare metus vitae leo imperdiet posuere. Nunc sed bibendum justo. Praesent ac mollis libero. Sed tincidunt, dui at ullamcorper posuere, ligula nisi luctus nisi, ac lacinia sem felis nec orci. Nullam placerat viverra massa, at pulvinar lacus sagittis sit amet. Quisque id efficitur tellus.
-						</div>
+						<div style="width:400px; height:400px; position: relative; background:red; animation-name:example3; animation-duration:4s; animation-iteration-count: infinite;animation-timing-function: linear;"></div>
 					</div>
 				</section>
 
 				<section>
 					<h2>Resources</h2>
-					<p class="caption">
+					<p>
 						<a href="http://www.w3schools.com/css/css3_borders.asp">CSS3 Rounded Borders</a><br/>
 						<a href="http://www.w3schools.com/css/css3_border_images.asp">CSS3 Border Images</a><br/>
 						<a href="http://www.w3schools.com/css/css3_gradients.asp">CSS3 Gradients</a><br/>
@@ -1017,7 +866,6 @@
 						<a href="http://www.w3schools.com/css/css3_3dtransforms.asp">CSS3 3D Transforms</a><br/>
 						<a href="http://www.w3schools.com/css/css3_transitions.asp">CSS3 Transitions</a><br/>
 						<a href="http://www.w3schools.com/css/css3_animations.asp">CSS3 Animations</a><br/>
-						<a href="http://www.w3schools.com/css/css3_multiple_columns.asp">CSS3 Multiple Columns</a><br/>
 					</p>
 				</section>
 
@@ -1037,6 +885,11 @@
 				progress: true,
 				history: true,
 				center: true,
+				width: 1920,
+		    height: 1440,
+		    margin: 0.1,
+		    minScale: 0.2,
+		    maxScale: 2.0,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
