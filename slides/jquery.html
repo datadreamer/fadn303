@@ -37,6 +37,14 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+		<style>
+			section img{
+				width: 90% !important;
+				height: auto;
+			}
+		</style>
+
 	</head>
 
 	<body>
@@ -46,15 +54,27 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
+				<!-- header and footer stays on page and changes when tweaked by <style> inside each <section> -->
+				<header>
+					<a href="http://www.fadn303.net" class="left">FADN 303: Web Design</a>
+					<a href="http://roski.usc.edu" class="right">USC Roski School of Art and Design</a>
+				</header>
+
+				<footer>
+					<span id="leftside" class="left"></span>
+					<span id="rightside" class="right"></span>
+				</footer>
+
 				<section>
 					<div class="titletext">
-						FADN 303: Web Design
-						<h1>Javascript & jQuery</h1>
-						Aaron Siegel<br/>
+						<div class="week">WEEK 8:</div>
+						<h1>Javascript &amp; JQuery</h1>
+						Aaron Siegel |
 						<script type="text/javascript">
-	        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
-	        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
-	          </script>
+				        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+				        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				        </script>
+				        | Spring 2016
 					</div>
 				</section>
 
@@ -63,8 +83,8 @@
 				</section>
 
 				<section>
-					What is Javascript?<br/><br/>
-					<ul class="caption">
+					<h2>What is Javascript?</h2><br/>
+					<ul>
 						<li>Industry standard scripting language of the web.</li>
 						<li>Used to program behavior of web pages.</li>
 						<li>High-level, dynamic, untyped, and interpreted.</li>
@@ -73,12 +93,10 @@
 				</section>
 
 				<section>
-					Javascript Variables
-					<p class="caption">
-						<br/>Javascript allows you to store information as variables which can be used in your program.
-					</p>
+					<h2>Javascript Variables</h2><br/>
+					Javascript allows you to store information as variables which can be used in your program.<br/>
 					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div class="half" style="text-align: left; font-size:0.8em;">
 						<code>
 							var a = "hey!";<br/>
 							var x = 5;<br/>
@@ -91,9 +109,9 @@
 					</div>
 
 					<div class="half">
-						<div id="jssyntax" style="background-color:#0099ff; padding:50px;float:left; margin-right: 5%;">
+						<div id="jssyntax" style="background-color:#0099ff; padding:5%; float:left; margin-right: 10%; width: 35%">
 						</div>
-						<div id="jssyntax2" style="background-color:#0099ff; padding:50px;float:left;">
+						<div id="jssyntax2" style="background-color:#0099ff; padding:5%; float:left; width: 35%">
 						</div>
 						<script>
 							var a = "hey!";
@@ -108,12 +126,10 @@
 				</section>
 
 				<section>
-					Javascript Variables
-					<p class="caption">
-						<br/>Beyond simple numbers and strings, javascript can hold arrays and associative arrays.
-					</p>
+					<h2>Javascript Variables</h2><br/>
+					Beyond simple numbers and strings, javascript can hold arrays and associative arrays.<br/>
 					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div style="text-align: left; font-size:0.7em;">
 						<code>
 							var dogBreeds = ["Corgi", "Chihuahua", "German Shepard"];<br/>
 							var dog = {name:"Oscar", breed:"Dachsund", age:6};<br/>
@@ -122,12 +138,12 @@
 						}<br/>
 						document.getElementById("jssyntax4").innerHTML = dog.name +" is a "+ dog.breed + " that is "+ dog.age +" years old.";
 						</code>
-					</div>
+					</div><br/>
 
-					<div class="half">
-						<div id="jssyntax3" style="background-color:#0099ff; padding:50px;float:left; margin-left: 5%; font-size:0.4em; margin-bottom: 20px; width:300px;">
+					<div>
+						<div id="jssyntax3" style="background-color:#0099ff; padding:5%;float:left; font-size:1em; margin-bottom: 20px; width:35%;">
 						</div>
-						<div id="jssyntax4" style="background-color:#0099ff; padding:50px;float:left; margin-left: 5%; font-size:0.4em;clear:both; width:300px;">
+						<div id="jssyntax4" style="background-color:#0099ff; padding:5%;float:left; margin-left: 10%; font-size:1em; width:35%;">
 						</div>
 						<script>
 							var dogBreeds = ["Corgi", "Chihuahua", "German Shepard"];
@@ -141,12 +157,10 @@
 				</section>
 
 				<section>
-					Javascript Functions
-					<p class="caption">
-						<br/>Functions are chunks of code that are used to perform an operation.
-					</p>
+					<h2>Javascript Functions</h2><br/>
+					Functions are chunks of code that are used to perform an operation.<br/>
 					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div style="text-align: left;">
 						<code>
 							function kmToMiles(dist){<br/>
 								&nbsp;&nbsp;return dist * 0.621371;<br/>
@@ -158,11 +172,12 @@
 							document.getElementById("jssyntax6").innerHTML = "5 miles is "+ milesToKm(5) + " km";
 						</code>
 					</div>
+					<br/>
 
-					<div class="half">
-						<div id="jssyntax5" style="background-color:#0099ff; padding:50px;float:left; margin-left: 5%; font-size:0.4em; margin-bottom: 20px; width:300px;">
+					<div>
+						<div id="jssyntax5" style="background-color:#0099ff; padding: 5%; float:left; margin-bottom: 20px; width:35%;">
 						</div>
-						<div id="jssyntax6" style="background-color:#0099ff; padding:50px;float:left; margin-left: 5%; font-size:0.4em; margin-bottom: 20px; width:300px;">
+						<div id="jssyntax6" style="background-color:#0099ff; padding: 5%; float:left; margin-left: 10%; margin-bottom: 20px; width:35%;">
 						</div>
 						<script>
 							function kmToMiles(dist){
@@ -182,8 +197,8 @@
 				</section>
 
 				<section>
-					What is jQuery?<br/><br/>
-					<ul class="caption">
+					<h2>What is jQuery?</h2><br/>
+					<ul>
 						<li>Javascript library for programming page behavior.</li>
 						<li>Shortcuts for performing Javascript tasks.</li>
 						<li>HTML/DOM/CSS manipulation.</li>
@@ -195,12 +210,10 @@
 				</section>
 
 				<section data-transition="fade">
-					Including jQuery
-					<p class="caption">
-						<br/>To use a javascript library, it has to be included in your HTML document. This is similar to referencing external CSS files, where it has to be declared inside the <code>&lt;head&gt;</code> tags. This will allow you to make use of all of jQuery's methods.
-					</p>
+					<h2>Including jQuery</h2>
+					To use a javascript library, it has to be included in your HTML document. This is similar to referencing external CSS files, where it has to be declared inside the <code>&lt;head&gt;</code> tags. This will allow you to make use of all of jQuery's methods.<br/>
 					<br/>
-					<div  style="text-align: left; font-size:0.4em;">
+					<div  style="text-align: left;">
 						<code>
 								&lt;head&gt;<br/>
 								&nbsp;&nbsp;&lt;script src="jquery-1.11.3.min.js"&gt;&lt;/script&gt;<br/>
@@ -216,14 +229,12 @@
 				</section>
 
 				<section data-transition="fade">
-					Basic Syntax
-					<p class="caption">
-						<br/>Basic syntax uses the <code>$(selector).action()</code> format.<br/>
-						<br/>
-						The $ symbol indicates that you're making use of jQuery. The selector is the CSS selector used to declare the element(s) that will be affected. The action is the method used to apply some change to the selected element(s).
-					</p>
+					<h2>Basic Syntax</h2><br/>
+					Basic syntax uses the <code>$(selector).action()</code> format.<br/>
 					<br/>
-					<div class="third" style="text-align: left; font-size:0.4em;">
+					The $ symbol indicates that you're making use of jQuery. The selector is the CSS selector used to declare the element(s) that will be affected. The action is the method used to apply some change to the selected element(s).
+					<br/><br/>
+					<div class="half" style="text-align: left;">
 						<code>
 							$(function(){<br/>
 								&nbsp;&nbsp;<br/>
@@ -234,12 +245,12 @@
 							});
 						</code>
 					</div>
-					<div class="third">
+					<div class="quarter">
 						<div id="jstest1a" style="background-color:#0099ff; padding:50px;float:left;">
 								Click me!
 						</div>
 					</div>
-					<div class="third">
+					<div class="quarter">
 						<div id="jstest1b" style="background-color:#0066cc; padding:50px;float:left;">
 							Watch me!
 						</div>
@@ -247,12 +258,10 @@
 				</section>
 
 				<section data-transition="fade">
-					Events
-					<p class="caption">
-						<br/>jQuery can be used to write code that occurs on particular events.
-					</p>
+					<h2>Events</h2><br/>
+					jQuery can be used to write code that occurs on particular events.<br/>
 					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div style="width:70%; float:left; text-align: left;">
 						<code>
 							$(function(){<br/>
 								<br/>
@@ -271,23 +280,21 @@
 							});
 						</code>
 					</div>
-					<div class="half">
-						<div id="jstest2a" style="width:300px;background-color:#0099ff; padding:50px;float:left; margin-bottom:20px;">
+					<div style="width:30%; float:left;">
+						<div id="jstest2a" style="width:90%;background-color:#0099ff; padding:5%;float:left; margin-bottom:5%;">
 								Click me!
 						</div>
-						<div id="jstest2b" style="width:300px;background-color:#0066cc; padding:50px;float:left;">
+						<div id="jstest2b" style="width:90%;background-color:#0066cc; padding:5%;float:left; clear:both;">
 							Watch me!
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Hiding / Showing
-					<p class="caption">
-						<br/>The display of elements can be toggled based on events.
-					</p>
+					<h2>Hiding / Showing</h2><br/>
+					The display of elements can be toggled based on events.<br/>
 					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div class="half" style="text-align: left;">
 						<code>
 							$(function(){<br/>
 								<br/>
@@ -307,25 +314,23 @@
 						</code>
 					</div>
 					<div class="half">
-						<div id="jstest3a" style="width:65%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px;">
+						<div id="jstest3a" style="width:100%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 5%;">
 							a
 						</div>
-						<div id="jstest3b" style="width:30%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px; margin-right: 5%;">
+						<div id="jstest3b" style="width:45%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px; margin-right: 10%;">
 							b
 						</div>
-						<div id="jstest3c" style="width:30%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px;">
+						<div id="jstest3c" style="width:45%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px;">
 							c
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Fading
-					<p class="caption">
-						<br/>Elements can be faded in and out at whim.
-					</p>
+					<h2>Fading</h2><br/>
+					Elements can be faded in and out at whim.<br/>
 					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div class="half" style="text-align: left;">
 						<code>
 							$(function(){<br/>
 								<br/>
@@ -345,25 +350,23 @@
 						</code>
 					</div>
 					<div class="half">
-						<div id="jstest4a" style="width:65%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px;">
+						<div id="jstest4a" style="width:100%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 5%;">
 							a
 						</div>
-						<div id="jstest4b" style="width:30%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px; margin-right: 5%;">
+						<div id="jstest4b" style="width:45%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px; margin-right: 10%;">
 							b
 						</div>
-						<div id="jstest4c" style="width:30%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px;">
+						<div id="jstest4c" style="width:45%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px;">
 							c
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Sliding
-					<p class="caption">
-						<br/>Elements can be revealed or hidden by sliding up and down.
-					</p>
+					<h2>Sliding</h2><br/>
+					Elements can be revealed or hidden by sliding up and down.<br/>
 					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div class="half" style="text-align: left;">
 						<code>
 							$(function(){<br/>
 								<br/>
@@ -383,32 +386,30 @@
 						</code>
 					</div>
 					<div class="half">
-						<div id="jstest5a" style="width:65%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px; ">
+						<div id="jstest5a" style="width:100%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 5%; ">
 							a
 						</div>
-						<div id="jstest5b" style="width:30%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px; margin-right: 5%;display: none;">
+						<div id="jstest5b" style="width:45%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px; margin-right: 10%;display: none;">
 							b
 						</div>
-						<div id="jstest5c" style="width:30%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px;display: none;">
+						<div id="jstest5c" style="width:45%; background-color:#0066cc; float:left; padding: 20px 0px 20px 0px;display: none;">
 							c
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Animating
-					<p class="caption">
-						<br/>Elements can be animated by specifying different css properties to affect.
-					</p>
+					<h2>Animating</h2>
+					Elements can be animated by specifying different css properties to affect.<br/>
 					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div class="half" style="text-align: left;">
 						<code>
 							$(function(){<br/>
 								<br/>
 								&nbsp;&nbsp;$("#jstest5a").on({<br/>
 							  &nbsp;&nbsp;&nbsp;&nbsp;mouseenter: function(){<br/>
 						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $("#jstest6b").animate({<br/>
-						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    marginLeft: '35%'<br/>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    marginLeft: '50%'<br/>
 						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  });<br/>
 						    &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
 						    &nbsp;&nbsp;&nbsp;&nbsp;mouseleave: function(){<br/>
@@ -427,22 +428,19 @@
 						</code>
 					</div>
 					<div class="half">
-						<div id="jstest6a" style="width:65%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px; ">
+						<div id="jstest6a" style="width:100%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px; ">
 							a
 						</div>
-						<div id="jstest6b" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; float: left;">
+						<div id="jstest6b" style="width:50%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; float: left;">
 							b
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Multiple Animations
-					<p class="caption">
-						<br/>Multiple animations can be stacked together.
-					</p>
-					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<h2>Multiple Animations</h2><br/>
+					Multiple animations can be stacked together.<br/><br/>
+					<div class="half" style="text-align: left; font-size:0.8em;">
 						<code>
 							$(function(){<br/>
 								<br/>
@@ -461,22 +459,20 @@
 						</code>
 					</div>
 					<div class="half">
-						<div id="jstest7a" style="width:65%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px; ">
+						<div id="jstest7a" style="width:100%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 5%; ">
 							a
 						</div>
-						<div id="jstest7b" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; float: left;">
+						<div id="jstest7b" style="width:50%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 10%; float: left;">
 							b
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Geting / Setting Content
-					<p class="caption">
-						<br/>jQuery can be used to dynamically read or write the content of elements.
-					</p>
+					<h2>Getting / Setting Content</h2><br/>
+					jQuery can be used to dynamically read or write the content of elements.<br/>
 					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div class="half" style="text-align: left;">
 						<code>
 							$(function(){<br/>
 								<br/>
@@ -489,25 +485,23 @@
 						</code>
 					</div>
 					<div class="half">
-						<div id="jstest8a" style="width:65%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 20px; ">
+						<div id="jstest8a" style="width:100%; background-color:#0099ff; clear:both; padding: 20px 0px 20px 0px; margin-bottom: 5%; ">
 							Click to copy.
 						</div>
-						<div id="jstest8b" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; float: left;">
+						<div id="jstest8b" style="width:45%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 10%; float: left;">
 							Stuff
 						</div>
-						<div id="jstest8c" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; float: left;">
+						<div id="jstest8c" style="width:45%; background-color:#0066cc; padding: 20px 0px 20px 0px; float: left;">
 							Here
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					Append / Prepend
-					<p class="caption">
-						<br/>jQuery can be used to dynamically append or prepend content inside elements.
-					</p>
+					<h2>Append / Prepend</h2><br/>
+					jQuery can be used to dynamically append or prepend content inside elements.<br/>
 					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div class="half" style="text-align: left; font-size:0.8em;">
 						<code>
 							$(function(){<br/>
 								<br/>
@@ -522,25 +516,23 @@
 						</code>
 					</div>
 					<div class="half">
-						<div id="jstest9a" style="width:30%; background-color:#0099ff; padding: 20px 0px 20px 0px; margin-bottom: 20px; float: left; margin-right: 5%; font-size: 0.4em">
+						<div id="jstest9a" style="width:45%; background-color:#0099ff; padding: 20px 0px 20px 0px; margin-bottom: 20px; float: left; margin-right: 10%;">
 							Append
 						</div>
-						<div id="jstest9b" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-bottom: 20px; float: left; font-size: 0.4em">
+						<div id="jstest9b" style="width:45%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-bottom: 20px; float: left;">
 							Prepend
 						</div>
-						<div id="jstest9c" style="width:65%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; clear:both; font-size: 0.4em">
+						<div id="jstest9c" style="width:100%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; clear:both;">
 							---<br/>
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					After / Before
-					<p class="caption">
-						<br/>jQuery can be used to dynamically add content before or after elements.
-					</p>
+					<h2>After / Before</h2><br/>
+					jQuery can be used to dynamically add content before or after elements.<br/>
 					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div class="half" style="text-align: left; font-size:0.8em;">
 						<code>
 							$(function(){<br/>
 								<br/>
@@ -555,25 +547,23 @@
 						</code>
 					</div>
 					<div class="half">
-						<div id="jstest10a" style="width:30%; background-color:#0099ff; padding: 20px 0px 20px 0px; margin-bottom: 20px; float: left; margin-right: 5%; font-size: 0.4em">
+						<div id="jstest10a" style="width:45%; background-color:#0099ff; padding: 20px 0px 20px 0px; margin-bottom: 5%; float: left; margin-right: 10%;">
 							After
 						</div>
-						<div id="jstest10b" style="width:30%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-bottom: 20px; float: left; font-size: 0.4em">
+						<div id="jstest10b" style="width:45%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-bottom: 20px; float: left;">
 							Before
 						</div>
-						<div id="jstest10c" style="width:65%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; clear:both; font-size: 0.4em">
+						<div id="jstest10c" style="width:100%; background-color:#0066cc; padding: 20px 0px 20px 0px; margin-right: 5%; clear:both;">
 							---<br/>
 						</div>
 					</div>
 				</section>
 
 				<section data-transition="fade">
-					jQuery Dimensions
-					<p class="caption">
-						<br/>jQuery can be used to grab the dimensions of any elements current size.
-					</p>
+					<h2>jQuery Dimensions</h2><br/>
+					jQuery can be used to grab the dimensions of any elements current size.<br/>
 					<br/>
-					<div class="half" style="text-align: left; font-size:0.4em;">
+					<div class="half" style="text-align: left; font-size:0.9em;">
 						<code>
 							$(function(){<br/>
 								<br/>
@@ -592,8 +582,8 @@
 				</section>
 
 				<section>
-					<h2>Resources</h2>
-					<p class="caption">
+					<h2>Resources</h2><br/>
+					<p>
 						<a href="http://www.w3schools.com/js/js_intro.asp">Javascript Introduction</a><br/>
 						<a href="http://www.w3schools.com/js/js_syntax.asp">Javascript Syntax</a><br/>
 						<a href="http://www.w3schools.com/js/js_variables.asp">Javascript Variables</a><br/>
@@ -632,6 +622,11 @@
 				progress: true,
 				history: true,
 				center: true,
+				width: 1920,
+		    height: 1440,
+		    margin: 0.1,
+		    minScale: 0.2,
+		    maxScale: 2.0,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 

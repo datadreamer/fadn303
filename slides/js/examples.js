@@ -60,7 +60,7 @@ $(function(){
   $("#jstest6a").on({
     mouseenter: function(){
       $("#jstest6b").animate({
-        marginLeft: '35%'
+        marginLeft: '50%'
       });
     },
     mouseleave: function(){
@@ -78,12 +78,12 @@ $(function(){
 
   $("#jstest7a").on({
     mouseenter: function(){
-      $("#jstest7b").animate({width:'65%'});
+      $("#jstest7b").animate({width:'100%'});
       $("#jstest7b").animate({height:'200px'});
     },
     mouseleave: function(){
       $("#jstest7b").animate({height:'50px'});
-      $("#jstest7b").animate({width:'30%'});
+      $("#jstest7b").animate({width:'50%'});
     }
   });
 
