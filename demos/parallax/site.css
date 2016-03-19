@@ -1,0 +1,99 @@
+html, body{
+  margin: 0px;
+  overflow: hidden;
+}
+
+/* THIS DETERMINES THE FIELD OF VIEW */
+.parallax {
+  height: 640px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+}
+
+.parallax_group {
+  position: relative;
+  height: 640px;
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.parallax_layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+
+/* THESE CLASSES CHANGE HOW ZOOMED IN OR OUT THEIR CHILD CONTENT IS */
+.parallax_layer_fg {
+  -webkit-transform: translateZ(100px);
+  transform: translateZ(100px);
+  z-index: 4;
+}
+
+.parallax_layer_mg {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 3;
+}
+
+.parallax_layer_bg {
+  -webkit-transform: translateZ(-100px);
+  transform: translateZ(-100px);
+  z-index: 2;
+}
+
+
+
+/* THIS CLASS IS FOR SIZING ITEMS THE SAME */
+.item{
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+}
+
+
+
+/* THESE CLASSES ARE FOR COLORING ITEMS */
+.bg{
+  background-color: rgba(255,0,0,0.5);
+}
+
+.mg{
+  background-color: rgba(255,150,0,0.5);
+}
+
+.fg{
+  background-color: rgba(255,255,0,0.5);
+}
+
+
+
+/* THESE CLASSES ARE FOR POSITONING ITEMS */
+.item1{
+  top:20vh;
+  left:0vw;
+}
+.item2{
+  top:60vh;
+  left:20vw;
+}
+.item3{
+  top:100vh;
+  left:40vw;
+}
+.item4{
+  top:160vh;
+  left:60vw;
+}
+.item5{
+  top:200vh;
+  left:80vw;
+}
