@@ -108,6 +108,20 @@ section{
   background-color: #000;
 }
 
+#page9{
+  display: none;
+  opacity: 0;
+  background-color: #09f;
+}
+
+/* CUSTOM STYLES FOR OL DIRTY BASTARD VIDEO */
+
+#odbvideo{
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
 /*
   THESE ARE FOR THE 3D GALLERY.
 */
