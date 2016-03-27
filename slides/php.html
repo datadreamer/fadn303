@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>PHP - FADN 303: Web Design</title>
+
+		<meta name="description" content="Lecture slides for USC FADN 303 Web Design course. Subject is PHP.">
+		<meta name="author" content="Aaron Siegel">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/animation.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/examples.js"></script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+			section img{
+				width: 90% !important;
+				height: auto;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- header and footer stays on page and changes when tweaked by <style> inside each <section> -->
+				<header>
+					<a href="http://www.fadn303.net" class="left">FADN 303: Web Design</a>
+					<a href="http://roski.usc.edu" class="right">USC Roski School of Art and Design</a>
+				</header>
+
+				<footer>
+					<span id="leftside" class="left"></span>
+					<span id="rightside" class="right"></span>
+				</footer>
+
+				<section>
+					<div class="titletext">
+						<div class="week">WEEK 12:</div>
+						<h1>PHP</h1>
+						Aaron Siegel |
+						<script type="text/javascript">
+				        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+				        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				        </script>
+				        | Spring 2016
+					</div>
+				</section>
+
+				<section>
+					<h2>PHP Hypertext Preprocessor</h2>
+					<ul>
+						<li>Server-side scripting language.</li>
+						<li>Executes code on the server before returning HTML to the client.</li>
+						<li>Has variables, arrays, objects, conditionals, operators, and loops.</li>
+						<li>Used to connect to databases.</li>
+						<li>Mixes seamlessly with HTML.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Code must run on the server</h2>
+					Your PHP code will only run on a web server with PHP installed on it. You can run the code on the fadn303.net server or you can install a server on your laptop using <a href="https://www.mamp.info/en/">MAMP</a>.<br/>
+					<br/>
+					<span style="color:#f00;">Your PHP will not run by simply opening the file in your browser.</span>
+				</section>
+
+				<section>
+					<div class="half" style="text-align: left;">
+						<h2>PHP Code</h2><br/>
+						<code>
+							&lt;html&gt;<br/>
+								&nbsp;&nbsp;&lt;head&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here's my title!<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/title&gt;<br/>
+								&nbsp;&nbsp;&lt;/head&gt;<br/>
+								&nbsp;&nbsp;&lt;body&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;?php<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Hello World!&lt;br/&gt;\n";<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo 2 + 3;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;?&gt;<br/>
+								&nbsp;&nbsp;&lt;/body&gt;<br/>
+							&lt;/html&gt;<br/>
+						</code>
+					</div>
+					<div class="half" style="text-align: left;">
+						<h2>HTML Results</h2><br/>
+						<code>
+							&lt;html&gt;<br/>
+								&nbsp;&nbsp;&lt;head&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here's my title!<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/title&gt;<br/>
+								&nbsp;&nbsp;&lt;/head&gt;<br/>
+								&nbsp;&nbsp;&lt;body&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;Hello World!&lt;br/&gt;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;5</br>
+								&nbsp;&nbsp;&lt;/body&gt;<br/>
+							&lt;/html&gt;<br/>
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Separating PHP and HTML</h2><br/>
+					All of your PHP code should go inside the php brackets.<br/>
+					<br/>
+					<div  style="text-align:left;">
+						<code>
+							&lt;?php<br/>
+							&nbsp;&nbsp;echo "This is how you print a line."<br/>
+							&nbsp;&nbsp;echo "This is a line with a linebreak at the end.\n"<br/>
+							?&gt;<br/>
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Variables</h2><br/>
+					Just like javascript, PHP can use variables to hold values.<br/>
+					<br/>
+					<div class="half" style="text-align:left;">
+						<code>
+							&lt;?php<br/>
+							&nbsp;&nbsp;$a = 2;<br/>
+				      &nbsp;&nbsp;$b = 3;<br/>
+				      &nbsp;&nbsp;$c = $a + $b;<br/>
+							&nbsp;&nbsp;echo "A plus B equals " . $c;<br/>
+							?&gt;<br/>
+						</code>
+					</div>
+					<div class="half" style="text-align:left;">
+						<code>
+							A plus B equals 5<br/>
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Operators</h2><br/>
+					Operators perform math operations or comparisons.<br/>
+					<br/>
+					<div class="half" style="text-align:left;font-size:0.8em;">
+						<code>
+							&lt;?php<br/>
+							&nbsp;&nbsp;$a = 2;<br/>
+				      &nbsp;&nbsp;$b = 3;<br/>
+							&nbsp;&nbsp;echo "A plus B equals " . ($a + $b) . "\n";<br/>
+							&nbsp;&nbsp;echo "A minus B equals " . ($a - $b) . "\n";<br/>
+							&nbsp;&nbsp;echo "A times B equals " . ($a * $b) . "\n";<br/>
+							&nbsp;&nbsp;echo "A divided by B equals " . ($a / $b) . "\n";<br/>
+							?&gt;<br/>
+						</code>
+					</div>
+					<div class="half" style="text-align:left;">
+						<code>
+							A plus B equals 5<br/>
+							A minus B equals -1<br/>
+							A times B equals 6<br/>
+							A divided by B equals 0.666666666667<br/>
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Conditionals</h2><br/>
+					Conditional statements use comparators to evaluate variables.<br/>
+					<br/>
+					<div class="half" style="text-align:left;font-size:0.8em;">
+						<code>
+							&lt;?php<br/>
+							&nbsp;&nbsp;$a = 7;<br/>
+						  &nbsp;&nbsp;if($a < 5){<br/>
+						  &nbsp;&nbsp;&nbsp;&nbsp;echo "A is less than five.\n";<br/>
+						  &nbsp;&nbsp;} else if($a > 5 && $a < 10){<br/>
+						  &nbsp;&nbsp;&nbsp;&nbsp;echo "A is greater than five but less than ten.\n";<br/>
+						  &nbsp;&nbsp;} else {<br/>
+						  &nbsp;&nbsp;&nbsp;&nbsp;echo "A is greater than ten.\n";<br/>
+						  &nbsp;&nbsp;}<br/>
+							?&gt;<br/>
+						</code>
+					</div>
+					<div class="half" style="text-align:left;">
+						<code>
+							A is greater than five but less than ten.<br/>
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Loops</h2><br/>
+					Loops use variables and conditions to iterate over values.<br/>
+					<br/>
+					<div class="half" style="text-align:left;font-size:0.8em;">
+						<code>
+							&lt;?php<br/>
+							&nbsp;&nbsp;$a = 0;<br/>
+						  &nbsp;&nbsp;while($a < 10){<br/>
+						  &nbsp;&nbsp;  echo "Line #" . $a . "\n";<br/>
+						  &nbsp;&nbsp;  $a++;<br/>
+						  &nbsp;&nbsp;}<br/>
+							?&gt;<br/>
+						</code>
+					</div>
+					<div class="half" style="text-align:left;">
+						<code>
+							Line #0<br/>
+							Line #1<br/>
+							Line #2<br/>
+							Line #3<br/>
+							Line #4<br/>
+							Line #5<br/>
+							Line #6<br/>
+							Line #7<br/>
+							Line #8<br/>
+							Line #9<br/>
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Page Composition using PHP</h2><br/>
+					You can use PHP to combine multiple HTML or PHP files together when a page is loaded.<br/><br/>
+					<div class="half" style="text-align:left;font-size:0.8em;">
+						<code>
+							&lt;!doctype html&gt;<br/>
+							&lt;html&gt;<br/>
+							&nbsp;&nbsp;&lt;head&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;PHP Page Composition&lt;/title&gt;<br/>
+							&nbsp;&nbsp;&lt;/head&gt;<br/>
+							&nbsp;&nbsp;&lt;body&gt;<br/>
+							&nbsp;&nbsp;&lt;?php<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;include("header.html");<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;echo "My dynamic content goes here!&lt;br/&gt;";<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;$a = 1;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;while($a &lt;= 10){<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo $a . "&lt;br/&gt;\n";<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$a++;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;echo "And we out!&lt;br/&gt;\n";<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;include("footer.html");<br/>
+							&nbsp;&nbsp;?&gt;<br/>
+							&nbsp;&nbsp;&lt;/body&gt;<br/>
+							&lt;/html&gt;<br/>
+
+						</code>
+					</div>
+					<div class="half" style="text-align:left;font-size:0.8em;">
+						<img src="images/phpcomposition.png">
+					</div>
+				</section>
+
+				<section>
+					<h2>$_GET, $_POST and $_FILES</h2>
+					GET and POST are ways that variables can be passed from the client to the server upon accessing a web page. FILES is how files can be uploaded from the client to the server. This is basically how we transfer things through the browser.<br/>
+				</section>
+
+				<section>
+					<h2>$_GET</h2>
+					The $_GET[] associative array holds variables that are passed in through the URL.<br/><br/>
+					<div class="half" style="text-align:left;font-size:0.8em;">
+						<code>
+							&lt;?php<br/>
+						&nbsp;&nbsp;echo $_GET["test"];<br/>
+							?&gt;<br/>
+						</code>
+					</div>
+					<div class="half" style="text-align:left;font-size:0.8em;">
+						<code>
+							<a href="http://mw1.fadn303.net/demos/phpget/index.php?test=anything" target="new">http://mw1.fadn303.net/demos/phpget/index.php?test=anything</a>
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>$_POST</h2>
+					The $_POST[] associative array holds variables that are passed in using a POST transfer function. Variables are not passed via the URL, so they can be much larger and more private.<br/>
+				</section>
+
+				<section>
+					<h2>$_FILES</h2>
+					The $_FILES[] associative array holds references to temporary files that have been uploaded via a POST transfer.<br/>
+				</section>
+
+				<section>
+					<h2>Resources</h2><br/>
+					<ul>
+						<li><a href="http://www.w3schools.com/php/default.asp">W3Schools: PHP Tutorial</a></li>
+						<li><a href="https://www.mamp.info/en/">MAMP</a></li>
+					</ul>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1920,
+		    height: 1440,
+		    margin: 0.1,
+		    minScale: 0.2,
+		    maxScale: 2.0,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
