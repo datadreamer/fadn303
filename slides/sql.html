@@ -164,6 +164,40 @@
 					</ol>
 				</section>
 
+				<section>
+					<h2>Connecting to your database with PHP</h2><br/>
+					<div style="text-align: left;">
+						<code>
+							$mysqli = new mysqli("localhost", "roskiweb_user", "password", "roskiweb_dbname");<br/>
+				      if($mysqli->connect_errno){<br/>
+				      &nbsp;&nbsp;echo "Failed to connect to MySQL: " . $mysqli->connect_error;<br/>
+				      }
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Querying the database with PHP</h2><br/>
+					<div style="text-align: left;">
+						<code>
+							$res = $mysqli->query("SELECT * FROM test WHERE id = 1");<br/>
+				      $row = $res->fetch_assoc();<br/>
+				      echo $row['body']; . "&lt;br/&gt;";<br/>
+							echo "It has been accessed and updated " . $row['hits'] . " times.";
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<h2>Updating a database record with PHP</h2><br/>
+					<div style="text-align: left;">
+						<code>
+							$res = $mysqli->query("UPDATE test SET hits = hits + 1 WHERE id = 1");<br/><br/>
+						</code>
+					</div>
+					<h3><a href="http://mw1.fadn303.net/demos/sqlbasic/">See Demo</a></h3>
+				</section>
+
 
 				<section>
 					<h2>Resources</h2><br/>
