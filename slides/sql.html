@@ -91,26 +91,30 @@
 
 				<section>
 					<h2>Database</h2>
-					The database is a collection of tables that are used to hold content. Each of you will create your own database and database user in order to insert and select content.
+					The database is a collection of tables that are used to hold content. Each of you will create your own database and database user in order to insert and select content.<br/>
+					<img src="images/database.png">
 				</section>
 
 				<section>
 					<h2>Tables</h2>
-					Each table in the database acts like a spreadsheet, and each has a structure that is determined by the database administrator (you). The structure uses columns with variable types in order to specify what data will fit. This is called Data Modeling.
+					Each table in the database acts like a spreadsheet, and each has a structure that is determined by the database administrator (you). The structure uses columns with variable types in order to specify what data will fit. This is called Data Modeling.<br/>
+					<img src="images/tables.png">
 				</section>
 
 				<section>
 					<h2>Column (aka attribute/field)</h2>
-					Each column in your table can be a different variable type, such as integer, float, character, text blob, etc.
+					Each column in your table can be a different variable type, such as integer, float, character, text blob, etc. You name your columns whatever you want (as long as it's not a <a href="https://msdn.microsoft.com/en-us/library/ms189822.aspx">reserved word</a>).<br/>
+					<img src="images/columns.png">
 				</section>
 
 				<section>
 					<h2>Row (aka record/entry)</h2>
-					Each row in your table is a data entry. Every time you make an INSERT query, you are adding a new row to your table. When you do a SELECT query, you are selecting rows from the table that match your query parameters.
+					Each row in your table is a data entry. Every time you make an INSERT query, you are adding a new row to your table. When you do a SELECT query, you are selecting rows from the table that match your query parameters.<br/>
+					<img src="images/rows.png">
 				</section>
 
 				<section>
-					<h2>SELECT</h2>
+					<h2>SELECT (read)</h2>
 					The SELECT query extracts records from your table based on the expression provided in your query.<br/>
 					<br/>
 					<code>
@@ -121,7 +125,7 @@
 				</section>
 
 				<section>
-					<h2>INSERT INTO</h2>
+					<h2>INSERT INTO (write)</h2>
 					The INSERT INTO query allows you to save a new record in a database table.<br/>
 					<br/>
 					<code>
@@ -130,7 +134,7 @@
 				</section>
 
 				<section>
-					<h2>UPDATE</h2>
+					<h2>UPDATE (rewrite)</h2>
 					The UPDATE query allows you to change the values of a database record that already exists.<br/>
 					<br/>
 					UPDATE test SET hits = hits + 1 WHERE id = 1;
@@ -151,7 +155,7 @@
 				<section>
 					<h2>phpMyAdmin: Make your first table.</h2>
 					<ol>
-						<li>Expand "roskiweb" on the right side.</li>
+						<li>Expand "roskiweb" on the left side.</li>
 						<li>Locate and click your database which should be named "roskiweb_yournetid".</li>
 						<li>In the section titled "Create table", enter a simple one-word name for your table, and hit "GO".</li>
 						<li>The first column name "id" and leave the type as "INT".</li>
