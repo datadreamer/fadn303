@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add a new Blog Post</title>
+  </head>
+  <body>
+
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+      Title:<br/>
+      <input type="text" name="title"><br/><br/>
+      Body:<br/>
+      <textarea name="body" rows="5" cols="40"></textarea><br/><br/>
+      Image:<br/>
+      <input type="file" name="image" id="image"><br/><br/>
+      <input type="submit" value="Post" name="submit">
+    </form>
+
+  </body>
+</html>
