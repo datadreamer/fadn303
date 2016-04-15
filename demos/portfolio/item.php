@@ -35,7 +35,7 @@
       //  where the PORTFOLIO_ID field is equal to the ID field in the PORTFOLIO table.
       $imgresults = $mysqli->query("SELECT * FROM images WHERE portfolio_id={$id} ORDER BY num ASC");
     	while($imgrow = $imgresults->fetch_assoc()){
-    		echo "<img src='images/{$imgrow['thumb']}' />";
+    		echo "<img class='thumb' src='images/{$imgrow['thumb']}' />";
     	}
       echo "<br/><br/>";
       echo "<span class='title'>" . $row['title'] . "</span><br/>";

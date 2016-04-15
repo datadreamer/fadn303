@@ -1,4 +1,6 @@
 <?php
+  $category = $_GET["category"];
+
   // this bit of code connects to the database on the local server and spits out an error if there's a problem.
   // the properties passed into mysqli() are the server address, username, password, and database name.
   $servername = "localhost";
@@ -11,7 +13,7 @@
   }
   // this bit of code fetches content from the database using a query and holds it in a variable.
   // it does a JOIN operation in order to fetch data from the IMAGE table based on the value of the ID column.
-  $result = $mysqli->query("SELECT portfolio.id, portfolio.title, portfolio.dt, portfolio.category, images.thumb FROM portfolio JOIN images ON portfolio.id=images.portfolio_id WHERE images.num=1");
+  $result = $mysqli->query("SELECT portfolio.id, portfolio.title, portfolio.dt, portfolio.category, images.thumb FROM portfolio JOIN images ON portfolio.id=images.portfolio_id WHERE images.num=1 AND portfolio.category = '{$category}'");
 ?>
 
 <!doctype html>
@@ -30,8 +32,7 @@
         echo "<img src='images/" . $row['thumb'] . "'>";
         echo "<span class='title'>" . $row['title'] . "</span><br/>";
         $date = date("F Y", strtotime($row['dt']));
-        echo "<span class='date'>" . $date . "</span></a><br/>";
-        echo "<a class='category' href='category.php?category={$row['category']}'>{$row['category']}</a>";
+        echo "<span class='date'>" . $date . " - " . $row['category'] . "</span><br/>";
         echo "</div>";
       }
     ?>
