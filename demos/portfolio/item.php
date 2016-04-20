@@ -12,6 +12,17 @@
   if($mysqli->connect_errno){
     echo "Failed to connect to MySQL: " . $mysqli->connect_error;
   }
+
+  //printf("Initial character set: %s\n", $mysqli->character_set_name());
+
+  /* change character set to utf8 */
+  if (!$mysqli->set_charset("utf8")) {
+      //printf("Error loading character set utf8: %s\n", $mysqli->error);
+      exit();
+  } else {
+      //printf("Current character set: %s\n", $mysqli->character_set_name());
+  }
+
   // this bit of code fetches content from the database using a query and holds it in a variable.
   //$result = $mysqli->query("SELECT * FROM portfolio WHERE id = " . $id);
   $result = $mysqli->query("SELECT * FROM portfolio WHERE id={$id}");
