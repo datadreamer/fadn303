@@ -22,6 +22,13 @@
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/examples.js"></script>
+
+		<!-- canvas demo -->
+		<script src="js/p5.min.js"></script>
+		<script src="js/canvasdemo.js"></script>
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -30,13 +37,17 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-		<!-- canvas demo -->
-		<script src="js/p5.min.js"></script>
-		<script src="js/canvasdemo.js"></script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+		<style>
+			section img{
+				width: 90% !important;
+				height: auto;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -46,15 +57,27 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
+				<!-- header and footer stays on page and changes when tweaked by <style> inside each <section> -->
+				<header>
+					<a href="http://www.fadn303.net" class="left">FADN 303: Web Design</a>
+					<a href="http://roski.usc.edu" class="right">USC Roski School of Art and Design</a>
+				</header>
+
+				<footer>
+					<span id="leftside" class="left"></span>
+					<span id="rightside" class="right"></span>
+				</footer>
+
 				<section>
 					<div class="titletext">
-						FADN 303: Web Design
+						<div class="week">WEEK 16:</div>
 						<h1>Final Thoughts</h1>
-						Aaron Siegel<br/>
+						Aaron Siegel |
 						<script type="text/javascript">
-	        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
-	        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
-	          </script>
+				        	document.write("<n uers=\"znvygb:nnebafvr@hfp.rqh\" ery=\"absbyybj\">nnebafvr@hfp.rqh</n>".replace(/[a-zA-Z]/g,
+				        	function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+				        </script>
+				        | Spring 2016
 					</div>
 				</section>
 
@@ -63,50 +86,24 @@
 				</section>
 
 				<section>
-					Backend Development<br/>
+					<h2>Frontend Development</h2>
 					<br/>
 					<div class="third">
-						<p class="caption">
-							<a href="http://www.w3schools.com/php/">PHP</a><br/>
-							<br/>
-							<i>PHP Hypertext Preprocessor</i> is used to generate HTML for web pages with dynamic content. This is needed to drive web sites from content stored in databases.
-						</p>
-					</div>
-					<div class="third">
-						<p class="caption">
-							<a href="http://www.w3schools.com/sql/">SQL</a><br/>
-							<br/>
-							<i>Structured Query Language</i> is used to access or manipulate content in databases. This is needed to efficiently and accurately perform tasks on large collections of information.
-						</p>
-					</div>
-					<div class="third">
-						<p class="caption">
-							<a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface">CGI</a><br/>
-							<br/>
-							<i>Common Gateway Interface</i> is the traditional concept of passing information between the frontend and backend of web applications. This is how the browser and the server talk to each other.
-						</p>
-					</div>
-				</section>
-
-				<section>
-					Frontend Development<br/>
-					<br/>
-					<div class="third">
-						<p class="caption">
+						<p>
 							<a href="http://www.w3schools.com/ajax/">AJAX</a><br/>
 							<br/>
 							<i>Asynchronous Javascript and XML</i> is used for a web page to communicate with a server and update its content without refreshing the browser window.
 						</p>
 					</div>
 					<div class="third">
-						<p class="caption">
+						<p>
 							<a href="https://en.wikipedia.org/wiki/Functional_reactive_programming">FRP</a><br/>
 							<br/>
 							<i>Functional Reactive Programming</i> (FRP) is a programming paradigm for reactive programming (asynchronous dataflow programming) using the building blocks of functional programming (e.g. map, reduce, filter).
 						</p>
 					</div>
 					<div class="third">
-						<p class="caption">
+						<p>
 							<a href="https://en.wikipedia.org/wiki/JavaScript_library">Frameworks</a><br/>
 							<br/>
 							<i>Javascript Frameworks</i> are Javascript libraries that provide full-stack capabilities, and are specifically optimized for developing particular applications.
@@ -114,36 +111,25 @@
 					</div>
 				</section>
 
-				<!--
 				<section>
-					HTML5 Canvas<br/>
-				</section>
-
-				<section>
-					<div id="canvasdemo">
-					</div>
-				</section>
-			-->
-
-				<section>
-					HTML5 Canvas<br/>
+					<h2>HTML5 Canvas</h2>
 					<br/>
 					<div class="third">
-						<p class="caption">
+						<p>
 							<a href="http://p5js.org/">p5.js</a><br/>
 							<br/>
 							<i>P5.js</i> is a pure javascript implementation of the Processing language. It includes many of its drawing functionalities and has additional support for accessing the DOM and HTML5 media elements.
 						</p>
 					</div>
 					<div class="third">
-						<p class="caption">
+						<p>
 							<a href="https://jonobr1.github.io/two.js/">Two.js</a><br/>
 							<br/>
 							<i>Two.js</i> is a two-dimensional drawing api geared towards modern web browsers. It is renderer agnostic enabling the same api to draw in multiple contexts: svg, canvas, and webgl.
 						</p>
 					</div>
 					<div class="third">
-						<p class="caption">
+						<p>
 							<a href="http://paperjs.org/">Paper.js</a><br/>
 							<br/>
 							<i>Paper.js</i> is an open source vector graphics scripting framework with its own document object model, allowing object oriented control over drawable elements.
@@ -152,24 +138,24 @@
 				</section>
 
 				<section>
-					HTML5 Media<br/>
+					<h2>HTML5 Media</h2>
 					<br/>
 					<div class="third">
-						<p class="caption">
+						<p>
 							<a href="http://www.w3schools.com/html/html_media.asp">Video/Audio</a><br/>
 							<br/>
 							Playback video and audio from a variety of formats directly in the browser. Content can be embedded in elements, and thus can be styled and transformed like anything else in the DOM.
 						</p>
 					</div>
 					<div class="third">
-						<p class="caption">
+						<p>
 							<a href="http://www.html5rocks.com/en/tutorials/getusermedia/intro/">getUserMedia</a><br/>
 							<br/>
 							The getUserMedia function of Javascript allows access to all sorts of media capture, from the users <a href="https://escobar5.github.io/asciicam/">camera</a>, microphone, geolocation, even device orientation.
 						</p>
 					</div>
 					<div class="third">
-						<p class="caption">
+						<p>
 							<a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/">WebRTC</a><br/>
 							<br/>
 							WebRTC (Real-time communication) is used to communicate media across devices without plugins or the need for a central server.
@@ -177,41 +163,35 @@
 					</div>
 				</section>
 
-				<!--
 				<section>
-					WebGL
-				</section>
-				-->
-
-				<section>
-					WebGL<br/>
+					<h2>WebGL</h2>
 					<br/>
 					<div class="third">
-						<p class="caption">
-							<a href="https://processing.org/">Processing</a><br/>
-							<br/>
-							<i>Processing</i> is a language and development environment empowering creative coding across a variety of mediums. Software can be exported to run as Javascript in the browser with 3D support from WebGL.
-						</p>
-					</div>
-					<div class="third">
-						<p class="caption">
+						<p>
 							<a href="http://threejs.org/">Three.js</a><br/>
 							<br/>
 							<i>Three.js</i> is a powerful Javascript library for doing 3D rendering in WebGL. It takes a very traditional approach to OpenGL applications, and has support for importing 3D models and rendering scenes with GLSL shaders.
 						</p>
 					</div>
 					<div class="third">
-						<p class="caption">
+						<p>
 							<a href="http://www.babylonjs.com/">BabylonJS</a><br/>
 							<br/>
 							<i>Babylon.js</i> is a Javascript framework specifically intended for building 3D games with HTML5, WebGL and web audio. Not only does it render scenes, it fully supports collision detection and has an integrated physics engine.
 						</p>
 					</div>
+					<div class="third">
+						<p>
+							<a href="https://aframe.io/">A-Frame</a><br/>
+							<br/>
+							<i>A-Frame</i> is a framework that allows you to use custom markup to define 3D objects for rendering in a WebGL context for desktop or VR.
+						</p>
+					</div>
 				</section>
 
 				<section>
-					Resume Pleasers
-					<p class="caption">
+					<h2>Resume Pleasers</h2>
+					<p>
 						<br/><a href="http://www.w3schools.com/ajax/">AJAX</a>,
 						<a href="https://angularjs.org/">Angular.js</a>,
 						<a href="http://backbonejs.org/">Backbone</a>,
@@ -241,7 +221,7 @@
 				</section>
 
 				<section>
-					<h2>Have a nice break :)</h2>
+					<h1>Have a great summer :)</h1>
 				</section>
 
 			</div>
@@ -260,6 +240,11 @@
 				progress: true,
 				history: true,
 				center: true,
+				width: 1920,
+		    height: 1440,
+		    margin: 0.1,
+		    minScale: 0.2,
+		    maxScale: 2.0,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
